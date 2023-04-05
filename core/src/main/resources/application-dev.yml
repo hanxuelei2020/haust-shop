@@ -105,19 +105,14 @@ dts:
       accessKeyId: 111111
       accessKeySecret: xxxxxx
       bucketName: dts-shop
-    # 腾讯对象存储配置信息
-    # 请参考 https://cloud.tencent.com/document/product/436/6249
-    tencent:
-      secretId: 111111
-      secretKey: xxxxxx
-      region: xxxxxx
-      bucketName: dts
-    # 七牛云对象存储配置信息
-    qiniu:
-      endpoint: http://dtsshop.wx.clouddn.com
-      accessKey: 111111
-      secretKey: xxxxxx
-      bucketName: dts
+    # minio 对象存储配置信息
+    minio:
+      address-url: http://192.168.88.128:9000/mall4cloud
+      type: 1
+      endpoint: http://192.168.88.128:9000
+      bucket: mall4cloud
+      access-key-id: admin
+      access-key-secret: admin123456
       
 pagehelper:
   helperDialect:  mysql
