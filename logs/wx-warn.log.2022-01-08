@@ -1,0 +1,36 @@
+ERROR 2022-01-08 12:59:49,952 [http-nio-8080-exec-5] com.haust.shop.wx.web.WxCartController > 获取用户购物车信息列表失败:用户未登录！！！
+ERROR 2022-01-08 13:00:04,505 [http-nio-8080-exec-9] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 13:04:43,637 [http-nio-8080-exec-8] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 13:06:14,810 [http-nio-8080-exec-6] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 13:06:38,031 [http-nio-8080-exec-7] c.g.b.wxpay.bean.result.WxPayUnifiedOrderResult > 
+结果业务代码异常，返回结果：{return_msg=签名错误, return_code=FAIL},
+返回代码：FAIL，返回信息：签名错误
+ERROR 2022-01-08 13:06:38,038 [http-nio-8080-exec-7] com.haust.shop.wx.service.WxOrderService > 付款订单的预支付会话标识失败：订单支付失败
+ERROR 2022-01-08 13:06:54,768 [http-nio-8080-exec-5] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 15:03:58,648 [http-nio-8080-exec-6] com.haust.shop.wx.web.WxCartController > 立即购买:用户未登录！！！
+ERROR 2022-01-08 15:04:11,002 [http-nio-8080-exec-3] c.g.b.wxpay.bean.result.WxPayUnifiedOrderResult > 
+结果业务代码异常，返回结果：{return_msg=签名错误, return_code=FAIL},
+返回代码：FAIL，返回信息：签名错误
+ERROR 2022-01-08 15:04:11,008 [http-nio-8080-exec-3] com.haust.shop.wx.service.WxOrderService > 付款订单的预支付会话标识失败：订单支付失败
+ERROR 2022-01-08 15:48:38,119 [http-nio-8080-exec-7] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 16:40:47,341 [http-nio-8080-exec-1] com.haust.shop.wx.web.WxCouponController > 个人可领取优惠券列表:用户未登录！！！
+ERROR 2022-01-08 18:34:39,246 [http-nio-8080-exec-3] com.haust.shop.wx.web.WxCouponController > 个人可领取优惠券列表:用户未登录！！！
+ERROR 2022-01-08 18:35:12,011 [http-nio-8080-exec-1] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 18:35:20,178 [http-nio-8080-exec-4] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 18:51:12,800 [http-nio-8080-exec-9] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 18:54:27,168 [http-nio-8080-exec-1] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 18:56:38,550 [http-nio-8080-exec-10] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 19:01:29,224 [http-nio-8080-exec-3] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 19:01:32,025 [http-nio-8080-exec-7] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 20:20:08,773 [http-nio-8080-exec-4] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 20:20:17,370 [http-nio-8080-exec-9] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 20:20:53,824 [http-nio-8080-exec-3] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 20:21:06,541 [http-nio-8080-exec-7] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 20:21:56,695 [http-nio-8080-exec-7] c.g.b.wxpay.bean.result.WxPayUnifiedOrderResult > 
+结果业务代码异常，返回结果：{return_msg=签名错误, return_code=FAIL},
+返回代码：FAIL，返回信息：签名错误
+ERROR 2022-01-08 20:21:56,725 [http-nio-8080-exec-7] com.haust.shop.wx.service.WxOrderService > 付款订单的预支付会话标识失败：订单支付失败
+ERROR 2022-01-08 20:22:23,423 [http-nio-8080-exec-5] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 20:22:33,934 [http-nio-8080-exec-6] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 21:35:37,364 [http-nio-8080-exec-9] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-08 21:35:53,102 [http-nio-8080-exec-10] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!

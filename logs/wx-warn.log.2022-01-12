@@ -1,0 +1,20 @@
+ERROR 2022-01-12 14:50:40,905 [http-nio-8080-exec-3] com.haust.shop.wx.web.WxCouponController > 个人可领取优惠券列表:用户未登录！！！
+ERROR 2022-01-12 14:58:46,274 [http-nio-8080-exec-4] c.g.b.wxpay.bean.result.WxPayUnifiedOrderResult > 
+结果业务代码异常，返回结果：{return_msg=签名错误, return_code=FAIL},
+返回代码：FAIL，返回信息：签名错误
+ERROR 2022-01-12 14:58:46,290 [http-nio-8080-exec-4] com.haust.shop.wx.service.WxOrderService > 付款订单的预支付会话标识失败：订单支付失败
+ERROR 2022-01-12 15:05:12,876 [http-nio-8080-exec-3] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-12 15:05:19,732 [http-nio-8080-exec-2] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-12 15:05:49,764 [http-nio-8080-exec-4] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-12 15:05:52,319 [http-nio-8080-exec-5] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-12 15:10:34,085 [http-nio-8080-exec-3] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-12 15:10:48,805 [http-nio-8080-exec-5] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-12 15:12:47,767 [http-nio-8080-exec-10] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-12 15:12:52,765 [http-nio-8080-exec-4] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-12 15:13:59,641 [http-nio-8080-exec-8] com.haust.shop.wx.web.WxAuthController > 请求验证码出错:小程序后台验证码服务不支持
+ERROR 2022-01-12 15:14:16,847 [http-nio-8080-exec-10] com.haust.shop.wx.web.WxAuthController > 请求账号注册出错:验证码错误
+ERROR 2022-01-12 15:14:20,289 [http-nio-8080-exec-4] com.haust.shop.wx.web.WxAuthController > 请求验证码出错:小程序后台验证码服务不支持
+ERROR 2022-01-12 15:14:21,971 [http-nio-8080-exec-5] com.haust.shop.wx.web.WxAuthController > 请求账号注册出错:验证码错误
+ERROR 2022-01-12 15:15:06,955 [http-nio-8080-exec-7] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-12 15:16:18,657 [http-nio-8080-exec-8] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-12 18:27:12,055 [http-nio-8080-exec-4] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!

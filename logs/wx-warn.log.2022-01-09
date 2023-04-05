@@ -1,0 +1,7 @@
+ERROR 2022-01-09 18:18:42,196 [http-nio-8080-exec-10] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-09 18:22:10,232 [http-nio-8080-exec-2] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-09 18:22:22,729 [http-nio-8080-exec-1] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-09 21:12:38,250 [http-nio-8080-exec-7] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-09 21:22:28,045 [http-nio-8080-exec-1] com.haust.shop.wx.web.WxBrandController > 品牌商获取失败,id:1001000
+ERROR 2022-01-09 21:25:08,767 [http-nio-8080-exec-2] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
+ERROR 2022-01-09 21:25:15,993 [http-nio-8080-exec-1] com.haust.shop.db.service.DtsAccountService > 根据代理用户id：200,获取账号信息出错!!!
