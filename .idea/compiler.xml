@@ -11,21 +11,29 @@
         <module name="dts-dao" />
         <module name="admin-api" />
         <module name="dts-core" />
+        <module name="shop-service" />
         <module name="dts-wx-api" />
+        <module name="shop-common" />
         <module name="dts-admin-api" />
         <module name="wx-api" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="haust-shop2" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="admin-api" options="-parameters" />
       <module name="core" options="-parameters" />
       <module name="dao" options="-parameters" />
-      <module name="dts-admin-api" options="-parameters" />
-      <module name="dts-core" options="-parameters" />
-      <module name="dts-dao" options="-parameters" />
-      <module name="dts-wx-api" options="-parameters" />
+      <module name="dts" options="" />
+      <module name="dts-admin-api" options="" />
+      <module name="dts-core" options="" />
+      <module name="dts-dao" options="" />
+      <module name="dts-wx-api" options="" />
+      <module name="haust-shop2" options="-parameters" />
+      <module name="shop-common" options="" />
       <module name="wx-api" options="-parameters" />
     </option>
   </component>
