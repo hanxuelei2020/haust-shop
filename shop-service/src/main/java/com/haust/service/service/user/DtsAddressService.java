@@ -13,4 +13,5 @@ public interface DtsAddressService {
     public List<DtsAddress> querySelective(Integer userId, String name, Integer page, Integer limit, String sort,
                                            String order);
 
+    List<DtsAddress> queryByUid(Integer userId);
 }

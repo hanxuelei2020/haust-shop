@@ -12,7 +12,7 @@ import java.util.Map;
 public interface DtsAccountService {
     public DtsUserAccount findShareUserAccountByUserId(Integer shareUserId);
     public List<Integer> findAllSharedUserId();
-    public void setSettleMentAccount(Integer sharedUserId, String prevMonthEndDay,Integer type);
+    public void setSettleMentAccount(Integer sharedUserId, String prevMonthEndDay,Integer type) throws Exception;
     public void settleApplyTrace(Integer sharedUserId, String startTime, String endTime, Integer type, BigDecimal toSettleMoney, String mobile);
     public BigDecimal getMonthSettleMoney(Integer sharedUserId, String startTime, String endTime);
     public Map<String, Object> getStatistics(Integer sharedUserId, int dayAgo);

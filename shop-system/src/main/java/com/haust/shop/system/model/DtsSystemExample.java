@@ -1,4 +1,4 @@
-package com.haust.service.domain.admin;
+package com.haust.shop.system.model;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
