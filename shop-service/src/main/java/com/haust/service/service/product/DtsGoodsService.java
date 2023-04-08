@@ -5,6 +5,7 @@ import com.haust.service.domain.product.DtsGoods;
 import java.util.List;
 
 public interface DtsGoodsService {
+    public void add(DtsGoods goods);
 
     List<DtsGoods> queryByHot(int offset, int limit);
 

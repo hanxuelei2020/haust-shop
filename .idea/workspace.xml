@@ -5,103 +5,154 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6101a212-168a-445f-96ec-70fdd432f1f0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/BaseConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/NotifyProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/SystemConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/response/SmsResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/type/NotifyType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/type/WxResponseCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/util/HomeCacheManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/util/IpUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/util/WxResponseUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/notify/NotifyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/notify/SmsSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-system/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-system/src/main/java/com/haust/shop/system/aspect/ConfigService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-system/src/main/java/com/haust/shop/system/aspect/DtsSystemConfigService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-system/src/main/java/com/haust/shop/system/aspect/SystemInistService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-system/src/main/java/com/haust/shop/system/mapper/DtsSystemMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-system/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-system/src/main/resources/mapper/DtsSystemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-third-party/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/ThirdPartyApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/config/NotifyAutoConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/config/NotifyProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/notify/NotifyServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/notify/SslMailSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/notify/TencentSmsSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/notify/WxTemplateSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/utils/EmailHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/UserApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/annotation/LoginUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/annotation/support/LoginUserHandlerMethodArgumentResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/config/WxWebMvcConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/controller/WxAddressController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/controller/WxAuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/controller/WxCollectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/controller/WxCommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/controller/WxFootprintController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/controller/WxHomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/controller/WxIndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/controller/WxUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/controller/WxUserFormId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/dao/AccountMapperEx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/dao/CommentMapperEx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/dao/DtsAccountTraceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/dao/DtsAddressMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/dao/DtsAgencyShareMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/dao/DtsCollectMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/dao/DtsCommentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/dao/DtsFootprintMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/dao/DtsUserAccountMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/dao/DtsUserFormidMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/dao/DtsUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/dao/StatMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/model/CaptchaItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/model/UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/model/UserToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/model/WxLoginInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/service/impl/DtsAccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/service/impl/DtsAddressServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/service/impl/DtsAgencyServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/service/impl/DtsCollectServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/service/impl/DtsCommentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/service/impl/DtsFootprintServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/service/impl/DtsUserFormIdServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/service/impl/DtsUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/service/impl/UserInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/utils/CaptchaCodeManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/utils/UserTokenManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/resources/mapper/AccountMapperEx.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/resources/mapper/CommentMapperEx.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/resources/mapper/DtsAccountTraceMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/resources/mapper/DtsAddressMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/resources/mapper/DtsAgencyShareMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/resources/mapper/DtsCollectMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/resources/mapper/DtsCommentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/resources/mapper/DtsFootprintMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/resources/mapper/DtsUserAccountMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/resources/mapper/DtsUserFormidMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/resources/mapper/DtsUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/src/main/resources/mapper/StatMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/AdminApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/annotation/RequiresPermissionsDesc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/config/ShiroConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/config/ShiroExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/domain/AccountVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/domain/CategorySellVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/domain/GoodsAllinone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/domain/OrderAmtsVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/domain/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/domain/UserOrderCntVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/job/CouponJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/job/OrderJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/job/SettlementJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/mapper/DtsAdminMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/mapper/DtsArticleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/mapper/DtsFeedbackMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/mapper/DtsIssueMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/mapper/DtsPermissionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/mapper/DtsRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/mapper/DtsTopicMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/service/AdminBrandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/service/AdminDataAuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/service/AdminGoodsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/service/AdminOrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/service/impl/AdminBrandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/service/impl/AdminDataAuthServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/service/impl/AdminGoodsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/service/impl/AdminOrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/service/impl/DtsAdminServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/service/impl/DtsArticleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/service/impl/DtsFeedbackServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/service/impl/DtsIssueServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/service/impl/DtsPermissionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/service/impl/DtsRoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/service/impl/DtsTopicServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/shiro/AdminAuthorizingRealm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/shiro/AdminWebSessionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/util/AdminResponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/util/AdminResponseUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/util/ArticleType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/util/AuthSupport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/util/CatVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/util/DtsBrandVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/util/PermVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/util/Permission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/util/PermissionUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/util/StatVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/util/VerifyCodeUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminAdController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminAddressController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminAdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminArticleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminAuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminBrandController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminBrokerageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminCategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminCollectController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminCommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminCouponController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminDashbordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminFeedbackController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminFootprintController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminGoodsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminGrouponController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminHistoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminIndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminIssueController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminKeywordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminOrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminRegionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminRoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminStatController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminStorageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminTopicController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/web/AdminUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/mapper/DtsAdminMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/mapper/DtsArticleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/mapper/DtsFeedbackMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/mapper/DtsIssueMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/mapper/DtsPermissionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/mapper/DtsRoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-admin/src/main/resources/mapper/DtsTopicMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/consts/CouponConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/consts/CouponUserConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/consts/OrderHandleOption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-coupon/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-coupon/src/main/java/com/qiguliuxing/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-order/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-order/src/main/java/com/qiguliuxing/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-payment/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-payment/src/main/java/com/qiguliuxing/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-product/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-product/src/main/java/com/qiguliuxing/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-search/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-search/src/main/java/com/qiguliuxing/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/order/OrderUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/product/DtsGrouponRulesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/third/ExpressService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/third/QCodeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/third/Storage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/third/StorageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/config/StorageAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/config/StorageProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/mapper/DtsRegionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/mapper/DtsStorageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/service/impl/DtsRegionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/service/impl/DtsStorageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/service/qcode/QCodeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/service/storage/AliyunStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/service/storage/LocalStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/service/storage/QiniuStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/service/storage/StorageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/service/storage/TencentStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/resources/mapper/DtsRegionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-third-party/src/main/resources/mapper/DtsStorageMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Environment/docker-compose/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Environment/docker-compose/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/WxConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/WxConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/admin/DtsSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-system/src/main/java/com/haust/shop/system/model/DtsSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/admin/DtsSystemExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-system/src/main/java/com/haust/shop/system/model/DtsSystemExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/admin/DtsSystemConfigService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/user/DtsAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/user/DtsAccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/user/DtsAddressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/user/DtsAddressService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/express/ExpressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/service/impl/ExpressServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/express/config/ExpressAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/config/ExpressAutoConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/express/config/ExpressProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/config/ExpressProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/express/dao/ExpressInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/third/ExpressInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/express/dao/Traces.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/third/Traces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/dict/DtsRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/third/DtsRegion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/dict/DtsRegionExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/third/DtsRegionExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/dict/DtsStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/third/DtsStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/dict/DtsStorageExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/third/DtsStorageExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/admin/DtsRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/admin/DtsRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/dict/DtsRegionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/third/DtsRegionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/dict/DtsStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/third/DtsStorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/notify/NotifyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/third/NotifyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/notify/SmsSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/third/SmsSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/product/DtsGoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/product/DtsGoodsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/ThirdPartyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/ThirdPartyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/config/NotifyAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/config/NotifyAutoConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/config/NotifyProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/config/NotifyProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/notify/NotifyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/service/notify/NotifyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/notify/SslMailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/service/notify/SslMailSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/notify/TencentSmsSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/service/notify/TencentSmsSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/notify/WxTemplateSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/service/notify/WxTemplateSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-third-party/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/controller/WxAddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/controller/WxAddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/controller/WxAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/src/main/java/com/haust/shop/user/controller/WxAuthController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,8 +162,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -126,6 +177,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/shop-admin/src/main/java/com/haust/shop/admin/config/ShiroConfig.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -159,14 +213,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/JavaProject/Graduation Information/java/haust-shop2/shop-system/src/main/resources",
+    "last_opened_file_path": "D:/JavaProject/Graduation Information/java/haust-shop2/shop-service/src/main/java/com/haust/service/domain/third",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "http.proxy",
-    "spring.configuration.checksum": "d49d1057d55480c83298b37e8ee2401b",
+    "spring.configuration.checksum": "e6c53fd3305cb0c5863dbff3db7e711a",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -175,13 +229,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-system\src\main\resources" />
-      <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-system\src\main\java\com\haust\shop\system\aspect" />
-      <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-common\src\main\resources" />
-      <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-common\src\main\resources\mapper" />
-      <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-common\src\main\java\com\haust\common\aspect" />
+      <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-service\src\main\java\com\haust\service\domain\third" />
+      <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-third-party\src\main\java\com\haust\shop\third\config" />
+      <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-third-party\src\main\resources\mapper" />
+      <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-third-party\src\main\java\com\haust\shop\third\mapper" />
+      <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-third-party\src\main\java\com\haust\shop\third\service\impl" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-admin\src\main\resources\mapper" />
       <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-system\src\main\resources\mapper" />
       <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-system\src\main\resources" />
       <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-common\src\main\resources\mapper" />
@@ -191,14 +246,21 @@
       <recent name="com.haust.common" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.haust.shop.third.qcode" />
+      <recent name="com.haust.service.service.notify" />
+      <recent name="com.haust.shop.admin.service.impl" />
       <recent name="com.haust.common.mapper" />
       <recent name="com.haust.common.aspect" />
-      <recent name="com.haust.shop.user.dao" />
-      <recent name="com.haust.shop.user.service.impl" />
-      <recent name="com.haust.common.type" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserApplication">
+  <component name="RunManager" selected="Spring Boot.AdminApplication">
+    <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="shop-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.admin.AdminApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="wx-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.qiguliuxing.dts.wx.Application" />
@@ -289,6 +351,7 @@
       <workItem from="1680710011455" duration="3510000" />
       <workItem from="1680789359144" duration="2812000" />
       <workItem from="1680888056274" duration="16557000" />
+      <workItem from="1680967024753" duration="8887000" />
     </task>
     <servers />
   </component>

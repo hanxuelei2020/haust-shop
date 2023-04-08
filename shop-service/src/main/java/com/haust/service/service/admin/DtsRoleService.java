@@ -13,4 +13,6 @@ public interface DtsRoleService {
     public void updateById(DtsRole role);
     public boolean checkExist(String name);
     public List<DtsRole> queryAll();
+
+    void add(DtsRole role);
 }

@@ -1,11 +1,13 @@
 package com.haust.shop.third.config;
 
 import com.github.qcloudsms.SmsSingleSender;
-import com.haust.service.service.notify.NotifyService;
-import com.haust.shop.third.notify.NotifyServiceImpl;
-import com.haust.shop.third.notify.SslMailSender;
-import com.haust.shop.third.notify.TencentSmsSender;
-import com.haust.shop.third.notify.WxTemplateSender;
+import com.haust.service.service.third.NotifyService;
+import com.haust.shop.third.service.notify.NotifyServiceImpl;
+import com.haust.shop.third.service.notify.SslMailSender;
+import com.haust.shop.third.service.notify.TencentSmsSender;
+import com.haust.shop.third.service.notify.WxTemplateSender;
+import org.apache.dubbo.config.annotation.DubboService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,13 +18,15 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 @EnableConfigurationProperties(NotifyProperties.class)
 public class NotifyAutoConfiguration {
 
-	private final NotifyProperties properties;
+	@Autowired
+	private NotifyProperties properties;
 
 	public NotifyAutoConfiguration(NotifyProperties properties) {
-		this.properties = properties;
+		properties = properties;
 	}
 
 	@Bean
+	@DubboService
 	public NotifyService notifyService() {
 		NotifyServiceImpl notifyService = new NotifyServiceImpl();
 
@@ -84,6 +88,7 @@ public class NotifyAutoConfiguration {
 	}
 
 	@Bean
+	@DubboService
 	public TencentSmsSender tencentSmsSender() {
 		NotifyProperties.Sms smsConfig = properties.getSms();
 		TencentSmsSender smsSender = new TencentSmsSender();

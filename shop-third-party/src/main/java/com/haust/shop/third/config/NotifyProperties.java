@@ -1,12 +1,14 @@
 package com.haust.shop.third.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 @ConfigurationProperties(prefix = "dts.notify")
+@EnableConfigurationProperties(NotifyProperties.class)
 public class NotifyProperties {
 	private Mail mail;
 	private Sms sms;
