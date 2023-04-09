@@ -6,25 +6,34 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="shop-coupon" />
         <module name="shop-payment" />
+        <module name="shop-coupon-api" />
+        <module name="shop-product-api" />
+        <module name="shop-cart-rpc" />
+        <module name="shop-service" />
+        <module name="dts-wx-api" />
+        <module name="shop-search-rpc" />
+        <module name="shop-admin" />
+        <module name="shop-cart-api" />
+        <module name="dao" />
+        <module name="shop-product-rpc" />
+        <module name="shop-search-api" />
+        <module name="shop-common" />
+        <module name="shop-coupon-rpc" />
+        <module name="shop-groupon-api" />
         <module name="dts-dao" />
         <module name="admin-api" />
         <module name="dts-core" />
-        <module name="shop-service" />
+        <module name="shop-groupon-rpc" />
         <module name="shop-third-party" />
-        <module name="dts-wx-api" />
-        <module name="shop-search" />
+        <module name="shop-user-api" />
         <module name="wx-api" />
-        <module name="shop-admin" />
         <module name="shop-system" />
         <module name="core" />
-        <module name="dao" />
-        <module name="shop-order" />
-        <module name="shop-user" />
-        <module name="shop-product" />
-        <module name="shop-common" />
+        <module name="shop-order-api" />
         <module name="dts-admin-api" />
+        <module name="shop-order-rpc" />
+        <module name="shop-user-rpc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

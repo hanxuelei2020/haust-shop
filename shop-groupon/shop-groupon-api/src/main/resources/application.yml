@@ -1,0 +1,14 @@
+server:
+  port: 16010
+
+
+dubbo:
+  application:
+    name: shop-groupon-api
+  protocol:
+    name: dubbo
+    port: 16017
+  registry:
+    address: nacos://192.168.88.128:8848
+    username: nacos
+    password: nacos

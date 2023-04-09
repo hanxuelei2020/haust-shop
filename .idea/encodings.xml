@@ -9,20 +9,48 @@
     <file url="file://$PROJECT_DIR$/dao/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-admin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-cart/shop-cart-rpc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-cart/shop-cart-rpc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-cart/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-cart/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-common/shop-third-party/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-common/shop-third-party/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-coupon/shop-coupon-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-coupon/shop-coupon-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-coupon/shop-coupon-rpc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-coupon/shop-coupon-rpc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-coupon/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-coupon/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-dict/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-dict/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-groupon/shop-groupon-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-groupon/shop-groupon-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-groupon/shop-groupon-rpc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-groupon/shop-groupon-rpc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-groupon/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-groupon/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-order/shop-order-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-order/shop-order-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-order/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-order/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-payment/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-payment/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-product/shop-product-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-product/shop-product-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-product/shop-product-rpc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-product/shop-product-rpc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-product/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-product/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-search/shop-search-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-search/shop-search-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-search/shop-search-rpc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-search/shop-search-rpc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-search/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-search/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-service/src/main/java" charset="UTF-8" />
@@ -31,6 +59,10 @@
     <file url="file://$PROJECT_DIR$/shop-system/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-third-party/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-third-party/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-user/shop-user-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-user/shop-user-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-user/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-user/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />

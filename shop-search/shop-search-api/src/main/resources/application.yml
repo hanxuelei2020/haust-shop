@@ -1,0 +1,14 @@
+server:
+  port: 14001
+
+
+dubbo:
+  application:
+    name: shop-search-api
+  protocol:
+    name: dubbo
+    port: 14015
+  registry:
+    address: nacos://192.168.88.128:8848
+    username: nacos
+    password: nacos

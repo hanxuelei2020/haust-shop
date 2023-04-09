@@ -44,6 +44,16 @@
         <module>shop-product</module>
         <module>shop-search</module>
         <module>shop-payment</module>
+        <module>shop-cart</module>
+        <module>shop-groupon</module>
+        <module>shop-order/shop-order-rpc</module>
+        <module>shop-order/shop-order-api</module>
+        <module>shop-product/shop-product-rpc</module>
+        <module>shop-product/shop-product-api</module>
+        <module>shop-search/shop-search-api</module>
+        <module>shop-search/shop-search-rpc</module>
+        <module>shop-user/shop-user-api</module>
+        <module>shop-user/shop-user-rpc</module>
     </modules>
   
 	<dependencyManagement>

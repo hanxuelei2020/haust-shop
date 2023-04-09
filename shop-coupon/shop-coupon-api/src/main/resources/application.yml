@@ -1,0 +1,23 @@
+server:
+  port: 13010
+
+
+dubbo:
+  application:
+    name: shop-coupon-api
+  protocol:
+    name: dubbo
+    port: 13014
+  registry:
+    address: nacos://192.168.88.128:8848
+    username: nacos
+    password: nacos
+  metadata-report:
+    address: nacos://192.168.88.128:8848
+    username: nacos
+    password: nacos
+    # 配置 namespace，有namespace需要指定namespace
+    parameters:
+      namespace: f29f8730-5682-4521-b7ff-2b74fba4e025
+    # 配置 隔离组，有配置 group 的需要指定 group
+    group: ucp

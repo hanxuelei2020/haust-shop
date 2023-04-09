@@ -1,0 +1,14 @@
+server:
+  port: 12010
+
+
+dubbo:
+  application:
+    name: shop-order-api
+  protocol:
+    name: dubbo
+    port: 12013
+  registry:
+    address: nacos://192.168.88.128:8848
+    username: nacos
+    password: nacos

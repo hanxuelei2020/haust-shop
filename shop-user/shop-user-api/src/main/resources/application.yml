@@ -1,0 +1,13 @@
+server:
+  port: 7001
+
+dubbo:
+  application:
+    name: shop-user-api
+  protocol:
+    name: dubbo
+    port: 7071
+  registry:
+    address: nacos://192.168.88.128:8848
+    username: nacos
+    password: nacos
