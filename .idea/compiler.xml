@@ -10,11 +10,12 @@
         <module name="shop-coupon-api" />
         <module name="shop-product-api" />
         <module name="shop-cart-rpc" />
+        <module name="shop-admin-rpc" />
         <module name="shop-service" />
         <module name="dts-wx-api" />
         <module name="shop-search-rpc" />
-        <module name="shop-admin" />
         <module name="shop-cart-api" />
+        <module name="shop-admin-api" />
         <module name="dao" />
         <module name="shop-product-rpc" />
         <module name="shop-search-api" />

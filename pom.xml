@@ -54,6 +54,8 @@
         <module>shop-search/shop-search-rpc</module>
         <module>shop-user/shop-user-api</module>
         <module>shop-user/shop-user-rpc</module>
+        <module>shop-admin/shop-admin-api</module>
+        <module>shop-admin/shop-admin-rpc</module>
     </modules>
   
 	<dependencyManagement>
