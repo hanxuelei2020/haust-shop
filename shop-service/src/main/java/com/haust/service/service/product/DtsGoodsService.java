@@ -20,6 +20,7 @@ public interface DtsGoodsService {
     public List<DtsGoods> querySelective(String goodsSn, String name, Integer page, Integer size, String sort,
                                          String order,List<Integer> brandIds);
     public DtsGoods findById(Integer id);
+    public List<DtsGoods> findByIds(List<Integer> id);
     public DtsGoods findByGoodsSn(String goodsSn);
     public DtsGoods findByIdVO(Integer id);
     public DtsGoods findBySnVO(String sn);
@@ -31,4 +32,5 @@ public interface DtsGoodsService {
     public List<DtsGoods> queryByBrandId(int bid, int cid, int offset, int limit);
     public List<DtsGoods> queryByCategoryAndNotSameBrandId(int bid, int cid, int offset, int limit);
 
+    List<Integer> getCatIds(Integer brandId, String keyword, Boolean isHot, Boolean isNew);
 }

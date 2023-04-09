@@ -11,6 +11,7 @@ public interface DtsGrouponRulesService {
     public List<DtsGrouponRules> queryByGoodsId(Long goodsId);
     public List<Map<String, Object>> queryList(int offset, int limit);
     public List<Map<String, Object>> queryList(int offset, int limit, String sort, String order);
+    public List<DtsGrouponRules> queryGoodRulesList(int offset, int limit, String sort, String order);
     public boolean isExpired(DtsGrouponRules rules);
     public List<DtsGrouponRules> querySelective(String goodsId, Integer page, Integer size, String sort, String order);
     public void delete(Integer id);

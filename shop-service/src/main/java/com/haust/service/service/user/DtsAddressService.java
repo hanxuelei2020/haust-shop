@@ -14,4 +14,6 @@ public interface DtsAddressService {
                                            String order);
 
     List<DtsAddress> queryByUid(Integer userId);
+
+    DtsAddress findDefault(Integer userId);
 }

@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     druid:
-      url:  jdbc:mysql://192.168.88.128:3306/shop_user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false
+      url:  jdbc:mysql://192.168.88.128:3306/shop_user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull
       driver-class-name:  com.mysql.cj.jdbc.Driver
       username:  root
       password:  root
