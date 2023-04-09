@@ -2,11 +2,12 @@ package com.haust.shop.user.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.haust.common.util.ResponseUtil;
+import com.haust.common.validator.LoginUser;
 import com.haust.service.domain.user.DtsUser;
 import com.haust.service.domain.user.DtsUserFormid;
-import com.haust.service.service.user.DtsUserFormIdService;
+import com.haust.service.service.third.DtsFormUserIdService;
 import com.haust.service.service.user.DtsUserService;
-import com.haust.shop.user.annotation.LoginUser;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +28,8 @@ public class WxUserFormId {
 	@Autowired
 	private DtsUserService userService;
 
-	@Autowired
-	private DtsUserFormIdService formIdService;
+	@DubboReference
+	private DtsFormUserIdService formIdService;
 
 	/**
 	 * 创建微信访问fromID

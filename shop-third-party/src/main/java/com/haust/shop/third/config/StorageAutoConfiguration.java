@@ -1,5 +1,6 @@
 package com.haust.shop.third.config;
 
+import com.haust.service.service.third.DtsStorageService;
 import com.haust.service.service.third.StorageService;
 import com.haust.shop.third.service.storage.*;
 import org.apache.dubbo.config.annotation.DubboService;
@@ -23,10 +24,11 @@ public class StorageAutoConfiguration {
 
 	@Bean
 	@DubboService
-	public StorageService storageService() {
-		StorageService storageService = new StorageServiceImpl();
+	public StorageService storageService(DtsStorageService dtsStorageService) {
+		StorageServiceImpl storageService = new StorageServiceImpl();
 		String active = properties.getActive();
 		storageService.setActive(active);
+		storageService.setDtsStorageService(dtsStorageService);
 		if (active.equals("local")) {
 			storageService.setStorage(localStorage());
 		} else if (active.equals("aliyun")) {

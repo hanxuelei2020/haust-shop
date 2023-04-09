@@ -20,8 +20,15 @@ import java.util.stream.Stream;
 public class StorageServiceImpl implements StorageService {
 	private String active;
 	private Storage storage;
-	@Autowired
 	private DtsStorageService dtsStorageService;
+
+	public DtsStorageService getDtsStorageService() {
+		return dtsStorageService;
+	}
+
+	public void setDtsStorageService(DtsStorageService dtsStorageService) {
+		this.dtsStorageService = dtsStorageService;
+	}
 
 	public String getActive() {
 		return active;

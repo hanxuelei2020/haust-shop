@@ -6,6 +6,7 @@ import com.haust.service.domain.third.DtsRegionExample;
 import com.haust.service.service.third.DtsRegionService;
 import com.haust.shop.third.mapper.DtsRegionMapper;
 import org.apache.dubbo.config.annotation.DubboService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -16,7 +17,7 @@ import java.util.List;
 @DubboService
 public class DtsRegionServiceImpl implements DtsRegionService {
 
-	@Resource
+	@Autowired
 	private DtsRegionMapper regionMapper;
 
 	public List<DtsRegion> getAll() {

@@ -4,12 +4,11 @@ import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.bean.WxMaTemplateData;
 import cn.binarywang.wx.miniapp.bean.WxMaTemplateMessage;
 import com.haust.service.domain.user.DtsUserFormid;
-import com.haust.service.service.user.DtsUserFormIdService;
+import com.haust.service.service.third.DtsFormUserIdService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,8 +22,8 @@ public class WxTemplateSender {
 	@Autowired
 	private WxMaService wxMaService;
 
-	@DubboReference
-	private DtsUserFormIdService formIdService;
+	@Autowired
+	private DtsFormUserIdService formIdService;
 
 	/**
 	 * 发送微信消息(模板消息),不带跳转

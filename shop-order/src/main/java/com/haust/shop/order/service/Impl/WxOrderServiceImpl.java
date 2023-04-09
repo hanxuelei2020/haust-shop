@@ -28,10 +28,7 @@ import com.haust.service.service.coupon.DtsCouponUserService;
 import com.haust.service.service.order.*;
 import com.haust.service.service.product.DtsGoodsProductService;
 import com.haust.service.service.product.DtsGrouponRulesService;
-import com.haust.service.service.third.DtsRegionService;
-import com.haust.service.service.third.ExpressService;
-import com.haust.service.service.third.NotifyService;
-import com.haust.service.service.third.QCodeService;
+import com.haust.service.service.third.*;
 import com.haust.service.service.user.*;
 import org.apache.commons.io.IOUtils;
 import org.apache.dubbo.config.annotation.DubboReference;
@@ -97,7 +94,7 @@ public class WxOrderServiceImpl implements WxOrderService {
     @DubboReference
     private NotifyService notifyService;
     @DubboReference
-    private DtsUserFormIdService formIdService;
+    private DtsFormUserIdService formIdService;
     @Autowired
     private DtsGrouponRulesService grouponRulesService;
     @Autowired

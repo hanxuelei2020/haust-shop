@@ -1,19 +1,19 @@
-package com.haust.shop.user.service.impl;
+package com.haust.shop.third.service.impl;
 
 import com.haust.service.domain.user.DtsUserFormid;
 import com.haust.service.domain.user.DtsUserFormidExample;
-import com.haust.service.service.user.DtsUserFormIdService;
-import com.haust.shop.user.dao.DtsUserFormidMapper;
+import com.haust.service.service.third.DtsFormUserIdService;
+import com.haust.shop.third.mapper.DtsUserFormidMapper;
 import org.apache.dubbo.config.annotation.DubboService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.time.LocalDateTime;
 
 @Service
 @DubboService
-public class DtsUserFormIdServiceImpl implements DtsUserFormIdService {
-	@Resource
+public class DtsFormUserIdServiceImpl implements DtsFormUserIdService {
+	@Autowired
 	private DtsUserFormidMapper formidMapper;
 
 	/**

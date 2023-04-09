@@ -85,7 +85,7 @@ dts:
     local:
       storagePath: dts/storage
       # 这个地方应该是wx模块的WxStorageController的fetch方法对应的地址
-      address: http://localhost:8080/demo/storage/
+      address: http://localhost:9999/demo/storage/
 
 server:
   port: 9000

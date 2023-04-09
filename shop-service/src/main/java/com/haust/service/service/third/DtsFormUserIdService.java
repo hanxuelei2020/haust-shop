@@ -1,8 +1,8 @@
-package com.haust.service.service.user;
+package com.haust.service.service.third;
 
 import com.haust.service.domain.user.DtsUserFormid;
 
-public interface DtsUserFormIdService {
+public interface DtsFormUserIdService {
     DtsUserFormid queryByOpenId(String openId);
 
     int updateUserFormId(DtsUserFormid userFormid);

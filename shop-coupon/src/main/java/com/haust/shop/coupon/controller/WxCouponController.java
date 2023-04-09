@@ -51,7 +51,7 @@ public class WxCouponController {
 	private DtsGrouponRulesService grouponRulesService;
 	@DubboReference
 	private DtsCartService cartService;
-	@DubboReference
+	@Autowired
 	private CouponVerifyService couponVerifyService;
 
 	/**
