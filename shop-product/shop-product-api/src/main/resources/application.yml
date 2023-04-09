@@ -1,12 +1,12 @@
 server:
-  port: 11001
+  port: 13000
 
 dubbo:
   application:
     name: shop-product-api
   protocol:
     name: dubbo
-    port: 11012
+    port: 13001
   registry:
     address: nacos://192.168.88.128:8848
     username: nacos

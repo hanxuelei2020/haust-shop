@@ -1,5 +1,5 @@
 server:
-  port: 16000
+  port: 11002
 
 spring:
   datasource:
@@ -29,7 +29,7 @@ dubbo:
     name: shop-groupon-rpc
   protocol:
     name: dubbo
-    port: 16016
+    port: 11003
   registry:
     address: nacos://192.168.88.128:8848
     username: nacos

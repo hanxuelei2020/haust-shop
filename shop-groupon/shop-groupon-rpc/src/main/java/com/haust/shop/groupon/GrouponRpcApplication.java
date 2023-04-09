@@ -1,4 +1,4 @@
-package com.haust.shop.order;
+package com.haust.shop.groupon;
 
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.mybatis.spring.annotation.MapperScan;
@@ -11,11 +11,11 @@ import org.springframework.context.annotation.ComponentScans;
 @EnableDubbo
 //扫描 common包
 @ComponentScans({@ComponentScan({"com.haust.common",
-        "com.haust.shop.order"})})
+        "com.haust.shop.groupon"})})
 @MapperScan({"com.haust.common",
-        "com.haust.shop.order"})
-public class OrderApplication {
+        "com.haust.shop.groupon"})
+public class GrouponRpcApplication {
     public static void main(String[] args) {
-        SpringApplication.run(OrderApplication.class, args);
+        SpringApplication.run(GrouponRpcApplication.class, args);
     }
 }

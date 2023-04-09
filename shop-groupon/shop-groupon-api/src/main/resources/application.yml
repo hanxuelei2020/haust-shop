@@ -1,5 +1,5 @@
 server:
-  port: 16010
+  port: 11000
 
 
 dubbo:
@@ -7,7 +7,7 @@ dubbo:
     name: shop-groupon-api
   protocol:
     name: dubbo
-    port: 16017
+    port: 11001
   registry:
     address: nacos://192.168.88.128:8848
     username: nacos

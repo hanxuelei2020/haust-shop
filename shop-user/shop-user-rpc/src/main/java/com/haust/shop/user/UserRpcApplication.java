@@ -1,4 +1,4 @@
-package com.haust.shop.cart;
+package com.haust.shop.user;
 
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.mybatis.spring.annotation.MapperScan;
@@ -11,11 +11,11 @@ import org.springframework.context.annotation.ComponentScans;
 @EnableDubbo
 //扫描 common包
 @ComponentScans({@ComponentScan({"com.haust.common",
-        "com.haust.shop.cart"})})
+        "com.haust.shop.user"})})
 @MapperScan({"com.haust.common",
-        "com.haust.shop.cart"})
-public class CartApplication {
+        "com.haust.shop.user"})
+public class UserRpcApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CartApplication.class, args);
+        SpringApplication.run(UserRpcApplication.class, args);
     }
 }

@@ -14,8 +14,8 @@ import org.springframework.context.annotation.ComponentScans;
         "com.haust.shop.coupon"})})
 @MapperScan({"com.haust.common",
         "com.haust.shop.coupon"})
-public class CouponApplication {
+public class CouponRpcApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CouponApplication.class, args);
+        SpringApplication.run(CouponRpcApplication.class, args);
     }
 }

@@ -1,5 +1,5 @@
 server:
-  port: 15000
+  port: 9002
 
 spring:
   datasource:
@@ -29,7 +29,7 @@ dubbo:
     name: shop-cart-rpc
   protocol:
     name: dubbo
-    port: 15015
+    port: 9003
   registry:
     address: nacos://192.168.88.128:8848
     username: nacos

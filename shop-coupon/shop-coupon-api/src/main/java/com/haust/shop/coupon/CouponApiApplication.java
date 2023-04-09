@@ -1,4 +1,4 @@
-package com.haust.shop.search;
+package com.haust.shop.coupon;
 
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.mybatis.spring.annotation.MapperScan;
@@ -11,11 +11,11 @@ import org.springframework.context.annotation.ComponentScans;
 @EnableDubbo
 //扫描 common包
 @ComponentScans({@ComponentScan({"com.haust.common",
-        "com.haust.shop.search"})})
+        "com.haust.shop.coupon"})})
 @MapperScan({"com.haust.common",
-        "com.haust.shop.search"})
-public class SearchApplication {
+        "com.haust.shop.coupon"})
+public class CouponApiApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SearchApplication.class, args);
+        SpringApplication.run(CouponApiApplication.class, args);
     }
 }

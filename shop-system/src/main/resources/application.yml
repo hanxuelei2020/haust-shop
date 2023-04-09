@@ -1,5 +1,5 @@
 server:
-  port: 8000
+  port: 15000
 
 spring:
   datasource:
@@ -28,7 +28,7 @@ dubbo:
     name: shop-admin
   protocol:
     name: dubbo
-    port: 8080
+    port: 15001
   registry:
     address: nacos://192.168.88.128:8848
     username: nacos

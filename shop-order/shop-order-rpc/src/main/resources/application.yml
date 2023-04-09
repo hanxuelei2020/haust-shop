@@ -1,5 +1,5 @@
 server:
-  port: 12000
+  port: 12002
 
 spring:
   datasource:
@@ -29,7 +29,7 @@ dubbo:
     name: shop-order-rpc
   protocol:
     name: dubbo
-    port: 12012
+    port: 12003
   registry:
     address: nacos://192.168.88.128:8848
     username: nacos

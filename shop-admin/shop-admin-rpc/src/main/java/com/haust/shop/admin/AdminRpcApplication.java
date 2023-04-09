@@ -12,10 +12,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 		"com.haust.shop.admin"})
 @EnableTransactionManagement
 @EnableScheduling
-public class AdminApplication {
+public class AdminRpcApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AdminApplication.class, args);
+		SpringApplication.run(AdminRpcApplication.class, args);
 	}
 
 }

@@ -88,7 +88,7 @@ dts:
       address: http://localhost:9999/demo/storage/
 
 server:
-  port: 9000
+  port: 16000
 
 spring:
   datasource:
@@ -118,7 +118,7 @@ dubbo:
     name: shop-third
   protocol:
     name: dubbo
-    port: 9090
+    port: 16001
   registry:
     address: nacos://192.168.88.128:8848
     username: nacos

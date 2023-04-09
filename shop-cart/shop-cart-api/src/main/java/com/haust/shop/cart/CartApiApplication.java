@@ -14,8 +14,8 @@ import org.springframework.context.annotation.ComponentScans;
         "com.haust.shop.cart"})})
 @MapperScan({"com.haust.common",
         "com.haust.shop.cart"})
-public class CartApplication {
+public class CartApiApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CartApplication.class, args);
+        SpringApplication.run(CartApiApplication.class, args);
     }
 }

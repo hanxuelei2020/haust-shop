@@ -14,8 +14,8 @@ import org.springframework.context.annotation.ComponentScans;
         "com.haust.shop.order"})})
 @MapperScan({"com.haust.common",
         "com.haust.shop.order"})
-public class OrderApplication {
+public class OrderApiApplication {
     public static void main(String[] args) {
-        SpringApplication.run(OrderApplication.class, args);
+        SpringApplication.run(OrderApiApplication.class, args);
     }
 }
