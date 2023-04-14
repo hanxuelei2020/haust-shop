@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.haust.common.util.ResponseUtil;
 import com.haust.service.domain.product.DtsBrand;
 import com.haust.service.service.product.DtsBrandService;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/wx/brand")
+@ShenyuSpringMvcClient("/wx/brand/**")
 @Validated
 public class WxBrandController {
 	private static final Logger logger = LoggerFactory.getLogger(WxBrandController.class);

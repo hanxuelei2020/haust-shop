@@ -10,6 +10,7 @@ import com.haust.service.domain.user.DtsFootprint;
 import com.haust.service.service.product.DtsGoodsService;
 import com.haust.service.service.user.DtsFootprintService;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/wx/footprint")
+@ShenyuSpringMvcClient("/wx/footprint/**")
 @Validated
 public class WxFootprintController {
 	private static final Logger logger = LoggerFactory.getLogger(WxFootprintController.class);

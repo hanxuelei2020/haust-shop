@@ -5,6 +5,7 @@ import com.haust.shop.admin.util.AuthSupport;
 import com.haust.common.validator.Order;
 import com.haust.common.validator.Sort;
 import com.haust.shop.admin.annotation.RequiresPermissionsDesc;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +17,8 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @RestController
-@RequestMapping("/com/haust/shop/admin/order")
+@RequestMapping("/admin/order")
+@ShenyuSpringMvcClient("/admin/order/**")
 @Validated
 public class AdminOrderController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminOrderController.class);

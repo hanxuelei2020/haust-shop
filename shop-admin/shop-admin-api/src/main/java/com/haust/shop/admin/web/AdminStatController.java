@@ -7,6 +7,7 @@ import com.haust.common.util.ResponseUtil;
 import com.haust.service.service.stat.StatService;
 import com.haust.shop.admin.annotation.RequiresPermissionsDesc;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +21,8 @@ import java.util.Map;
 
 @SuppressWarnings("rawtypes")
 @RestController
-@RequestMapping("/com/haust/shop/admin/stat")
+@RequestMapping("/admin/stat")
+@ShenyuSpringMvcClient("/admin/stat/**")
 @Validated
 public class AdminStatController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminStatController.class);

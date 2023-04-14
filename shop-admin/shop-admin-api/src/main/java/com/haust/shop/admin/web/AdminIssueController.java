@@ -9,6 +9,7 @@ import com.haust.common.validator.Order;
 import com.haust.common.validator.Sort;
 import com.haust.service.domain.admin.DtsIssue;
 import com.haust.service.service.admin.DtsIssueService;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +24,8 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/com/haust/shop/admin/issue")
+@RequestMapping("/admin/issue")
+@ShenyuSpringMvcClient("/admin/issue/**")
 @Validated
 public class AdminIssueController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminIssueController.class);

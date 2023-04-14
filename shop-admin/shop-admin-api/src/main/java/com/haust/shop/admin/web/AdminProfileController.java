@@ -8,6 +8,7 @@ import com.haust.common.util.ResponseUtil;
 import com.haust.common.util.bcrypt.BCryptPasswordEncoder;
 import com.haust.service.domain.admin.DtsAdmin;
 import com.haust.service.service.admin.DtsAdminService;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.apache.shiro.subject.Subject;
@@ -22,7 +23,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/com/haust/shop/admin/profile")
+@RequestMapping("/admin/profile")
+@ShenyuSpringMvcClient("/admin/profile/**")
 @Validated
 public class AdminProfileController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminProfileController.class);

@@ -8,6 +8,7 @@ import com.haust.common.consts.CommConsts;
 import com.haust.common.response.SmsResult;
 import com.haust.common.type.NotifyType;
 import com.haust.common.type.UserTypeEnum;
+import com.haust.common.type.WxResponseCode;
 import com.haust.common.util.*;
 import com.haust.common.util.bcrypt.BCryptPasswordEncoder;
 import com.haust.common.validator.LoginUser;
@@ -21,6 +22,7 @@ import com.haust.shop.user.model.WxLoginInfo;
 import com.haust.shop.user.utils.CaptchaCodeManager;
 import com.haust.shop.user.utils.UserTokenManager;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +49,7 @@ import static com.haust.common.type.WxResponseCode.*;
  */
 @RestController
 @RequestMapping("/wx/auth")
+@ShenyuSpringMvcClient("/wx/auth/**")
 @Validated
 public class WxAuthController {
 	private static final Logger logger = LoggerFactory.getLogger(WxAuthController.class);

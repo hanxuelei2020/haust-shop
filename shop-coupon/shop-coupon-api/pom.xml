@@ -18,6 +18,13 @@
     </properties>
 
     <dependencies>
+        <!-- 网关只有api需要 -->
+        <!--if you use http proxy start this-->
+        <dependency>
+            <groupId>org.apache.shenyu</groupId>
+            <artifactId>shenyu-spring-boot-starter-client-springmvc</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.qiguliuxing</groupId>
             <artifactId>shop-coupon-rpc</artifactId>

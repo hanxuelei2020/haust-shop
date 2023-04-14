@@ -9,6 +9,7 @@ import com.haust.service.domain.user.DtsAddress;
 import com.haust.service.service.third.DtsRegionService;
 import com.haust.service.service.user.DtsAddressService;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,7 @@ import java.util.concurrent.*;
  */
 @RestController
 @RequestMapping("/wx/address")
+@ShenyuSpringMvcClient("/wx/address/**")
 @Validated
 public class WxAddressController {
 	private static final Logger logger = LoggerFactory.getLogger(WxAddressController.class);

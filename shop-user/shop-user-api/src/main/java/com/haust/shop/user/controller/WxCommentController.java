@@ -11,6 +11,7 @@ import com.haust.service.service.user.DtsCommentService;
 import com.haust.shop.user.model.UserInfo;
 import com.haust.shop.user.service.UserInfoService;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/wx/comment")
+@ShenyuSpringMvcClient("/wx/comment/**")
 @Validated
 public class WxCommentController {
 	private static final Logger logger = LoggerFactory.getLogger(WxCollectController.class);

@@ -22,6 +22,7 @@ import com.haust.service.service.user.DtsFootprintService;
 import com.haust.service.service.user.DtsUserService;
 import com.mysql.cj.util.StringUtils;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +44,7 @@ import java.util.concurrent.*;
  */
 @RestController
 @RequestMapping("/wx/goods")
+@ShenyuSpringMvcClient("/wx/goods/**")
 @Validated
 public class WxGoodsController {
 	private static final Logger logger = LoggerFactory.getLogger(WxGoodsController.class);

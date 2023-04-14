@@ -5,6 +5,7 @@ import com.haust.common.util.HomeCacheManager;
 import com.haust.common.util.ResponseUtil;
 import com.haust.service.domain.product.DtsCategory;
 import com.haust.service.service.product.DtsCategoryService;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/wx/catalog")
+@ShenyuSpringMvcClient("/wx/catalog/**")
 @Validated
 public class WxCatalogController {
 	private static final Logger logger = LoggerFactory.getLogger(WxCatalogController.class);

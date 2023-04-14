@@ -13,6 +13,7 @@ import com.haust.shop.admin.domain.OrderAmtsVo;
 import com.haust.shop.admin.domain.UserOrderCntVo;
 import com.haust.shop.admin.util.AuthSupport;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.validation.annotation.Validated;
@@ -24,7 +25,8 @@ import java.math.BigDecimal;
 import java.util.*;
 
 @RestController
-@RequestMapping("/com/haust/shop/admin/dashboard")
+@RequestMapping("/admin/dashboard")
+@ShenyuSpringMvcClient("/admin/dashboard/**")
 @Validated
 public class AdminDashbordController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminDashbordController.class);

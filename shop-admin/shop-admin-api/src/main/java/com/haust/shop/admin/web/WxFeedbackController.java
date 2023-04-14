@@ -10,6 +10,7 @@ import com.haust.service.service.admin.DtsFeedbackService;
 import com.haust.service.service.user.DtsUserService;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/wx/feedback")
+@ShenyuSpringMvcClient("/wx/feedback/**")
 @Validated
 public class WxFeedbackController {
 	private static final Logger logger = LoggerFactory.getLogger(WxFeedbackController.class);

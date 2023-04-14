@@ -11,6 +11,7 @@ import com.haust.service.service.third.DtsStorageService;
 import com.haust.service.service.third.StorageService;
 import com.haust.shop.admin.annotation.RequiresPermissionsDesc;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +27,8 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/com/haust/shop/admin/storage")
+@RequestMapping("/admin/storage")
+@ShenyuSpringMvcClient("/admin/storage/**")
 @Validated
 public class AdminStorageController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminStorageController.class);

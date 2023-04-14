@@ -3,6 +3,7 @@ package com.haust.shop.third.controller;
 import com.haust.common.util.ResponseUtil;
 import com.haust.service.domain.third.DtsRegion;
 import com.haust.service.service.third.DtsRegionService;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/wx/region")
+@ShenyuSpringMvcClient("/wx/region/**")
 @Validated
 public class WxRegionController {
 	private static final Logger logger = LoggerFactory.getLogger(WxRegionController.class);

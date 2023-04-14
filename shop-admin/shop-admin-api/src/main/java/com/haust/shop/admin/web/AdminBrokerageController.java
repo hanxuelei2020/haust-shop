@@ -13,6 +13,7 @@ import com.haust.service.service.user.DtsUserService;
 import com.haust.shop.admin.annotation.RequiresPermissionsDesc;
 import com.haust.shop.admin.util.AuthSupport;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,7 +32,8 @@ import java.util.Map;
  * @QQ 2407411399
  */
 @RestController
-@RequestMapping("/com/haust/shop/admin/brokerage")
+@RequestMapping("/admin/brokerage")
+@ShenyuSpringMvcClient("/admin/brokerage/**")
 @Validated
 public class AdminBrokerageController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminBrokerageController.class);

@@ -25,6 +25,7 @@ import com.haust.service.service.product.DtsGrouponRulesService;
 import com.haust.service.service.user.DtsAddressService;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +46,7 @@ import static com.haust.common.type.WxResponseCode.*;
  */
 @RestController
 @RequestMapping("/wx/cart")
+@ShenyuSpringMvcClient("/wx/cart/**")
 @Validated
 public class WxCartController {
 	private static final Logger logger = LoggerFactory.getLogger(WxCartController.class);

@@ -12,6 +12,7 @@ import com.haust.service.service.admin.DtsAdminService;
 import com.haust.shop.admin.annotation.RequiresPermissionsDesc;
 import com.haust.shop.admin.util.AdminResponseUtil;
 import com.haust.shop.admin.util.AuthSupport;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,7 +29,8 @@ import java.util.Map;
 import static com.haust.shop.admin.util.AdminResponseCode.*;
 
 @RestController
-@RequestMapping("/com/haust/shop/admin/admin")
+@RequestMapping("/admin/admin")
+@ShenyuSpringMvcClient("/admin/admin/**")
 @Validated
 public class AdminAdminController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminAdminController.class);

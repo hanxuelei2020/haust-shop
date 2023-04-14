@@ -10,6 +10,7 @@ import com.haust.service.service.product.DtsAdService;
 import com.haust.shop.admin.annotation.RequiresPermissionsDesc;
 import com.haust.shop.admin.util.AuthSupport;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,8 +24,9 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/com/haust/shop/admin/ad")
+@RequestMapping("/admin/ad")
 @Validated
+@ShenyuSpringMvcClient("/admin/ad/**")
 public class AdminAdController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminAdController.class);
 

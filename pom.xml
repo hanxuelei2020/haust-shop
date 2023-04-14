@@ -26,6 +26,7 @@
         <swagger-models.version>1.5.22</swagger-models.version>
         <swagger-bootstrap-ui.version>1.9.3</swagger-bootstrap-ui.version>
         <spring-javaformat.version>0.0.22</spring-javaformat.version>
+        <shenyu.version>2.5.1</shenyu.version>
 	</properties>
     
 	<modules>
@@ -60,11 +61,32 @@
   
 	<dependencyManagement>
 		<dependencies>
+            <!--if you use http proxy start this-->
+            <dependency>
+                <groupId>org.apache.shenyu</groupId>
+                <artifactId>shenyu-spring-boot-starter-client-springmvc</artifactId>
+                <version>${shenyu.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.shenyu</groupId>
+                <artifactId>shenyu-register-client-nacos</artifactId>
+                <version>${shenyu.version}</version>
+            </dependency>
+
             <!-- Spring Boot -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--spring cloud-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

@@ -2,6 +2,7 @@ package com.haust.shop.admin.web;
 
 import com.haust.shop.admin.annotation.RequiresPermissionsDesc;
 import com.haust.common.util.ResponseUtil;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.authz.annotation.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,7 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/com/haust/shop/admin/index")
+@RequestMapping("/admin/index")
+@ShenyuSpringMvcClient("/admin/index/**")
 public class AdminIndexController {
 
 	@RequestMapping("/index")
@@ -36,7 +38,7 @@ public class AdminIndexController {
 	}
 
 	@RequiresRoles("com/haust/shop/admin")
-	@RequestMapping("/com/haust/shop/admin")
+	@RequestMapping("/admin")
 	public Object admin() {
 		return ResponseUtil.ok("hello world, this is admin service");
 	}

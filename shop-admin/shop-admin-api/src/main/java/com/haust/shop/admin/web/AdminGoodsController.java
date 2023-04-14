@@ -10,6 +10,7 @@ import com.haust.shop.admin.domain.GoodsAllinone;
 import com.haust.shop.admin.service.AdminDataAuthService;
 import com.haust.shop.admin.service.AdminGoodsService;
 import com.haust.shop.admin.util.AuthSupport;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +24,8 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/com/haust/shop/admin/goods")
+@RequestMapping("/admin/goods")
+@ShenyuSpringMvcClient("/admin/goods/**")
 @Validated
 public class AdminGoodsController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminGoodsController.class);

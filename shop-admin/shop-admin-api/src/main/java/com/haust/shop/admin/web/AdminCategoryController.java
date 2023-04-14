@@ -10,6 +10,7 @@ import com.haust.service.service.product.DtsCategoryService;
 import com.haust.shop.admin.annotation.RequiresPermissionsDesc;
 import com.haust.shop.admin.util.AuthSupport;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +25,8 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/com/haust/shop/admin/category")
+@RequestMapping("/admin/category")
+@ShenyuSpringMvcClient("/admin/category/**")
 @Validated
 public class AdminCategoryController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminCategoryController.class);

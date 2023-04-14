@@ -11,6 +11,7 @@ import com.haust.shop.admin.annotation.RequiresPermissionsDesc;
 import com.haust.shop.admin.util.AdminResponseUtil;
 import com.haust.shop.admin.util.ArticleType;
 import com.haust.shop.admin.util.AuthSupport;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +31,8 @@ import static com.haust.shop.admin.util.AdminResponseCode.ARTICLE_NAME_EXIST;
  * 公告管理
  */
 @RestController
-@RequestMapping("/com/haust/shop/admin/article")
+@RequestMapping("/admin/article")
+@ShenyuSpringMvcClient("/admin/article/**")
 @Validated
 public class AdminArticleController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminArticleController.class);

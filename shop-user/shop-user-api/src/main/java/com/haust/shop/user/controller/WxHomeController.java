@@ -16,6 +16,7 @@ import com.haust.service.service.product.DtsBrandService;
 import com.haust.service.service.product.DtsCategoryService;
 import com.haust.service.service.product.DtsGoodsService;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.validation.annotation.Validated;
@@ -36,6 +37,7 @@ import java.util.concurrent.*;
  */
 @RestController
 @RequestMapping("/wx/home")
+@ShenyuSpringMvcClient("/wx/home/**")
 @Validated
 public class WxHomeController {
 	private static final Logger logger = LoggerFactory.getLogger(WxHomeController.class);

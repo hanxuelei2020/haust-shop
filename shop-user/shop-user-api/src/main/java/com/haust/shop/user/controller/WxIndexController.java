@@ -1,6 +1,7 @@
 package com.haust.shop.user.controller;
 
 import com.haust.common.util.ResponseUtil;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/wx/index")
+@ShenyuSpringMvcClient("/wx/index/**")
 public class WxIndexController {
 
 	/**

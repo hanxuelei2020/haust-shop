@@ -5,43 +5,81 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6101a212-168a-445f-96ec-70fdd432f1f0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/AdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/AdminApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/config/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminAdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminAdController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminAddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminAddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminAuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminBrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminBrandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminBrokerageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminBrokerageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminCategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminCollectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminCollectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminCommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminCommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminCouponController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminCouponController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminDashbordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminDashbordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminFeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminFeedbackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminFootprintController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminFootprintController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminGoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminGoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminGrouponController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminGrouponController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminHistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminIndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminIndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminIssueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminIssueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminKeywordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminKeywordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminRegionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminRegionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminStatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminStatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminStorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminStorageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminTopicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminTopicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/WxArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/WxArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/WxFeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/WxFeedbackController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/java/com/haust/shop/admin/AdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/java/com/haust/shop/admin/AdminRpcApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/java/com/haust/shop/cart/CartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/java/com/haust/shop/cart/CartApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-cart/shop-cart-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-cart/shop-cart-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/java/com/haust/shop/cart/controller/WxCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/java/com/haust/shop/cart/controller/WxCartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-cart/shop-cart-rpc/src/main/java/com/haust/shop/cart/CartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-cart/shop-cart-rpc/src/main/java/com/haust/shop/cart/CartRpcApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-cart/shop-cart-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-cart/shop-cart-rpc/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/src/main/java/com/haust/shop/coupon/CouponApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/src/main/java/com/haust/shop/coupon/CouponApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/src/main/java/com/haust/shop/coupon/controller/WxCouponController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/src/main/java/com/haust/shop/coupon/controller/WxCouponController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-coupon/shop-coupon-rpc/src/main/java/com/haust/shop/coupon/CouponApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-coupon/shop-coupon-rpc/src/main/java/com/haust/shop/coupon/CouponRpcApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-coupon/shop-coupon-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-coupon/shop-coupon-rpc/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-groupon/shop-groupon-api/src/main/java/com/haust/shop/groupon/GrouponApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-groupon/shop-groupon-api/src/main/java/com/haust/shop/groupon/GrouponApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-groupon/shop-groupon-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-groupon/shop-groupon-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-groupon/shop-groupon-api/src/main/java/com/haust/shop/groupon/controller/WxGrouponController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-groupon/shop-groupon-api/src/main/java/com/haust/shop/groupon/controller/WxGrouponController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-groupon/shop-groupon-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-groupon/shop-groupon-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-groupon/shop-groupon-rpc/src/main/java/com/haust/shop/groupon/GrouponApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-groupon/shop-groupon-rpc/src/main/java/com/haust/shop/groupon/GrouponRpcApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-groupon/shop-groupon-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-groupon/shop-groupon-rpc/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/java/com/haust/shop/order/OrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/java/com/haust/shop/order/OrderApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-order/shop-order-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-order/shop-order-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/java/com/haust/shop/order/controller/WxOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/java/com/haust/shop/order/controller/WxOrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java/com/haust/shop/order/OrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java/com/haust/shop/order/OrderRpcApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/java/com/haust/shop/product/ProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/java/com/haust/shop/product/ProductApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-product/shop-product-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-product/shop-product-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/java/com/haust/shop/product/controller/WxBrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/java/com/haust/shop/product/controller/WxBrandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/java/com/haust/shop/product/controller/WxCatalogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/java/com/haust/shop/product/controller/WxCatalogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/java/com/haust/shop/product/controller/WxGoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/java/com/haust/shop/product/controller/WxGoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/java/com/haust/shop/product/controller/WxTopicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/java/com/haust/shop/product/controller/WxTopicController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-product/shop-product-rpc/src/main/java/com/haust/shop/product/ProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-product/shop-product-rpc/src/main/java/com/haust/shop/product/ProductRpcApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-product/shop-product-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-product/shop-product-rpc/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-search/shop-search-api/src/main/java/com/haust/shop/search/SearchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-search/shop-search-api/src/main/java/com/haust/shop/search/SearchApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-search/shop-search-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-search/shop-search-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-search/shop-search-api/src/main/java/com/haust/shop/search/controller/WxSearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-search/shop-search-api/src/main/java/com/haust/shop/search/controller/WxSearchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-search/shop-search-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-search/shop-search-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-search/shop-search-rpc/src/main/java/com/haust/shop/search/SearchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-search/shop-search-rpc/src/main/java/com/haust/shop/search/SearchRpcApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-search/shop-search-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-search/shop-search-rpc/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-system/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-system/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-third-party/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/controller/WxRegionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/controller/WxRegionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/controller/WxStorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/controller/WxStorageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-third-party/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/UserApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxAddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxAddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxAgencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxAgencyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxAuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxBrokerageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxBrokerageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxCollectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxCollectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxCommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxCommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxFootprintController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxFootprintController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxHomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxIndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxIndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxUserFormId.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxUserFormId.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/UserRpcApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,11 +120,6 @@
         <option name="userSettingsFile" value="D:\apache-maven-3.8.6-bin\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectId" id="23Mw411erPh49qHhmrt0EmyGh1S" />
   <component name="ProjectViewState">
@@ -103,7 +136,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/JavaProject/Graduation Information/java/haust-shop2/shop-admin/shop-admin-api/src/main/resources",
+    "last_opened_file_path": "D:/JavaProject/shop-gateway",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -113,7 +146,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.27598897",
     "settings.editor.selected.configurable": "http.proxy",
-    "spring.configuration.checksum": "244ebf8cade1d3b2a8f2854f97a8bb4d",
+    "spring.configuration.checksum": "7765d333a98d43413179f928dffdb542",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -154,7 +187,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CouponRpcApplication">
+  <component name="RunManager" selected="Spring Boot.ThirdPartyApplication">
     <configuration name="AdminApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-admin-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.admin.AdminApiApplication" />
@@ -257,9 +290,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GrouponRpcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="shop-groupon-rpc" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.groupon.GrouponRpcApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-order-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.order.OrderApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderRpcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="shop-order-rpc" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.order.OrderRpcApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -334,9 +381,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ThirdPartyApplication" />
         <item itemvalue="Spring Boot.AdminRpcApplication" />
         <item itemvalue="Spring Boot.ProductRpcApplication" />
-        <item itemvalue="Spring Boot.ThirdPartyApplication" />
         <item itemvalue="Spring Boot.AdminApplication" />
         <item itemvalue="Spring Boot.CouponApplication" />
       </list>
@@ -369,7 +416,10 @@
       <workItem from="1680888056274" duration="16557000" />
       <workItem from="1680967024753" duration="8942000" />
       <workItem from="1681011603330" duration="24664000" />
-      <workItem from="1681050451564" duration="6407000" />
+      <workItem from="1681050451564" duration="6477000" />
+      <workItem from="1681311407618" duration="1939000" />
+      <workItem from="1681394271879" duration="8556000" />
+      <workItem from="1681476371409" duration="11457000" />
     </task>
     <servers />
   </component>
@@ -383,6 +433,16 @@
           <url>file://$PROJECT_DIR$/shop-system/src/main/java/com/haust/shop/system/aspect/DtsSystemConfigService.java</url>
           <line>19</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../LocalRepository/org/apache/shenyu/shenyu-register-client-http/2.5.1/shenyu-register-client-http-2.5.1.jar!/org/apache/shenyu/register/client/http/utils/RegisterUtils.class</url>
+          <line>44</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../LocalRepository/org/apache/shenyu/shenyu-register-client-http/2.5.1/shenyu-register-client-http-2.5.1.jar!/org/apache/shenyu/register/client/http/utils/RegisterUtils.class</url>
+          <line>26</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

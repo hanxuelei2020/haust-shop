@@ -8,6 +8,7 @@ import com.haust.service.domain.user.DtsUserFormid;
 import com.haust.service.service.third.DtsFormUserIdService;
 import com.haust.service.service.user.DtsUserService;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ import java.time.LocalDateTime;
 
 @RestController
 @RequestMapping("/wx/formid")
+@ShenyuSpringMvcClient("/wx/formid/**")
 @Validated
 public class WxUserFormId {
 	private static final Logger logger = LoggerFactory.getLogger(WxUserFormId.class);

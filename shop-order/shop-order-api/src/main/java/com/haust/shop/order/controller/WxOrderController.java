@@ -2,6 +2,7 @@ package com.haust.shop.order.controller;
 
 import com.haust.common.validator.LoginUser;
 import com.haust.service.service.order.WxOrderService;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import javax.validation.constraints.NotNull;
 
 @RestController
 @RequestMapping("/wx/order")
+@ShenyuSpringMvcClient("/wx/order/**")
 @Validated
 public class WxOrderController {
 	private static final Logger logger = LoggerFactory.getLogger(WxOrderController.class);

@@ -10,6 +10,7 @@ import com.haust.common.validator.Sort;
 import com.haust.service.domain.search.DtsKeyword;
 import com.haust.service.service.search.DtsKeywordService;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +24,8 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/com/haust/shop/admin/keyword")
+@RequestMapping("/admin/keyword")
+@ShenyuSpringMvcClient("/admin/keyword/**")
 @Validated
 public class AdminKeywordController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminKeywordController.class);

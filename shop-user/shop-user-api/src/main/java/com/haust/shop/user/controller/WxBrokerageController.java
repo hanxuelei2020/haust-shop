@@ -15,6 +15,7 @@ import com.haust.service.service.order.WxOrderService;
 import com.haust.service.service.user.DtsAccountService;
 import com.haust.shop.user.service.impl.DtsAccountServiceImpl;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/wx/brokerage")
+@ShenyuSpringMvcClient("/wx/brokerage/**")
 @Validated
 public class WxBrokerageController {
 	private static final Logger logger = LoggerFactory.getLogger(WxBrokerageController.class);

@@ -1,6 +1,5 @@
 package com.haust.shop.admin.web;
 
-import admin.util.*;
 import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageInfo;
 import com.haust.common.util.JacksonUtil;
@@ -13,6 +12,7 @@ import com.haust.service.service.admin.DtsPermissionService;
 import com.haust.service.service.admin.DtsRoleService;
 import com.haust.shop.admin.annotation.RequiresPermissionsDesc;
 import com.haust.shop.admin.util.*;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,7 +28,8 @@ import java.util.*;
 import static com.haust.shop.admin.util.AdminResponseCode.ROLE_NAME_EXIST;
 
 @RestController
-@RequestMapping("/com/haust/shop/admin/role")
+@RequestMapping("/admin/role")
+@ShenyuSpringMvcClient("/admin/role/**")
 @Validated
 public class AdminRoleController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminRoleController.class);

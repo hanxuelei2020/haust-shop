@@ -3,6 +3,7 @@ package com.haust.shop.admin.web;
 import com.haust.common.util.ResponseUtil;
 import com.haust.service.domain.admin.DtsArticle;
 import com.haust.service.service.admin.DtsArticleService;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ import javax.validation.constraints.NotNull;
  */
 @RestController
 @RequestMapping("/wx/article")
+@ShenyuSpringMvcClient("/wx/article/**")
 @Validated
 public class WxArticleController {
 	private static final Logger logger = LoggerFactory.getLogger(WxArticleController.class);

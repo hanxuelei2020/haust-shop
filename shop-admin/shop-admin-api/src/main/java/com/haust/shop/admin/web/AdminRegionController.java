@@ -9,6 +9,7 @@ import com.haust.common.validator.Sort;
 import com.haust.service.domain.third.DtsRegion;
 import com.haust.service.service.third.DtsRegionService;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.validation.annotation.Validated;
@@ -23,7 +24,8 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/com/haust/shop/admin/region")
+@RequestMapping("/admin/region")
+@ShenyuSpringMvcClient("/admin/region/**")
 @Validated
 public class AdminRegionController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminRegionController.class);

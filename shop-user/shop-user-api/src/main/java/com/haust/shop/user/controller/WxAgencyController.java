@@ -8,6 +8,7 @@ import com.haust.service.domain.user.DtsUser;
 import com.haust.service.service.user.DtsAgencyService;
 import com.haust.service.service.user.DtsUserService;
 import com.haust.service.service.user.WxAgencyService;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/wx/agency")
+@ShenyuSpringMvcClient("/wx/agency/**")
 @Validated
 public class WxAgencyController {
 	private static final Logger logger = LoggerFactory.getLogger(WxAgencyController.class);

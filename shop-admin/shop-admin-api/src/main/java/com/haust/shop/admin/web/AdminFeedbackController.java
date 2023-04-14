@@ -9,6 +9,7 @@ import com.haust.service.domain.admin.DtsFeedback;
 import com.haust.service.service.admin.DtsFeedbackService;
 import com.haust.shop.admin.annotation.RequiresPermissionsDesc;
 import com.haust.shop.admin.util.AuthSupport;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,7 +29,8 @@ import java.util.Map;
  * @QQ 2407411399
  */
 @RestController
-@RequestMapping("/com/haust/shop/admin/feedback")
+@RequestMapping("/admin/feedback")
+@ShenyuSpringMvcClient("/admin/feedback/**")
 @Validated
 public class AdminFeedbackController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminFeedbackController.class);

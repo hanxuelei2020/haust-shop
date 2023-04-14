@@ -7,6 +7,7 @@ import com.haust.service.domain.search.DtsKeyword;
 import com.haust.service.domain.search.DtsSearchHistory;
 import com.haust.service.service.search.DtsKeywordService;
 import com.haust.service.service.search.DtsSearchHistoryService;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/wx/search")
+@ShenyuSpringMvcClient("/wx/search/**")
 @Validated
 public class WxSearchController {
 	private static final Logger logger = LoggerFactory.getLogger(WxSearchController.class);

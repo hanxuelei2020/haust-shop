@@ -15,6 +15,7 @@ import com.haust.service.service.order.DtsGrouponService;
 import com.haust.service.service.product.DtsGoodsService;
 import com.haust.service.service.product.DtsGrouponRulesService;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +31,8 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/com/haust/shop/admin/groupon")
+@RequestMapping("/admin/groupon")
+@ShenyuSpringMvcClient("/admin/groupon/**")
 @Validated
 public class AdminGrouponController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminGrouponController.class);

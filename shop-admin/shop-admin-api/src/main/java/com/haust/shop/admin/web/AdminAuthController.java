@@ -1,6 +1,5 @@
 package com.haust.shop.admin.web;
 
-import admin.util.*;
 import com.alibaba.fastjson.JSONObject;
 import com.haust.common.captcha.CaptchaCodeManager;
 import com.haust.common.util.JacksonUtil;
@@ -9,6 +8,7 @@ import com.haust.service.domain.admin.DtsAdmin;
 import com.haust.service.service.admin.DtsPermissionService;
 import com.haust.service.service.admin.DtsRoleService;
 import com.haust.shop.admin.util.*;
+import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.LockedAccountException;
@@ -30,7 +30,8 @@ import java.io.IOException;
 import java.util.*;
 
 @RestController
-@RequestMapping("/com/haust/shop/admin/auth")
+@RequestMapping("/admin/auth")
+@ShenyuSpringMvcClient("/admin/auth/**")
 @Validated
 public class AdminAuthController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminAuthController.class);
