@@ -136,7 +136,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/JavaProject/shop-gateway",
+    "last_opened_file_path": "D:/JavaProject/Graduation Information/java/haust-shop2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -420,6 +420,7 @@
       <workItem from="1681311407618" duration="1939000" />
       <workItem from="1681394271879" duration="8556000" />
       <workItem from="1681476371409" duration="11457000" />
+      <workItem from="1681489511083" duration="1010000" />
     </task>
     <servers />
   </component>

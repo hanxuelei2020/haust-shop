@@ -132,7 +132,7 @@ mybatis:
 shenyu:
   register:
     registerType: http #zookeeper #etcd #nacos #consul
-    serverLists: http://localhost:9095  #localhost:2181 #http://localhost:2379 #localhost:8848
+    serverLists: http://192.168.88.128:9095  #localhost:2181 #http://localhost:2379 #localhost:8848
     props:
       username: admin
       password: 123456
