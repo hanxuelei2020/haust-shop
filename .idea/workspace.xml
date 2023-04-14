@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6101a212-168a-445f-96ec-70fdd432f1f0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/serialization/MyRedisSerializationContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/service/CacheService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/service/impl/CacheServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -45,6 +48,8 @@
       <change beforePath="$PROJECT_DIR$/shop-cart/shop-cart-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-cart/shop-cart-api/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/java/com/haust/shop/cart/controller/WxCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/java/com/haust/shop/cart/controller/WxCartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-common/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/src/main/java/com/haust/shop/coupon/controller/WxCouponController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/src/main/java/com/haust/shop/coupon/controller/WxCouponController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/src/main/resources/application.yml" afterDir="false" />
@@ -90,8 +95,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -136,7 +141,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/JavaProject/Graduation Information/java/haust-shop2",
+    "last_opened_file_path": "D:/JavaProject/Graduation Information/java/haust-shop2/Environment/docker-compose",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -155,11 +160,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\Environment\docker-compose" />
       <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-admin\shop-admin-api\src\main\resources" />
       <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-user\shop-user-api\src\main\resources" />
       <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-search\shop-search-api\src\main\resources" />
       <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-product\shop-product-api\src\main\resources" />
-      <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-order\shop-order-api\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\JavaProject\Graduation Information\java\haust-shop2\shop-admin\shop-admin-rpc\src\main\resources" />
@@ -420,7 +425,7 @@
       <workItem from="1681311407618" duration="1939000" />
       <workItem from="1681394271879" duration="8556000" />
       <workItem from="1681476371409" duration="11457000" />
-      <workItem from="1681489511083" duration="1010000" />
+      <workItem from="1681489511083" duration="2141000" />
     </task>
     <servers />
   </component>
