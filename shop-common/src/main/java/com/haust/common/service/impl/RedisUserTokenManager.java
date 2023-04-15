@@ -19,6 +19,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -47,16 +48,21 @@ public class RedisUserTokenManager implements UserTokenManager {
 
     @Override
     public Integer getUserId(String token) {
-        Mono<String> userToken = cacheService.getValue(token);
+        // 尝试通过 token 获取 userId
+        String userToken = null;
+        List<String> userId = JWT.decode(token).getAudience();
+        if (userId != null && !userId.isEmpty()) {
+            if (userId.size() == 1) {
+                userToken = cacheService.getValue(RedisPrefix.USER_ID_TOKEN + userId.get(0)).block();
+            }
+        }
 
-        Optional<String> userTokenOption = userToken.blockOptional();
-        if (!userTokenOption.isPresent()) {
+        // 如果用户传递进来的 token 并不能解析出来对应的 userid, 那么直接返回
+        if (userToken == null || !userToken.equals(token)) {
             return null;
         }
-        UserToken res = JSON.parseObject(userTokenOption.get(), new TypeReference<UserToken>() {
-        }.getType());
 
-        return res.getUserId();
+        return Integer.parseInt(userId.get(0));
     }
     @Override
     public UserToken generateToken(Integer id, String sessionKey) {
@@ -70,9 +76,9 @@ public class RedisUserTokenManager implements UserTokenManager {
         JWTCreator.Builder builder = JWT.create();
         // 三十分钟之后失效
         String token = builder.withExpiresAt(expires)
-                .withClaim("updateTime", update)
                 .withClaim("sessionKey", sessionKey)
-                .withAudience("token")
+                .withAudience(String.valueOf(id))
+                .withIssuedAt(update)
                 .sign(Algorithm.HMAC256(jwtSecret));
 
         userToken.setToken(token);
