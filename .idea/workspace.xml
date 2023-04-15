@@ -6,18 +6,29 @@
   <component name="ChangeListManager">
     <list default="true" id="6101a212-168a-445f-96ec-70fdd432f1f0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/haust/shop/db/domain/DtsOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/haust/shop/db/domain/DtsOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-common/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-cart/shop-cart-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-cart/shop-cart-rpc/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-common/src/main/resources/application-demo.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/resources/application-demo.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-common/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-common/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/resources/application-prod.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-coupon/shop-coupon-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-coupon/shop-coupon-rpc/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-groupon/shop-groupon-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-groupon/shop-groupon-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-groupon/shop-groupon-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-groupon/shop-groupon-rpc/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-product/shop-product-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-product/shop-product-rpc/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-search/shop-search-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-search/shop-search-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/order/DtsOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/order/DtsOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/product/DtsAd.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/product/DtsAd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-search/shop-search-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-search/shop-search-rpc/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/coupon/DtsCouponUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/coupon/DtsCouponUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/order/DtsOrderGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/order/DtsOrderGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-system/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-system/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-third-party/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -327,8 +338,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ProductRpcApplication" />
-        <item itemvalue="Spring Boot.ThirdPartyApplication" />
         <item itemvalue="Spring Boot.AdminRpcApplication" />
+        <item itemvalue="Spring Boot.ThirdPartyApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -366,7 +377,7 @@
       <workItem from="1681489511083" duration="4082000" />
       <workItem from="1681530119693" duration="9637000" />
       <workItem from="1681540476800" duration="774000" />
-      <workItem from="1681556380535" duration="4524000" />
+      <workItem from="1681556380535" duration="6480000" />
     </task>
     <servers />
   </component>
@@ -390,6 +401,26 @@
           <url>jar://C:/Program Files/Java/jdk1.8.0_321/src.zip!/java/lang/reflect/Method.java</url>
           <line>489</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/BaseConfig.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxAuthController.java</url>
+          <line>164</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../LocalRepository/com/github/binarywang/weixin-java-miniapp/3.3.0/weixin-java-miniapp-3.3.0.jar!/cn/binarywang/wx/miniapp/api/impl/WxMaUserServiceImpl.class</url>
+          <line>31</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../LocalRepository/com/github/binarywang/weixin-java-miniapp/3.3.0/weixin-java-miniapp-3.3.0.jar!/cn/binarywang/wx/miniapp/api/impl/WxMaServiceImpl.class</url>
+          <line>170</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

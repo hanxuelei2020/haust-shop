@@ -2,6 +2,8 @@ server:
   port: 12002
 
 spring:
+  profiles:
+    active: prod
   datasource:
     druid:
       url:  jdbc:mysql://192.168.88.128:3306/shop_order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull
