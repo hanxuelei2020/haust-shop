@@ -1,8 +1,8 @@
 package com.haust.shop.admin.service.impl;
 
 import com.github.pagehelper.PageHelper;
-import com.haust.service.domain.product.DtsTopic;
-import com.haust.service.domain.product.DtsTopicExample;
+import com.haust.service.domain.admin.DtsTopic;
+import com.haust.service.domain.admin.DtsTopicExample;
 import com.haust.service.service.admin.DtsTopicService;
 
 import com.haust.shop.admin.mapper.DtsTopicMapper;

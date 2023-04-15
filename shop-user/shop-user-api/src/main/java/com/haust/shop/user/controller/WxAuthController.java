@@ -5,7 +5,9 @@ import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
 import cn.binarywang.wx.miniapp.bean.WxMaPhoneNumberInfo;
 import com.alibaba.fastjson.JSONObject;
 import com.haust.common.consts.CommConsts;
+import com.haust.common.model.UserToken;
 import com.haust.common.response.SmsResult;
+import com.haust.common.service.UserTokenManager;
 import com.haust.common.type.NotifyType;
 import com.haust.common.type.UserTypeEnum;
 import com.haust.common.type.WxResponseCode;
@@ -17,10 +19,8 @@ import com.haust.service.service.coupon.CouponAssignService;
 import com.haust.service.service.third.NotifyService;
 import com.haust.service.service.user.DtsUserService;
 import com.haust.shop.user.model.UserInfo;
-import com.haust.shop.user.model.UserToken;
 import com.haust.shop.user.model.WxLoginInfo;
 import com.haust.shop.user.utils.CaptchaCodeManager;
-import com.haust.shop.user.utils.UserTokenManager;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
@@ -59,6 +59,9 @@ public class WxAuthController {
 
 	@Autowired
 	private WxMaService wxService;
+
+	@Autowired
+	private UserTokenManager userTokenManager;
 
 	@DubboReference
 	private NotifyService notifyService;
@@ -123,7 +126,7 @@ public class WxAuthController {
 		// token
 		UserToken userToken = null;
 		try {
-			userToken = UserTokenManager.generateToken(user.getId());
+			userToken = userTokenManager.generateToken(user.getId(), user.getPassword());
 		} catch (Exception e) {
 			logger.error("账户登录失败,生成token失败：{}", user.getId());
 			e.printStackTrace();
@@ -205,7 +208,7 @@ public class WxAuthController {
 		// token
 		UserToken userToken = null;
 		try {
-			userToken = UserTokenManager.generateToken(user.getId());
+			userToken = userTokenManager.generateToken(user.getId(), sessionKey);
 		} catch (Exception e) {
 			logger.error("微信登录失败,生成token失败：{}", user.getId());
 			e.printStackTrace();
@@ -325,9 +328,11 @@ public class WxAuthController {
 		}
 
 		String openId = null;
+		String sessionKey = null;
 		try {
 			WxMaJscode2SessionResult result = wxService.getUserService().getSessionInfo(wxCode);
 			openId = result.getOpenid();
+			sessionKey = result.getSessionKey();
 		} catch (Exception e) {
 			logger.error("请求账号注册出错:{}", WxResponseCode.AUTH_OPENID_UNACCESS.desc());
 			e.printStackTrace();
@@ -381,7 +386,7 @@ public class WxAuthController {
 		// token
 		UserToken userToken = null;
 		try {
-			userToken = UserTokenManager.generateToken(user.getId());
+			userToken = userTokenManager.generateToken(user.getId(), sessionKey);
 		} catch (Exception e) {
 			logger.error("账号注册失败,生成token失败：{}", user.getId());
 			e.printStackTrace();
@@ -463,7 +468,7 @@ public class WxAuthController {
 	public Object bindPhone(@LoginUser Integer userId, @RequestBody String body) {
 		logger.info("【请求开始】绑定手机号码,请求参数，body:{}", body);
 
-		String sessionKey = UserTokenManager.getSessionKey(userId);
+		String sessionKey = userTokenManager.getSessionKey(userId);
 		String encryptedData = JacksonUtil.parseString(body, "encryptedData");
 		String iv = JacksonUtil.parseString(body, "iv");
 		WxMaPhoneNumberInfo phoneNumberInfo = null;
@@ -501,7 +506,7 @@ public class WxAuthController {
 			return ResponseUtil.unlogin();
 		}
 		try {
-			UserTokenManager.removeToken(userId);
+			userTokenManager.removeToken(userId);
 		} catch (Exception e) {
 			logger.error("注销登录出错：userId:{}", userId);
 			e.printStackTrace();

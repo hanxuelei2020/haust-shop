@@ -16,6 +16,7 @@ import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -39,6 +40,8 @@ import java.util.concurrent.*;
 public class WxHomeController {
 	private static final Logger logger = LoggerFactory.getLogger(WxHomeController.class);
 
+	@Autowired
+	private SystemConfig systemConfig;
 	@DubboReference
 	private DtsAdService adService;
 
@@ -129,13 +132,13 @@ public class WxHomeController {
 
 			Callable<List> channelListCallable = () -> categoryService.queryChannel();
 
-			Callable<List> newGoodsListCallable = () -> goodsService.queryByNew(0, SystemConfig.getNewLimit());
+			Callable<List> newGoodsListCallable = () -> goodsService.queryByNew(0, systemConfig.getNewLimit());
 
-			Callable<List> hotGoodsListCallable = () -> goodsService.queryByHot(0, SystemConfig.getHotLimit());
+			Callable<List> hotGoodsListCallable = () -> goodsService.queryByHot(0, systemConfig.getHotLimit());
 
-			Callable<List> brandListCallable = () -> brandService.queryVO(0, SystemConfig.getBrandLimit());
+			Callable<List> brandListCallable = () -> brandService.queryVO(0, systemConfig.getBrandLimit());
 
-			Callable<List> topicListCallable = () -> topicService.queryList(0, SystemConfig.getTopicLimit());
+			Callable<List> topicListCallable = () -> topicService.queryList(0, systemConfig.getTopicLimit());
 
 			// 团购专区
 			Callable<List> grouponListCallable = () -> grouponRulesService.queryList(0, 6);
@@ -190,7 +193,7 @@ public class WxHomeController {
 	@SuppressWarnings("rawtypes")
 	private List<Map> getCategoryList() {
 		List<Map> categoryList = new ArrayList<>();
-		List<DtsCategory> catL1List = categoryService.queryL1WithoutRecommend(0, SystemConfig.getCatlogListLimit());
+		List<DtsCategory> catL1List = categoryService.queryL1WithoutRecommend(0, systemConfig.getCatlogListLimit());
 		for (DtsCategory catL1 : catL1List) {
 			List<DtsCategory> catL2List = categoryService.queryByPid(catL1.getId());
 			List<Integer> l2List = new ArrayList<>();
@@ -202,7 +205,7 @@ public class WxHomeController {
 			if (l2List.size() == 0) {
 				categoryGoods = new ArrayList<>();
 			} else {
-				categoryGoods = goodsService.queryByCategory(l2List, 0, SystemConfig.getCatlogMoreLimit());
+				categoryGoods = goodsService.queryByCategory(l2List, 0, systemConfig.getCatlogMoreLimit());
 			}
 
 			Map<String, Object> catGoods = new HashMap<>();

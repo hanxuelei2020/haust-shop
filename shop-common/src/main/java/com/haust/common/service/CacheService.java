@@ -16,4 +16,5 @@ public interface CacheService {
     public Mono<String> hGet(String key, String field);
     public Mono<Map> hGetAll(String key);
     public Mono<Boolean> setExp(String key, Long expTime);
+    public Mono<Long> delectKey(String key);
 }

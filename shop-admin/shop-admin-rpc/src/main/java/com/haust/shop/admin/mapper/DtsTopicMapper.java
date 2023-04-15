@@ -1,7 +1,7 @@
 package com.haust.shop.admin.mapper;
 
-import com.haust.service.domain.product.DtsTopic;
-import com.haust.service.domain.product.DtsTopicExample;
+import com.haust.service.domain.admin.DtsTopic;
+import com.haust.service.domain.admin.DtsTopicExample;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

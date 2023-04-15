@@ -1,12 +1,18 @@
 package com.haust.shop.system.aspect;
 
 import com.haust.common.config.BaseConfig;
+import com.haust.common.config.RedisPrefix;
+import com.haust.common.service.CacheService;
 import com.haust.shop.system.model.DtsSystem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import reactor.core.publisher.Mono;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 /**
  * 该类用于自动初始化数据库配置到BaseConfig中，以便BaseConfig的子类调用
@@ -16,6 +22,10 @@ public class ConfigService {
 	private static ConfigService systemConfigService;
 	@Autowired
 	private DtsSystemConfigService dtsSystemConfigService;
+
+	// 将数据存储进redis
+	@Autowired
+	private CacheService cacheService;
 
 	// 不允许实例化
 	private ConfigService() {
@@ -50,9 +60,9 @@ public class ConfigService {
 	 * 读取全部配置
 	 */
 	private void inistConfigs() {
-		List<DtsSystem> list = dtsSystemConfigService.queryAll();
-		for (DtsSystem item : list) {
-			BaseConfig.addConfig(item.getKeyName(), item.getKeyValue());
-		}
+		// 构建 map
+		Map<String, String> map = dtsSystemConfigService.queryAll().stream().filter(Objects::nonNull)
+				.collect(Collectors.toMap(DtsSystem::getKeyName, DtsSystem::getKeyValue));
+		cacheService.hMset(RedisPrefix.SYSTEM_CONFIG, map).block();
 	}
 }

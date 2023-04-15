@@ -53,6 +53,9 @@ public class WxCartController {
 
 	@Autowired
 	private DtsCartService cartService;
+
+	@Autowired
+	private SystemConfig systemConfig;
 	@DubboReference
 	private DtsGoodsService goodsService;
 	@DubboReference
@@ -105,7 +108,7 @@ public class WxCartController {
 		Map<String, Object> result = new HashMap<>();
 		result.put("cartTotal", cartTotal);
 
-		if (SystemConfig.isMultiOrderModel()) {// 如果需要拆订单，则需要按店铺显示购物车商品
+		if (systemConfig.isMultiOrderModel()) {// 如果需要拆订单，则需要按店铺显示购物车商品
 			result.put("isMultiOrderModel", 1);
 			List<BrandCartGoods> brandCartgoodsList = new ArrayList<BrandCartGoods>();
 			for (DtsCart cart : cartList) {
@@ -538,7 +541,7 @@ public class WxCartController {
 		BigDecimal totalFreightPrice = new BigDecimal(0.00);// 总配送费 （单店铺模式一个，多店铺模式多个配送费的总和）
 
 		// 如果需要拆订单，则按店铺进行拆分,如果不拆订单，则统一呈现
-		if (SystemConfig.isMultiOrderModel()) {// 需要拆订单，则需要按店铺显示购物车商品
+		if (systemConfig.isMultiOrderModel()) {// 需要拆订单，则需要按店铺显示购物车商品
 			// a.按入驻店铺归类checkout商品
 			List<BrandCartGoods> brandCartgoodsList = new ArrayList<BrandCartGoods>();
 			for (DtsCart cart : checkedGoodsList) {
@@ -579,8 +582,8 @@ public class WxCartController {
 				}
 
 				// 每个店铺都单独计算运费，满xxx则免运费，否则按配置的邮寄费x元计算；
-				if (bandGoodsTotalPrice.compareTo(SystemConfig.getFreightLimit()) < 0) {
-					bandFreightPrice = SystemConfig.getFreight();
+				if (bandGoodsTotalPrice.compareTo(systemConfig.getFreightLimit()) < 0) {
+					bandFreightPrice = systemConfig.getFreight();
 				}
 
 				goodsTotalPrice = goodsTotalPrice.add(bandGoodsTotalPrice);
@@ -609,8 +612,8 @@ public class WxCartController {
 			}
 
 			// 根据订单商品总价计算运费，满66则免运费，否则6元；
-			if (goodsTotalPrice.compareTo(SystemConfig.getFreightLimit()) < 0) {
-				totalFreightPrice = SystemConfig.getFreight();
+			if (goodsTotalPrice.compareTo(systemConfig.getFreightLimit()) < 0) {
+				totalFreightPrice = systemConfig.getFreight();
 			}
 
 			data.put("isMultiOrderModel", 0);

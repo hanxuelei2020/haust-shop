@@ -77,6 +77,9 @@ public class WxOrderServiceImpl implements WxOrderService {
 
     @DubboReference
     private DtsUserService userService;
+
+    @Autowired
+    private SystemConfig systemConfig;
     @DubboReference
     private DtsOrderService orderService;
     @DubboReference
@@ -330,7 +333,7 @@ public class WxOrderServiceImpl implements WxOrderService {
         BigDecimal goodsTotalPrice = new BigDecimal(0.00);// 商品总价 （包含团购减免，即减免团购后的商品总价，多店铺需将所有商品相加）
         BigDecimal totalFreightPrice = new BigDecimal(0.00);// 总配送费 （单店铺模式一个，多店铺模式多个配送费的总和）
         // 如果需要拆订单，则按店铺进行归类，在计算邮费
-        if (SystemConfig.isMultiOrderModel()) {
+        if (systemConfig.isMultiOrderModel()) {
             // a.按入驻店铺归类checkout商品
             List<BrandCartGoods> brandCartgoodsList = new ArrayList<BrandCartGoods>();
             for (DtsCart cart : checkedGoodsList) {
@@ -369,8 +372,8 @@ public class WxOrderServiceImpl implements WxOrderService {
                 }
 
                 // 每个店铺都单独计算运费，满66则免运费，否则6元；
-                if (bandGoodsTotalPrice.compareTo(SystemConfig.getFreightLimit()) < 0) {
-                    bandFreightPrice = SystemConfig.getFreight();
+                if (bandGoodsTotalPrice.compareTo(systemConfig.getFreightLimit()) < 0) {
+                    bandFreightPrice = systemConfig.getFreight();
                 }
                 goodsTotalPrice = goodsTotalPrice.add(bandGoodsTotalPrice);
                 totalFreightPrice = totalFreightPrice.add(bandFreightPrice);
@@ -387,8 +390,8 @@ public class WxOrderServiceImpl implements WxOrderService {
                 }
             }
             // 根据订单商品总价计算运费，满足条件（例如66元）则免运费，否则需要支付运费（例如6元）；
-            if (goodsTotalPrice.compareTo(SystemConfig.getFreightLimit()) < 0) {
-                totalFreightPrice = SystemConfig.getFreight();
+            if (goodsTotalPrice.compareTo(systemConfig.getFreightLimit()) < 0) {
+                totalFreightPrice = systemConfig.getFreight();
             }
         }
 
@@ -762,7 +765,7 @@ public class WxOrderServiceImpl implements WxOrderService {
         // 邮件通知的订单id
         String orderIds = "";
 
-        if (SystemConfig.isMultiOrderModel() && brandOrderGoodsList.size() > 1) {// 如果是多店铺模式，且这个订单确实含有多个店铺商品
+        if (systemConfig.isMultiOrderModel() && brandOrderGoodsList.size() > 1) {// 如果是多店铺模式，且这个订单确实含有多个店铺商品
             logger.info("需要进行拆单：主订单编号：【" + order.getId() + "】 支付编号【" + payId + "】");
             List<DtsOrder> dtsOrders = new ArrayList<DtsOrder>();
 
@@ -791,8 +794,8 @@ public class WxOrderServiceImpl implements WxOrderService {
                     }
                 }
                 // 每个店铺都单独计算运费，满xxx则免运费，否则x元；
-                if (bandGoodsTotalPrice.compareTo(SystemConfig.getFreightLimit()) < 0) {
-                    bandFreightPrice = SystemConfig.getFreight();
+                if (bandGoodsTotalPrice.compareTo(systemConfig.getFreightLimit()) < 0) {
+                    bandFreightPrice = systemConfig.getFreight();
                 }
 
                 childOrder.setGoodsPrice(bandGoodsTotalPrice);

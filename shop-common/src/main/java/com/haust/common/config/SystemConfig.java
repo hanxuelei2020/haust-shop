@@ -1,66 +1,91 @@
 package com.haust.common.config;
 
+import com.haust.common.service.CacheService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+
 import java.math.BigDecimal;
+import java.util.Objects;
 
 /**
  * 系统设置,其他配置请参考该类的实现
  */
+@Configuration
 public class SystemConfig extends BaseConfig {
+
+	private CacheService cacheService;
+
+	public SystemConfig() {
+	}
+
+	public CacheService getCacheService() {
+		return cacheService;
+	}
+
+	@Autowired
+	public void setCacheService(CacheService cacheService) {
+		this.cacheService = cacheService;
+	}
+
+	public SystemConfig(CacheService cacheService) {
+		this.cacheService = cacheService;
+	}
+
 	public static final String PRE_FIX = "dts.system.";
 
-	public static Integer getNewLimit() {
+	public Integer getNewLimit() {
 		return getConfigInt(PRE_FIX + "indexlimit.new");
 	}
 
-	public static Integer getHotLimit() {
+	public Integer getHotLimit() {
 		return getConfigInt(PRE_FIX + "indexlimit.hot");
 	}
 
-	public static Integer getBrandLimit() {
+	public Integer getBrandLimit() {
 		return getConfigInt(PRE_FIX + "indexlimit.brand");
 	}
 
-	public static Integer getTopicLimit() {
+	public Integer getTopicLimit() {
 		return getConfigInt(PRE_FIX + "indexlimit.topic");
 	}
 
-	public static Integer getCatlogListLimit() {
+	public Integer getCatlogListLimit() {
 		return getConfigInt(PRE_FIX + "indexlimit.catloglist");
 	}
 
-	public static Integer getCatlogMoreLimit() {
+	public Integer getCatlogMoreLimit() {
 		return getConfigInt(PRE_FIX + "indexlimit.catloggood");
 	}
 
-	public static String getHotBannerTitle() {
+	public String getHotBannerTitle() {
 		return getConfig(PRE_FIX + "banner.hot.title");
 	}
 
-	public static String getNewBannerTitle() {
+	public String getNewBannerTitle() {
 		return getConfig(PRE_FIX + "banner.new.title");
 	}
 
-	public static String getHotImageUrl() {
+	public String getHotImageUrl() {
 		return getConfig(PRE_FIX + "banner.hot.imageurl");
 	}
 
-	public static String getNewImageUrl() {
+	public String getNewImageUrl() {
 		return getConfig(PRE_FIX + "banner.new.imageurl");
 	}
 
-	public static BigDecimal getFreight() {
+	public BigDecimal getFreight() {
 		return getConfigBigDec(PRE_FIX + "freight.value");
 	}
 
-	public static BigDecimal getFreightLimit() {
+	public BigDecimal getFreightLimit() {
 		return getConfigBigDec(PRE_FIX + "freight.limit");
 	}
 
-	public static String getMallName() {
+	public String getMallName() {
 		return getConfig(PRE_FIX + "mallname");
 	}
 
-	public static boolean isAutoCreateShareImage() {
+	public boolean isAutoCreateShareImage() {
 		int autoCreate = getConfigInt(PRE_FIX + "shareimage.autocreate");
 		return autoCreate == 0 ? false : true;
 	}
@@ -70,9 +95,13 @@ public class SystemConfig extends BaseConfig {
 	 * 
 	 * @return
 	 */
-	public static boolean isMultiOrderModel() {
+	public boolean isMultiOrderModel() {
 		int multiOrderModel = getConfigInt(PRE_FIX + "multi.order.model");
 		return multiOrderModel == 0 ? false : true;
+	}
+
+	public Integer getConfigInt(String key) {
+		return Integer.parseInt(Objects.requireNonNull(cacheService.hGet(RedisPrefix.SYSTEM_CONFIG, key).block()));
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package com.haust.service.domain.product;
+package com.haust.service.domain.admin;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

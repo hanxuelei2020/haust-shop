@@ -6,7 +6,7 @@ import com.github.pagehelper.PageInfo;
 import com.haust.common.util.ResponseUtil;
 import com.haust.common.validator.Order;
 import com.haust.common.validator.Sort;
-import com.haust.service.domain.product.DtsTopic;
+import com.haust.service.domain.admin.DtsTopic;
 import com.haust.service.service.admin.DtsTopicService;
 import com.haust.service.service.third.QCodeService;
 import com.haust.shop.admin.annotation.RequiresPermissionsDesc;

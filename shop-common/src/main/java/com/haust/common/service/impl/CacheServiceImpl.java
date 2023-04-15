@@ -13,11 +13,9 @@ import java.time.temporal.ChronoUnit;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@Service
 public class CacheServiceImpl implements CacheService {
     private ReactiveRedisTemplate redisTemplate;
 
-    @Autowired
     public void setRedisTemplate(ReactiveRedisTemplate reactiveRedisTemplate) {
         this.redisTemplate = reactiveRedisTemplate;
     }
@@ -96,5 +94,10 @@ public class CacheServiceImpl implements CacheService {
     @Override
     public Mono<Boolean> setExp(String key, Long expTime) {
         return redisTemplate.expire(key, Duration.ofMinutes(expTime));
+    }
+
+    @Override
+    public Mono<Long> delectKey(String key) {
+        return redisTemplate.delete(key);
     }
 }

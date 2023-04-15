@@ -1,6 +1,7 @@
-package com.haust.shop.user.config;
+package com.haust.common.config;
 
-import com.haust.shop.user.support.LoginUserHandlerMethodArgumentResolver;
+import com.haust.common.handler.LoginUserHandlerMethodArgumentResolver;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -13,8 +14,10 @@ import java.util.List;
 */ 
 @Configuration
 public class WxWebMvcConfiguration implements WebMvcConfigurer {
+	@Autowired
+	private LoginUserHandlerMethodArgumentResolver resolver;
 	@Override
 	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
-		argumentResolvers.add(new LoginUserHandlerMethodArgumentResolver());
+		argumentResolvers.add(resolver);
 	}
 }

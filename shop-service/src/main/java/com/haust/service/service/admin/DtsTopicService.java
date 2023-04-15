@@ -1,6 +1,6 @@
 package com.haust.service.service.admin;
 
-import com.haust.service.domain.product.DtsTopic;
+import com.haust.service.domain.admin.DtsTopic;
 
 import java.util.List;
 

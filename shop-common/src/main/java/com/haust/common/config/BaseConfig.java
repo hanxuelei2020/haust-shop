@@ -33,15 +33,6 @@ public abstract class BaseConfig {
 		return configs.get(keyName);
 	}
 
-	/**
-	 * 以Integer类型获取配置值
-	 *
-	 * @param keyName
-	 * @return
-	 */
-	protected static Integer getConfigInt(String keyName) {
-		return Integer.parseInt(configs.get(keyName));
-	}
 
 	/**
 	 * 以BigDecimal类型获取配置值

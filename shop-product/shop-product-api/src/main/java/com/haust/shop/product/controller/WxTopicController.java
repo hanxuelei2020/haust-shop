@@ -5,9 +5,11 @@ import com.haust.common.util.ResponseUtil;
 import com.haust.common.validator.Order;
 import com.haust.common.validator.Sort;
 import com.haust.service.domain.product.DtsGoods;
-import com.haust.service.domain.product.DtsTopic;
+import com.haust.service.domain.admin.DtsTopic;
 import com.haust.service.service.admin.DtsTopicService;
 import com.haust.service.service.product.DtsGoodsService;
+import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,7 +36,7 @@ import java.util.Map;
 public class WxTopicController {
 	private static final Logger logger = LoggerFactory.getLogger(WxTopicController.class);
 
-	@Autowired
+	@DubboReference
 	private DtsTopicService topicService;
 	@Autowired
 	private DtsGoodsService goodsService;

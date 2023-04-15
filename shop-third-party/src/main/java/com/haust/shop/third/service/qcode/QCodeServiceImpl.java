@@ -32,6 +32,8 @@ public class QCodeServiceImpl implements QCodeService {
 	
 	@Autowired
 	WxMaService wxMaService;
+	@Autowired
+	private SystemConfig systemConfig;
 
 	@Autowired
 	private StorageService storageService;
@@ -70,7 +72,7 @@ public class QCodeServiceImpl implements QCodeService {
 	 * @param goodName
 	 */
 	public String createGoodShareImage(Integer shareUserId,String goodId, String goodPicUrl, String goodName,BigDecimal counterPrice,BigDecimal retailPrice) {
-		if (!SystemConfig.isAutoCreateShareImage())
+		if (!systemConfig.isAutoCreateShareImage())
 			return "";
 		try {
 			// 创建该商品的二维码
@@ -287,7 +289,7 @@ public class QCodeServiceImpl implements QCodeService {
 	 * @return
 	 */
 	public String createShareTopicImage(Integer topicId, String picUrl, String subtitle, BigDecimal price) {
-		if (!SystemConfig.isAutoCreateShareImage())
+		if (!systemConfig.isAutoCreateShareImage())
 			return "";
 		try {
 			// 创建该商品的二维码
@@ -369,7 +371,7 @@ public class QCodeServiceImpl implements QCodeService {
 	 * @return
 	 */
 	public String createBrandImage(Integer shareUserId,Integer brandId, String picUrl, String name, String defaultCategory) {
-		if (!SystemConfig.isAutoCreateShareImage())
+		if (!systemConfig.isAutoCreateShareImage())
 			return "";
 		try {
 			// 创建该商品的二维码
