@@ -29,7 +29,8 @@ dubbo:
     name: shop-coupon-rpc
   protocol:
     name: dubbo
-    port: 10003
+    port: -1
+    host: 0.0.0.0
   registry:
     address: nacos://192.168.88.128:8848
     username: nacos

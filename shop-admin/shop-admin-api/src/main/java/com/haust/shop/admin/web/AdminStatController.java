@@ -11,6 +11,7 @@ import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +28,7 @@ import java.util.Map;
 public class AdminStatController {
 	private static final Logger logger = LoggerFactory.getLogger(AdminStatController.class);
 
-	@DubboReference
+	@Autowired
 	private StatService statService;
 
 	@RequiresPermissions("admin:stat:user")

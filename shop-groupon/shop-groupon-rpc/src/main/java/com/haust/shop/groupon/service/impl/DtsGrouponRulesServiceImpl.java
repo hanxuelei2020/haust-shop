@@ -8,6 +8,7 @@ import com.haust.service.domain.product.DtsGoods;
 import com.haust.service.service.product.DtsGrouponRulesService;
 import com.haust.shop.groupon.mapper.DtsGrouponRulesMapper;
 import com.haust.shop.groupon.mapper.GrouponMapperEx;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 @Service
+@DubboService
 public class DtsGrouponRulesServiceImpl implements DtsGrouponRulesService {
 	@Autowired
 	private DtsGrouponRulesMapper mapper;

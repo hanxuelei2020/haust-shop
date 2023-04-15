@@ -11,10 +11,7 @@ import com.haust.service.service.admin.DtsArticleService;
 import com.haust.service.service.admin.DtsTopicService;
 import com.haust.service.service.coupon.DtsCouponService;
 import com.haust.service.service.order.DtoGrouponRulesService;
-import com.haust.service.service.product.DtsAdService;
-import com.haust.service.service.product.DtsBrandService;
-import com.haust.service.service.product.DtsCategoryService;
-import com.haust.service.service.product.DtsGoodsService;
+import com.haust.service.service.product.*;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
@@ -58,7 +55,7 @@ public class WxHomeController {
 	private DtsCategoryService categoryService;
 
 	@DubboReference
-	private DtoGrouponRulesService grouponRulesService;
+	private DtsGrouponRulesService grouponRulesService;
 
 	@DubboReference
 	private DtsCouponService couponService;
