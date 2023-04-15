@@ -11,6 +11,10 @@ dubbo:
     address: nacos://192.168.88.128:8848
     username: nacos
     password: nacos
+# 如果 这里配置了, 那么 common 就不要配置了, 不然会重复
+# 而且,如果 common 中也存在 xml,就需要使用 classpath*
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
 
 spring:
   datasource:

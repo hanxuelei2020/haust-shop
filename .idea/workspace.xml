@@ -5,33 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6101a212-168a-445f-96ec-70fdd432f1f0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/java/com/haust/shop/admin/mapper/StatMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/java/com/haust/shop/admin/service/impl/StatServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/StatMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminStatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminStatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/haust/shop/db/domain/DtsOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/haust/shop/db/domain/DtsOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/java/com/haust/shop/admin/AdminRpcApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/java/com/haust/shop/admin/AdminRpcApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/DtsAdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/DtsAdminMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/DtsArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/DtsArticleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/DtsFeedbackMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/DtsFeedbackMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/DtsIssueMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/DtsIssueMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/DtsPermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/DtsPermissionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/DtsRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/DtsRoleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/DtsTopicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/DtsTopicMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-cart/shop-cart-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-cart/shop-cart-rpc/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-common/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-coupon/shop-coupon-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-coupon/shop-coupon-rpc/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-coupon/shop-coupon-rpc/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-groupon/shop-groupon-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-groupon/shop-groupon-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-groupon/shop-groupon-rpc/src/main/java/com/haust/shop/groupon/service/impl/DtsGrouponRulesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-groupon/shop-groupon-rpc/src/main/java/com/haust/shop/groupon/service/impl/DtsGrouponRulesServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/java/com/haust/shop/product/ProductApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/java/com/haust/shop/product/ProductApiApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-product/shop-product-rpc/src/main/java/com/haust/shop/product/ProductRpcApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-product/shop-product-rpc/src/main/java/com/haust/shop/product/ProductRpcApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-search/shop-search-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-search/shop-search-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxHomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/order/DtsOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/order/DtsOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/product/DtsAd.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/product/DtsAd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,30 +64,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/JavaProject/Graduation Information/java/haust-shop2/shop-admin/shop-admin-rpc/src/main/resources/mapper",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.27598897",
-    "settings.editor.selected.configurable": "http.proxy",
-    "spring.configuration.checksum": "7765d333a98d43413179f928dffdb542",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JavaProject/shop-gateway&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.27598897&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;7765d333a98d43413179f928dffdb542&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -144,6 +129,7 @@
     <configuration name="AdminApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-admin-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.admin.AdminApiApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -151,6 +137,7 @@
     <configuration name="AdminRpcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="shop-admin-rpc" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.admin.AdminRpcApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.haust.shop.admin.*" />
@@ -178,6 +165,7 @@
     <configuration name="CartApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-cart-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.cart.CartApiApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -185,6 +173,7 @@
     <configuration name="CartRpcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-cart-rpc" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.cart.CartRpcApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -192,6 +181,7 @@
     <configuration name="CouponApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-coupon-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.coupon.CouponApiApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -199,6 +189,7 @@
     <configuration name="CouponRpcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-coupon-rpc" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.coupon.CouponRpcApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -206,6 +197,7 @@
     <configuration name="GrouponApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-groupon-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.groupon.GrouponApiApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -213,6 +205,7 @@
     <configuration name="GrouponRpcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-groupon-rpc" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.groupon.GrouponRpcApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -220,6 +213,7 @@
     <configuration name="OrderApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-order-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.order.OrderApiApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -227,6 +221,7 @@
     <configuration name="OrderRpcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-order-rpc" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.order.OrderRpcApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -234,6 +229,7 @@
     <configuration name="ProductApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-product-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.product.ProductApiApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -241,6 +237,7 @@
     <configuration name="ProductRpcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="shop-product-rpc" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.product.ProductRpcApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.haust.shop.product.*" />
@@ -254,6 +251,7 @@
     <configuration name="SearchApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-search-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.search.SearchApiApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -261,6 +259,7 @@
     <configuration name="SearchRpcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-search-rpc" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.search.SearchRpcApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -268,6 +267,7 @@
     <configuration name="SystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-system" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.system.SystemApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -275,6 +275,7 @@
     <configuration name="ThirdPartyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="shop-third-party" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.third.ThirdPartyApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.haust.shop.third.*" />
@@ -288,6 +289,7 @@
     <configuration name="UserApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-user-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.user.UserApiApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -295,12 +297,14 @@
     <configuration name="UserRpcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shop-user-rpc" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.haust.shop.user.UserRpcApplication" />
+      <option name="VM_PARAMETERS" value="-Xms500m -Xmx500m" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Spring Boot.AdminApiApplication" />
+      <item itemvalue="Spring Boot.UserApiApplication" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.Application (1)" />
       <item itemvalue="Spring Boot.CartApiApplication" />
@@ -315,7 +319,6 @@
       <item itemvalue="Spring Boot.SearchApiApplication" />
       <item itemvalue="Spring Boot.SearchRpcApplication" />
       <item itemvalue="Spring Boot.SystemApplication" />
-      <item itemvalue="Spring Boot.UserApiApplication" />
       <item itemvalue="Spring Boot.UserRpcApplication" />
       <item itemvalue="Spring Boot.AdminRpcApplication" />
       <item itemvalue="Spring Boot.ProductRpcApplication" />
@@ -323,9 +326,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.AdminRpcApplication" />
         <item itemvalue="Spring Boot.ProductRpcApplication" />
         <item itemvalue="Spring Boot.ThirdPartyApplication" />
+        <item itemvalue="Spring Boot.AdminRpcApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -361,7 +364,9 @@
       <workItem from="1681394271879" duration="8556000" />
       <workItem from="1681476371409" duration="11457000" />
       <workItem from="1681489511083" duration="4082000" />
-      <workItem from="1681530119693" duration="7193000" />
+      <workItem from="1681530119693" duration="9637000" />
+      <workItem from="1681540476800" duration="774000" />
+      <workItem from="1681556380535" duration="4524000" />
     </task>
     <servers />
   </component>
@@ -372,11 +377,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/shop-system/src/main/java/com/haust/shop/system/aspect/DtsSystemConfigService.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar://$PROJECT_DIR$/../../../../LocalRepository/org/apache/shenyu/shenyu-register-client-http/2.5.1/shenyu-register-client-http-2.5.1.jar!/org/apache/shenyu/register/client/http/utils/RegisterUtils.class</url>
           <line>44</line>
           <option name="timeStamp" value="3" />
@@ -386,7 +386,17 @@
           <line>26</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_321/src.zip!/java/lang/reflect/Method.java</url>
+          <line>489</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.haust.service.domain.product.DtsGoodsExample" memberName="oredCriteria" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
