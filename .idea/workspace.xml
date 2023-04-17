@@ -5,58 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6101a212-168a-445f-96ec-70fdd432f1f0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/CommonApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/RedisPrefix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/model/UserToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/service/UserTokenManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/service/impl/RedisUserTokenManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/RocketMqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/consts/RocketMqConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java/com/haust/shop/order/config/RocketMqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java/com/haust/shop/order/mapper/SettlementOrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java/com/haust/shop/order/service/Impl/SettlementOrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/resources/mapper/SettlementOrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/order/SettlementOrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminTopicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminTopicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/java/com/haust/shop/admin/mapper/DtsTopicMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/java/com/haust/shop/admin/mapper/DtsTopicMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/java/com/haust/shop/admin/service/impl/DtsTopicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/java/com/haust/shop/admin/service/impl/DtsTopicServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/DtsTopicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-rpc/src/main/resources/mapper/DtsTopicMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/java/com/haust/shop/cart/controller/WxCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-cart/shop-cart-api/src/main/java/com/haust/shop/cart/controller/WxCartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/BaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/BaseConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/SystemConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/SystemConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/service/CacheService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/service/CacheService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/service/impl/CacheServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/service/impl/CacheServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/service/impl/RedisUserTokenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/service/impl/RedisUserTokenManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/type/WxResponseCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/type/WxResponseCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/java/com/haust/shop/order/service/impl/WxOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/java/com/haust/shop/order/service/impl/WxOrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/java/com/haust/shop/product/controller/WxTopicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-product/shop-product-api/src/main/java/com/haust/shop/product/controller/WxTopicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-product/shop-product-rpc/src/main/java/com/haust/shop/product/mapper/DtsTopicMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-product/shop-product-rpc/src/main/java/com/haust/shop/product/service/impl/DtsTopicServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-product/shop-product-rpc/src/main/resources/mapper/DtsTopicMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/admin/DtsArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/admin/DtsArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/admin/DtsIssue.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/admin/DtsIssue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/product/DtsBrand.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/product/DtsBrand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/product/DtsGoods.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/product/DtsGoods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/product/DtsTopic.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/admin/DtsTopic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/product/DtsTopicExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/admin/DtsTopicExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/admin/DtsTopicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/admin/DtsTopicService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-system/src/main/java/com/haust/shop/system/aspect/ConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-system/src/main/java/com/haust/shop/system/aspect/ConfigService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-system/src/main/java/com/haust/shop/system/aspect/SystemInistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-system/src/main/java/com/haust/shop/system/aspect/SystemInistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/service/qcode/QCodeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-third-party/src/main/java/com/haust/shop/third/service/qcode/QCodeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxAuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxHomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/config/WxWebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/WxWebMvcConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/model/UserToken.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/support/LoginUserHandlerMethodArgumentResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/handler/LoginUserHandlerMethodArgumentResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/utils/UserTokenManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx-haust-shop/pages/auth/accountLogin/accountLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/wx-haust-shop/pages/auth/accountLogin/accountLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx-haust-shop/pages/auth/register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/wx-haust-shop/pages/auth/register/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx-haust-shop/pages/brandDetail/brandDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/wx-haust-shop/pages/brandDetail/brandDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx-haust-shop/pages/brokerage/main/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/wx-haust-shop/pages/brokerage/main/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx-haust-shop/pages/brokerage/withdrawal/withdrawal.js" beforeDir="false" afterPath="$PROJECT_DIR$/wx-haust-shop/pages/brokerage/withdrawal/withdrawal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx-haust-shop/pages/goods/goods.js" beforeDir="false" afterPath="$PROJECT_DIR$/wx-haust-shop/pages/goods/goods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx-haust-shop/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/wx-haust-shop/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx-haust-shop/pages/topicDetail/topicDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/wx-haust-shop/pages/topicDetail/topicDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx-haust-shop/pages/ucenter/expressInfo/expressInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/wx-haust-shop/pages/ucenter/expressInfo/expressInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx-haust-shop/pages/ucenter/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/wx-haust-shop/pages/ucenter/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx-haust-shop/pages/ucenter/main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/wx-haust-shop/pages/ucenter/main/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx-haust-shop/pages/ucenter/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/wx-haust-shop/pages/ucenter/user/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx-haust-shop/utils/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/wx-haust-shop/utils/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wx-haust-shop/utils/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/wx-haust-shop/utils/util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/user/DtsAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/user/DtsAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxBrokerageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxBrokerageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/dao/AccountMapperEx.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/dao/AccountMapperEx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/service/impl/DtsAccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/service/impl/DtsAccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/resources/mapper/AccountMapperEx.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/resources/mapper/AccountMapperEx.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -345,11 +312,11 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.AdminApiApplication" />
+      <item itemvalue="Spring Boot.UserApiApplication" />
       <item itemvalue="Spring Boot.CartApiApplication" />
       <item itemvalue="Spring Boot.SystemApplication" />
       <item itemvalue="Spring Boot.UserRpcApplication" />
       <item itemvalue="Spring Boot.GrouponApiApplication" />
-      <item itemvalue="Spring Boot.UserApiApplication" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.Application (1)" />
       <item itemvalue="Spring Boot.CartRpcApplication" />
@@ -368,8 +335,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.AdminRpcApplication" />
-        <item itemvalue="Spring Boot.ProductRpcApplication" />
         <item itemvalue="Spring Boot.ThirdPartyApplication" />
+        <item itemvalue="Spring Boot.ProductRpcApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -407,7 +374,10 @@
       <workItem from="1681489511083" duration="4082000" />
       <workItem from="1681530119693" duration="9637000" />
       <workItem from="1681540476800" duration="774000" />
-      <workItem from="1681556380535" duration="29742000" />
+      <workItem from="1681556380535" duration="30885000" />
+      <workItem from="1681629416326" duration="1360000" />
+      <workItem from="1681632484390" duration="6606000" />
+      <workItem from="1681735953068" duration="2376000" />
     </task>
     <servers />
   </component>

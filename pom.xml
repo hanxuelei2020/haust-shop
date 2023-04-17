@@ -26,6 +26,7 @@
         <swagger-models.version>1.5.22</swagger-models.version>
         <swagger-bootstrap-ui.version>1.9.3</swagger-bootstrap-ui.version>
         <spring-javaformat.version>0.0.22</spring-javaformat.version>
+        <rocketmq-springboot.version>2.2.2</rocketmq-springboot.version>
         <shenyu.version>2.5.1</shenyu.version>
 <!--        jwt token-->
         <jwt.version>4.2.1</jwt.version>
@@ -63,6 +64,12 @@
   
 	<dependencyManagement>
 		<dependencies>
+<!--            rocket mq-->
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq-springboot.version}</version>
+            </dependency>
             <!-- https://mvnrepository.com/artifact/com.auth0/java-jwt -->
             <dependency>
                 <groupId>com.auth0</groupId>

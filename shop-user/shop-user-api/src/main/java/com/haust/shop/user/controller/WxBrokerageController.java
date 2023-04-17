@@ -11,10 +11,12 @@ import com.haust.common.util.WxResponseUtil;
 import com.haust.common.validator.LoginUser;
 import com.haust.service.domain.user.DtsAccountTrace;
 import com.haust.service.domain.user.DtsUserAccount;
+import com.haust.service.service.order.SettlementOrderService;
 import com.haust.service.service.order.WxOrderService;
 import com.haust.service.service.user.DtsAccountService;
 import com.haust.shop.user.service.impl.DtsAccountServiceImpl;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.apache.shenyu.client.springmvc.annotation.ShenyuSpringMvcClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -51,6 +53,9 @@ public class WxBrokerageController {
 	@DubboReference
 	private WxOrderService wxOrderService;
 
+	@DubboReference
+	private SettlementOrderService settlementOrderService;
+
 	/**
 	 * 用户结算页面数据
 	 * <p>
@@ -79,21 +84,22 @@ public class WxBrokerageController {
 		}
 		
 		//可提现金额 = 已结算未提现 remainAmount + 未结算 unSettleAmount
-		BigDecimal unSettleAmount = accountService.getUnSettleAmount(userId);
+		BigDecimal unSettleAmount = settlementOrderService.getUnSettleAmount(userId);
 		data.put("totalAmount", totalAmount);
 		data.put("remainAmount", remainAmount.add(unSettleAmount));
 
 		// 统计数据信息 本月和上月的结算
 		String lastMonthEndTime = DateTimeUtil.getPrevMonthEndDay() + " 23:59:59";
 		String lastMonthStartTime = DateTimeUtil.getPrevMonthEndDay().substring(0, 7) + "-01 00:00:00";
-		BigDecimal lastMonthSettleMoney = accountService.getMonthSettleMoney(userId, lastMonthStartTime,
+		Integer shardLevelUserId = accountService.getShardLevelUserId(userId);
+		BigDecimal lastMonthSettleMoney = settlementOrderService.getMonthSettleMoney(shardLevelUserId, lastMonthStartTime,
 				lastMonthEndTime);
 
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		String today = sdf.format(new Date());
 		String currMonthEndTime = today + " 23:59:59";
 		String currMonthStartTime = today.substring(0, 7) + "-01 00:00:00";
-		BigDecimal currMonthSettleMoney = accountService.getMonthSettleMoney(userId, currMonthStartTime,
+		BigDecimal currMonthSettleMoney = settlementOrderService.getMonthSettleMoney(shardLevelUserId, currMonthStartTime,
 				currMonthEndTime);
 		data.put("lastMonthSettleMoney", lastMonthSettleMoney);
 		data.put("currMonthSettleMoney", currMonthSettleMoney);
@@ -179,7 +185,7 @@ public class WxBrokerageController {
 		DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 		
 		//获取未结算的金额
-		BigDecimal unSettleAmount = accountService.getUnSettleAmount(userId,startTime.format(df),endTime.format(df));
+		BigDecimal unSettleAmount = settlementOrderService.getUnSettleAmount(userId,startTime.format(df),endTime.format(df));
 		if (unSettleAmount != null && unSettleAmount.compareTo(new BigDecimal(0)) > 0) {
 			accountService.settleApplyTrace(userId, startTime.format(df),endTime.format(df), BrokerageTypeEnum.USER_APPLY.getType().intValue(), unSettleAmount,mobile);
 		}

@@ -43,82 +43,9 @@
     <select id="getShareUserId" resultType="java.lang.Integer" >
        select distinct share_user_id from dts_user t where t.deleted = 0 and t.share_user_id > 0
     </select>
-    
-    <select id="getToSettleMoney" resultType="java.math.BigDecimal" parameterType="map">
-      select sum(t.settlement_money) as total_settlement_money from dts_order t 
-				 where t.deleted = 0 and t.order_status in (401,402) and t.settlement_status = 0 
-				 and t.confirm_time &gt;= STR_TO_DATE(#{startTime},'%Y-%m-%d %H:%i:%s') 
-				 and t.confirm_time &lt;= STR_TO_DATE(#{endTime},'%Y-%m-%d %H:%i:%s')   
-				 and t.user_id in (select id  
-        from dts_user u where (u.id=#{sharedUserId,jdbcType=INTEGER} and u.user_level=2) or (u.share_user_id =#{sharedUserId,jdbcType=INTEGER} and u.user_level &lt; 2)) 
-   </select>
-    
-    <select id="getLastMonthSettleMoney" resultType="java.math.BigDecimal" parameterType="map">
-       select sum(t.settlement_money) as total_settlement_money from dts_order t 
-				 where t.deleted = 0 and t.order_status in (401,402) and t.settlement_status = 0 
-				 and t.confirm_time &gt;= STR_TO_DATE(#{startTime},'%Y-%m-%d %H:%i:%s') 
-				 and t.confirm_time &lt;= STR_TO_DATE(#{endTime},'%Y-%m-%d %H:%i:%s')   
-				 and t.user_id in (select id  
-        from dts_user u where (u.id=#{sharedUserId,jdbcType=INTEGER} and u.user_level=2) or (u.share_user_id =#{sharedUserId,jdbcType=INTEGER} and u.user_level &lt; 2)) 
+    <select id="getLevelShareUserId" resultType="java.lang.Integer">
+        select distinct id from dts_user u where
+               (u.id=#{sharedUserId,jdbcType=INTEGER} and u.user_level=2)
+              or (u.share_user_id =#{sharedUserId,jdbcType=INTEGER} and u.user_level > 2)
     </select>
-    
-    <update id="setLastMonthOrderSettleStaus"  parameterType="map">
-       update dts_order set settlement_status = 1 
-				 where deleted = 0 and order_status in (401,402)
-				 and confirm_time &gt;= STR_TO_DATE(#{startTime},'%Y-%m-%d %H:%i:%s') 
-				 and confirm_time &lt;= STR_TO_DATE(#{endTime},'%Y-%m-%d %H:%i:%s')   
-				 and user_id in (select id  
-        from dts_user u where  (u.id=#{sharedUserId,jdbcType=INTEGER} and u.user_level=2) or (u.share_user_id =#{sharedUserId,jdbcType=INTEGER} and u.user_level &lt; 2)) 
-    </update>
-    
-    <select id="staticMonthSettleMoney" resultType="java.math.BigDecimal" parameterType="map">
-       select sum(t.settlement_money)  as total_settlement_money from dts_order t 
-				 where t.deleted = 0 and t.order_status in (401,402)
-				 and t.confirm_time &gt;= STR_TO_DATE(#{startTime},'%Y-%m-%d %H:%i:%s') 
-				 and t.confirm_time &lt;= STR_TO_DATE(#{endTime},'%Y-%m-%d %H:%i:%s')   
-				 and t.user_id in (select id  
-        from dts_user u where  (u.id=#{sharedUserId,jdbcType=INTEGER} and u.user_level=2) or (u.share_user_id =#{sharedUserId,jdbcType=INTEGER} and u.user_level &lt; 2)) 
-    </select>
-    
-   <select id="countOrderSharedUser" resultType="java.lang.Long" parameterType="map">
-       select count(1) as cnt from dts_order t 
-				 where t.deleted = 0 
-				 and t.pay_time &gt;= #{startTime,jdbcType=TIMESTAMP}  
-				 and t.user_id in (select id  
-        from dts_user u where  (u.id=#{sharedUserId,jdbcType=INTEGER} and u.user_level=2) or (u.share_user_id =#{sharedUserId,jdbcType=INTEGER} and u.user_level &lt; 2)) 
-   </select>
-   
-   <select id="sumOrderSettleAmtSharedUser" resultType="java.math.BigDecimal" parameterType="map">
-       select sum(t.settlement_money) as total_settlement_money from dts_order t 
-				 where t.deleted = 0 
-				 and t.pay_time &gt;= #{startTime,jdbcType=TIMESTAMP}  
-				 and t.user_id in (select id  
-        from dts_user u where  (u.id=#{sharedUserId,jdbcType=INTEGER} and u.user_level=2) or (u.share_user_id =#{sharedUserId,jdbcType=INTEGER} and u.user_level &lt; 2)) 
-   </select>
-   
-   <select id="querySettlementOrder" resultMap="BaseResultMap" parameterType="map">
-       select distinct  
-       <include refid="Base_Column_List" />
-        from dts_order o where o.deleted = 0 
-		<if test="conditionSql != null and conditionSql != ''">
-            ${conditionSql} 
-        </if>	 
-		and o.user_id in (select id  
-        from dts_user u where  (u.id=#{sharedUserId,jdbcType=INTEGER} and u.user_level=2) or (u.share_user_id =#{sharedUserId,jdbcType=INTEGER} and u.user_level &lt; 2)) 
-        order by o.add_time desc
-   </select>
-   
-   <!-- 已支付，且无退款，在正常流转的订单  -->
-   <select id="getUserUnOrderSettleMoney" resultType="java.math.BigDecimal" parameterType="map">
-        select sum(t.settlement_money) as total_settlement_money from dts_order t 
-				 where t.deleted = 0 and t.order_status in (201,301,401,402) and t.settlement_status = 0  
-				 and t.user_id=#{userId,jdbcType=INTEGER} 
-   </select>
-   
-   <update id="setUserOrderSettleStaus"  parameterType="map">
-       update dts_order set settlement_status = 1 
-				where deleted = 0 and order_status in (201,301,401,402) 
-				and t.user_id=#{userId,jdbcType=INTEGER} 
-    </update>
-   
 </mapper>

@@ -1,6 +1,7 @@
 package com.haust.shop.user.service.impl;
 
 import com.github.pagehelper.PageHelper;
+import com.haust.common.consts.RocketMqConstant;
 import com.haust.service.domain.order.DtsOrder;
 import com.haust.service.domain.user.*;
 import com.haust.service.service.user.DtsAccountService;
@@ -9,9 +10,13 @@ import com.haust.shop.user.dao.DtsAccountTraceMapper;
 import com.haust.shop.user.dao.DtsUserAccountMapper;
 import com.haust.shop.user.dao.DtsUserMapper;
 import org.apache.dubbo.config.annotation.DubboService;
+import org.apache.rocketmq.client.producer.SendStatus;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.messaging.support.GenericMessage;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -60,6 +65,11 @@ public class DtsAccountServiceImpl implements DtsAccountService {
 
 	public List<Integer> findAllSharedUserId() {
 		return accountMapperEx.getShareUserId();
+	}
+
+	@Override
+	public Integer getShardLevelUserId(Integer shareUserId) {
+		return accountMapperEx.getLevelShareUserId(shareUserId);
 	}
 
 	private String getRandomNum(Integer num) {
@@ -125,21 +135,6 @@ public class DtsAccountServiceImpl implements DtsAccountService {
 		accountTraceMapper.insert(trace);
 	}
 
-	/**
-	 * 统计某个用户时间段内的结算金额
-	 * 
-	 * @param sharedUserId
-	 * @param startTime
-	 * @param endTime
-	 * @return
-	 */
-	public BigDecimal getMonthSettleMoney(Integer sharedUserId, String startTime, String endTime) {
-		BigDecimal staticSettleMoney = accountMapperEx.staticMonthSettleMoney(sharedUserId, startTime, endTime);
-		if (staticSettleMoney == null || staticSettleMoney.compareTo(new BigDecimal("0")) == 0) {// 如果该用户未产生推荐单，则降低结算比例
-			staticSettleMoney = new BigDecimal(0.00);
-		}
-		return staticSettleMoney;
-	}
 
 	public Map<String, Object> getStatistics(Integer sharedUserId, int dayAgo) {
 		Map<String, Object> result = new HashMap<String, Object>();
@@ -163,24 +158,6 @@ public class DtsAccountServiceImpl implements DtsAccountService {
 		return result;
 	}
 
-	public List<DtsOrder> querySettlementOrder(Integer sharedUserId, List<Short> orderStatus,
-											   List<Short> settlementStatus, Integer page, Integer size) {
-
-		String conditionSql = null;
-		if (orderStatus != null) {
-			conditionSql = "";
-			for (Short orderStatu : orderStatus) {
-				conditionSql += "," + orderStatu;
-			}
-			conditionSql = "and o.order_status in (" + conditionSql.substring(1) + ") ";
-		}
-		if (settlementStatus != null && settlementStatus.size() == 1) {
-			conditionSql = conditionSql + " and o.settlement_status =" + settlementStatus.get(0) + " ";
-		}
-
-		PageHelper.startPage(page, size);
-		return accountMapperEx.querySettlementOrder(sharedUserId, conditionSql);
-	}
 
 	public List<DtsAccountTrace> queryAccountTraceList(Integer userId, Integer page, Integer size) {
 		DtsAccountTraceExample example = new DtsAccountTraceExample();
@@ -270,28 +247,6 @@ public class DtsAccountServiceImpl implements DtsAccountService {
 		
 	}
 
-	/**
-	 * 只计算近两个月内未结算的订单佣金
-	 * 时间范围两月内，且订单超过一周，原因，一周内可能发生退款，
-	 * 减少退款订单对佣金结算的影响
-	 * @param userId
-	 * @return
-	 */
-	public BigDecimal getUnSettleAmount(Integer userId) {
-		LocalDateTime startTime = LocalDateTime.now().minusDays(TWO_MONTH_DAYS);
-		LocalDateTime endTime = LocalDateTime.now().minusDays(ONE_WEEK_DAYS);
-		DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-		return getUnSettleAmount(userId,startTime.format(df),endTime.format(df));
-	}
-	
-	public BigDecimal getUnSettleAmount(Integer userId,String startDay,String endDay) {
-		BigDecimal staticSettleMoney = accountMapperEx.getToSettleMoney(userId,startDay,endDay);
-		if (staticSettleMoney == null || staticSettleMoney.compareTo(new BigDecimal("0")) == 0) {// 如果该用户未产生推荐单，则降低结算比例
-			staticSettleMoney = new BigDecimal(0.00);
-		}
-		logger.info("获取开始时间：{} - 结束时间 ：{} 内 用户id:{} 的未结算佣金 :{}",startDay,endDay,userId,staticSettleMoney);
-		return staticSettleMoney;
-	}
 
 	/**
 	 * 为资金账户的安全，建议做线下销账处理，处理后执行该逻辑

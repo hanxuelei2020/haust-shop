@@ -94,6 +94,9 @@ public class WxOrderServiceImpl implements WxOrderService {
     private DtsGoodsProductService productService;
     @Autowired
     private WxPayService wxPayService;
+
+    @Autowired
+    private SettlementOrderService settlementOrderService;
     @DubboReference
     private NotifyService notifyService;
     @DubboReference
@@ -1250,7 +1253,7 @@ public class WxOrderServiceImpl implements WxOrderService {
         List<Short> orderStatus = OrderUtil.settleOrderStatus(showType);
         List<Short> settlementStatus = OrderUtil.settlementStatus(showType);
 
-        List<DtsOrder> orderList = accountService.querySettlementOrder(userId, orderStatus, settlementStatus, page,
+        List<DtsOrder> orderList = settlementOrderService.querySettlementOrder(userId, orderStatus, settlementStatus, page,
                 size);
         long count = PageInfo.of(orderList).getTotal();
         int totalPages = (int) Math.ceil((double) count / size);

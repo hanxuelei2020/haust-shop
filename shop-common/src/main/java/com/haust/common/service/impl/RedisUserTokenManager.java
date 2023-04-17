@@ -87,7 +87,7 @@ public class RedisUserTokenManager implements UserTokenManager {
         userToken.setUserId(id);
         // 将 id 和 token 的对应关系放入 redis
         cacheService.setValueWithExp(RedisPrefix.USER_ID_TOKEN + id, token,
-                expireDateTime.getLong(ChronoField.SECOND_OF_MINUTE));
+                expireDateTime.getLong(ChronoField.MINUTE_OF_HOUR));
 
         return userToken;
     }

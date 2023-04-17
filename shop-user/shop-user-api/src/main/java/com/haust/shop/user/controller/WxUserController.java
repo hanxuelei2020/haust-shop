@@ -9,6 +9,7 @@ import com.haust.service.domain.user.DtsUser;
 import com.haust.service.domain.user.DtsUserAccount;
 import com.haust.service.service.coupon.DtsCouponService;
 import com.haust.service.service.order.DtsOrderService;
+import com.haust.service.service.order.SettlementOrderService;
 import com.haust.service.service.user.DtsAccountService;
 import com.haust.service.service.user.DtsUserService;
 import org.apache.commons.lang3.StringUtils;
@@ -49,6 +50,9 @@ public class WxUserController {
 	@DubboReference
 	private DtsCouponService couponService;
 
+	@DubboReference
+	private SettlementOrderService settlementOrderService;
+
 	/**
 	 * 用户个人页面数据
 	 * <p>
@@ -78,7 +82,7 @@ public class WxUserController {
 		}
 		
 		// 可提现金额 = 已结算未提现 remainAmount + 未结算 unSettleAmount
-		BigDecimal unSettleAmount = accountService.getUnSettleAmount(userId);
+		BigDecimal unSettleAmount = settlementOrderService.getUnSettleAmount(userId);
 		data.put("totalAmount", totalAmount);
 		data.put("remainAmount", remainAmount.add(unSettleAmount));
 		
