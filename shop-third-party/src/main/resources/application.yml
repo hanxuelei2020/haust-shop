@@ -41,8 +41,8 @@ dts:
       # 邮件通知配置,邮箱一般用于接收业务通知例如收到新的订单，sendto 定义邮件接收者，通常为商城运营人员
       enable: true
       host: smtp.aliyun.com
-      username: dtsshop@aliyun.com
-      password: xxx
+      username: 2407411399@qq.com
+      password: qwer20011213
       sendfrom: xxx@aliyun.com
       sendto: xxx@qq.com
 
@@ -86,6 +86,8 @@ dts:
       storagePath: dts/storage
       # 这个地方应该是wx模块的WxStorageController的fetch方法对应的地址
       address: http://localhost:9999/demo/storage/
+
+
 
 server:
   port: 16000
