@@ -2,7 +2,7 @@ package com.haust.shop.user.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.haust.common.consts.RocketMqConstant;
-import com.haust.service.domain.order.DtsOrder;
+import com.haust.service.domain.order.SharedUserVo;
 import com.haust.service.domain.user.*;
 import com.haust.service.service.user.DtsAccountService;
 import com.haust.shop.user.dao.AccountMapperEx;
@@ -15,7 +15,6 @@ import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.messaging.support.GenericMessage;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -48,6 +47,9 @@ public class DtsAccountServiceImpl implements DtsAccountService {
 
 	@Autowired
 	private DtsUserMapper userMapper;
+
+	@Autowired
+	private RocketMQTemplate userOrderTemplate;
 
 	public DtsUserAccount findShareUserAccountByUserId(Integer shareUserId) {
 
@@ -83,19 +85,16 @@ public class DtsAccountServiceImpl implements DtsAccountService {
 		return sb.toString();
 	}
 
-	public void setSettleMentAccount(Integer sharedUserId, String prevMonthEndDay,Integer type) throws Exception {
-		// 1.获取用户的代理订单代理金额
-		String endTime = prevMonthEndDay + " 23:59:59";
-		String startTime = prevMonthEndDay.substring(0, 7) + "-01 00:00:00";
-		BigDecimal toSettleMoney = accountMapperEx.getToSettleMoney(sharedUserId, startTime, endTime);
+	public void setSettleMentAccount(Integer sharedUserId, Integer type, BigDecimal toSettleMoney, String startTime, String endTime) throws Exception {
+
 		if (toSettleMoney == null || toSettleMoney.compareTo(new BigDecimal(0)) <= 0) {//如果无佣金
 			toSettleMoney = new BigDecimal(0);
 		}
+
 		logger.info("代理用户编号： {" + sharedUserId + "},日期：" + startTime + " - " + endTime + ",获取佣金: " + toSettleMoney
 				+ "元");
-
 		if (toSettleMoney.compareTo(new BigDecimal(0)) > 0) {
-			settleApplyTrace(sharedUserId, startTime,endTime,type, toSettleMoney,null);
+			settleApplyTrace(sharedUserId, startTime, endTime, type, toSettleMoney,null);
 		}
 	}
 
@@ -110,8 +109,13 @@ public class DtsAccountServiceImpl implements DtsAccountService {
 		}
 		
 		// 更新订单结算状态
-		accountMapperEx.setLastMonthOrderSettleStaus(sharedUserId, startTime, endTime);
-		
+		SendStatus sendStatus = userOrderTemplate.syncSend(RocketMqConstant.USER_ORDER,
+				new GenericMessage<SharedUserVo>(new SharedUserVo(sharedUserId, startTime, endTime))).getSendStatus();
+
+		if (!Objects.equals(sendStatus,SendStatus.SEND_OK)) {
+			// 消息发不出去就抛异常，发的出去无所谓
+			throw new RuntimeException("消息传递异常");
+		}
 		//更新代理用户账号信息
 		account.setRemainAmount(account.getRemainAmount().add(toSettleMoney));//剩余结算,尚未结算给用户
 		account.setTotalAmount(account.getTotalAmount().add(toSettleMoney));
@@ -145,16 +149,8 @@ public class DtsAccountServiceImpl implements DtsAccountService {
 				.andAddTimeGreaterThanOrEqualTo(startTime);
 		Long userCnt = (Long) userMapper.countByExample(example);
 
-		Long orderCnt = accountMapperEx.countOrderSharedUser(sharedUserId, startTime);
-		BigDecimal orderSettleAmt = accountMapperEx.sumOrderSettleAmtSharedUser(sharedUserId, startTime);
-		if (orderSettleAmt == null) {
-			orderSettleAmt = new BigDecimal(0.00);
-		}
-		BigDecimal finalSettleAmt = orderSettleAmt; //默认就是设置的结算价格
 		result.put("userCnt", userCnt);
-		result.put("orderCnt", orderCnt);
-		result.put("orderSettleAmt", orderSettleAmt);
-		result.put("finalSettleAmt", finalSettleAmt);
+
 		return result;
 	}
 
@@ -293,10 +289,9 @@ public class DtsAccountServiceImpl implements DtsAccountService {
 	 * @return
 	 */
 	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = { Exception.class })
-	public boolean settlementPreviousAgency(Integer userId){
+	public boolean settlementPreviousAgency(Integer userId, BigDecimal toSettleMoney){
 		
 		// 获取当前用户是否有未结算的订单(约束：已支付，且无退款，在正常流转的订单)，如果存在则结算给用户的代理人，如果不存在，则结束
-		BigDecimal toSettleMoney = accountMapperEx.getUserUnOrderSettleMoney(userId);
 		if (toSettleMoney == null || toSettleMoney.compareTo(new BigDecimal("0")) == 0) {// 如果该用户未产生订单
 			logger.info("用户 userId:{} 不存在未结算的订单,给其代理人结算佣金结束!");
 			return true;
@@ -306,9 +301,17 @@ public class DtsAccountServiceImpl implements DtsAccountService {
 		Integer sharedUserId = user.getShareUserId();
 		// 获取用户账户信息并更新记录
 		DtsUserAccount account = this.findShareUserAccountByUserId(sharedUserId);
-		
-		// 更新用户订单结算状态
-		accountMapperEx.setUserOrderSettleStaus(userId);
+
+		// 更新订单结算状态
+		SharedUserVo sharedUserVo = new SharedUserVo();
+		sharedUserVo.setShardUserId(userId);
+		SendStatus sendStatus = userOrderTemplate.syncSend(RocketMqConstant.USER_ORDER,
+				new GenericMessage<SharedUserVo>(sharedUserVo)).getSendStatus();
+
+		if (!Objects.equals(sendStatus,SendStatus.SEND_OK)) {
+			// 消息发不出去就抛异常，发的出去无所谓
+			throw new RuntimeException("消息传递异常");
+		}
 
 		// 更新代理用户账号信息
 		account.setRemainAmount(account.getRemainAmount().add(toSettleMoney));// 剩余结算,尚未结算给用户

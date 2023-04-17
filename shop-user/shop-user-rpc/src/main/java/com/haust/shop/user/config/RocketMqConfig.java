@@ -1,4 +1,4 @@
-package com.haust.shop.order.config;
+package com.haust.shop.user.config;
 
 import com.haust.common.consts.RocketMqConstant;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
@@ -14,7 +14,8 @@ public class RocketMqConfig {
 
     @Bean("userOrderTemplate")
     @Lazy
-    public RocketMQTemplate userOrderTemplate() {
+    public RocketMQTemplate userSettle() {
         return config.getTemplateByTopicName(RocketMqConstant.USER_ORDER);
     }
+
 }

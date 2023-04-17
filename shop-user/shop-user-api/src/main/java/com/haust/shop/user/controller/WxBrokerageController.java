@@ -105,12 +105,24 @@ public class WxBrokerageController {
 		data.put("currMonthSettleMoney", currMonthSettleMoney);
 
 		Map<String, Object> todayData = accountService.getStatistics(userId, 1);
-		Map<String, Object> yestodayData = accountService.getStatistics(userId, 2);
+		Map<String, Object> todayDataSettle = settlementOrderService.getStatistics(userId, 1);
+		todayData.putAll(todayDataSettle);
+
+		Map<String, Object> yesterdayData = accountService.getStatistics(userId, 2);
+		Map<String, Object> yesterdayDataSettle = settlementOrderService.getStatistics(userId, 2);
+		yesterdayData.putAll(yesterdayDataSettle);
+
 		Map<String, Object> weekData = accountService.getStatistics(userId, 7);
+		Map<String, Object> weekDataSettle = settlementOrderService.getStatistics(userId, 7);
+		weekData.putAll(weekDataSettle);
+
 		Map<String, Object> monthData = accountService.getStatistics(userId, 30);
+		Map<String, Object> monthDataSettle = settlementOrderService.getStatistics(userId, 30);
+		monthData.putAll(monthDataSettle);
+
 
 		data.put("todayData", todayData);
-		data.put("yestodayData", yestodayData);
+		data.put("yestodayData", yesterdayData);
 		data.put("weekData", weekData);
 		data.put("monthData", monthData);
 

@@ -5,25 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6101a212-168a-445f-96ec-70fdd432f1f0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/config/RocketMqConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/consts/RocketMqConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java/com/haust/shop/order/config/RocketMqConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java/com/haust/shop/order/mapper/SettlementOrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java/com/haust/shop/order/service/Impl/SettlementOrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/resources/mapper/SettlementOrderMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/order/SettlementOrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java/com/haust/shop/order/consumer/OrderConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/order/SharedUserVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/config/RocketMqConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/service/impl/RedisUserTokenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/service/impl/RedisUserTokenManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/type/WxResponseCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/src/main/java/com/haust/common/type/WxResponseCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/java/com/haust/shop/order/service/impl/WxOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/java/com/haust/shop/order/service/impl/WxOrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/job/SettlementJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/job/SettlementJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java/com/haust/shop/order/config/RocketMqConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java/com/haust/shop/order/service/Impl/SettlementOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java/com/haust/shop/order/service/Impl/SettlementOrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/order/SettlementOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/order/SettlementOrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/user/DtsAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/user/DtsAccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxBrokerageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxBrokerageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/dao/AccountMapperEx.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/dao/AccountMapperEx.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/service/impl/DtsAccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/service/impl/DtsAccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/resources/mapper/AccountMapperEx.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/resources/mapper/AccountMapperEx.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,11 +111,11 @@
       <recent name="com.haust.common" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.haust.shop.order.model" />
       <recent name="com.haust.common.config" />
       <recent name="com.haust.common.handler" />
       <recent name="com.haust.common.util" />
       <recent name="com.haust.shop.admin.mapper" />
-      <recent name="com.haust.shop.admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -377,7 +370,7 @@
       <workItem from="1681556380535" duration="30885000" />
       <workItem from="1681629416326" duration="1360000" />
       <workItem from="1681632484390" duration="6606000" />
-      <workItem from="1681735953068" duration="2376000" />
+      <workItem from="1681735953068" duration="4831000" />
     </task>
     <servers />
   </component>

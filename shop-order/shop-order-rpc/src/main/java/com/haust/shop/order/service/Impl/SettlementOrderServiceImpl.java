@@ -2,6 +2,7 @@ package com.haust.shop.order.service.Impl;
 
 import com.github.pagehelper.PageHelper;
 import com.haust.service.domain.order.DtsOrder;
+import com.haust.service.domain.order.SharedUserVo;
 import com.haust.service.service.order.SettlementOrderService;
 import com.haust.shop.order.mapper.SettlementOrderMapper;
 import org.apache.dubbo.config.annotation.DubboService;
@@ -13,7 +14,9 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 @DubboService
@@ -72,5 +75,32 @@ public class SettlementOrderServiceImpl implements SettlementOrderService {
         }
         logger.info("获取开始时间：{} - 结束时间 ：{} 内 用户id:{} 的未结算佣金 :{}",startDay,endDay,userId,staticSettleMoney);
         return staticSettleMoney;
+    }
+
+    @Override
+    public void setLastMonthOrderSettleStaus(SharedUserVo sharedUserVo) {
+        settlementOrderMapper.setLastMonthOrderSettleStaus(sharedUserVo.getShardUserId(), sharedUserVo.getStartTime(), sharedUserVo.getEndTime());
+        logger.info("设置订单状态 起始时间: {}, 结束时间: {}, 用户id: {}",sharedUserVo.getStartTime(), sharedUserVo.getEndTime(), sharedUserVo.getShardUserId());
+    }
+
+    @Override
+    public Map<String, Object> getStatistics(Integer sharedUserId, int dayAgo) {
+        HashMap<String, Object> res = new HashMap<>();
+        LocalDateTime startTime = LocalDateTime.now().minusDays(dayAgo);
+        Long orderCnt = settlementOrderMapper.countOrderSharedUser(sharedUserId, startTime);
+        BigDecimal orderSettleAmt = settlementOrderMapper.sumOrderSettleAmtSharedUser(sharedUserId, startTime);
+        if (orderSettleAmt == null) {
+            orderSettleAmt = new BigDecimal(0.00);
+        }
+        BigDecimal finalSettleAmt = orderSettleAmt; //默认就是设置的结算价格
+        res.put("orderCnt", orderCnt);
+        res.put("orderSettleAmt", orderSettleAmt);
+        res.put("finalSettleAmt", finalSettleAmt);
+        return res;
+    }
+
+    @Override
+    public BigDecimal getUserUnOrderSettleMoney(Integer userId) {
+        return settlementOrderMapper.getUserUnOrderSettleMoney(userId);
     }
 }

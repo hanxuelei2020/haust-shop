@@ -2,6 +2,7 @@ package com.haust.shop.admin.job;
 
 import com.haust.common.type.BrokerageTypeEnum;
 import com.haust.common.util.DateTimeUtil;
+import com.haust.service.service.order.SettlementOrderService;
 import com.haust.service.service.user.DtsAccountService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -9,6 +10,7 @@ import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -21,6 +23,9 @@ public class SettlementJob {
 
 	@DubboReference
 	private DtsAccountService accountService;
+
+	@DubboReference
+	private SettlementOrderService settlementOrderService;
 
 	/**
 	 * 自动结算代理佣金
@@ -36,7 +41,13 @@ public class SettlementJob {
 
 		for (Integer sharedUserId : sharedUserIds) {
 			try {
-				accountService.setSettleMentAccount(sharedUserId, DateTimeUtil.getPrevMonthEndDay(), BrokerageTypeEnum.SYS_APPLY.getType().intValue());
+				String prevMonthEndDay = DateTimeUtil.getPrevMonthEndDay();
+				// 1.获取用户的代理订单代理金额
+				String endTime = prevMonthEndDay + " 23:59:59";
+				String startTime = prevMonthEndDay.substring(0, 7) + "-01 00:00:00";
+				BigDecimal decimal = settlementOrderService.getUnSettleAmount(sharedUserId, startTime, endTime);
+				accountService.setSettleMentAccount(sharedUserId, BrokerageTypeEnum.SYS_APPLY.getType().intValue(), decimal, startTime, endTime);
+
 			} catch (Exception e) {
 				logger.error("自动结算出错:" + e.getMessage());
 				e.printStackTrace();

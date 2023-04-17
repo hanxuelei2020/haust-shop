@@ -1,5 +1,6 @@
 package com.haust.shop.admin.web;
 
+import com.haust.service.service.order.SettlementOrderService;
 import com.haust.shop.admin.util.AuthSupport;
 import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageInfo;
@@ -22,6 +23,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -41,6 +43,8 @@ public class AdminUserController {
 
 	@DubboReference
 	private DtsAccountService accountService;
+	@DubboReference
+	private SettlementOrderService settlementOrderService;
 
 	@RequiresPermissions("admin:user:list")
 	@RequiresPermissionsDesc(menu = { "用户管理", "会员管理" }, button = "查询")
@@ -106,7 +110,8 @@ public class AdminUserController {
 			 * 在用户审批通过成为代理用户之前下的订单，结算佣金应归属于前一个代理用户
 			 * 后续的订单由用户申请或系统自动结算给，代理用户直接会将佣金结算给自己
 			 */
-			boolean result = accountService.settlementPreviousAgency(userId);
+			BigDecimal settleMoney = settlementOrderService.getUserUnOrderSettleMoney(userId);
+			boolean result = accountService.settlementPreviousAgency(userId, settleMoney);
 			if (!result) {
 				logger.warn("用户管理->会员管理->代理审批 存在异常：{}","当前用户订单佣金交割给代理用户时出错！");
 			}

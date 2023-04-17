@@ -13,7 +13,7 @@ public interface DtsAccountService {
     public DtsUserAccount findShareUserAccountByUserId(Integer shareUserId);
     public List<Integer> findAllSharedUserId();
     public Integer getShardLevelUserId(Integer shareUserId);
-    public void setSettleMentAccount(Integer sharedUserId, String prevMonthEndDay,Integer type) throws Exception;
+    public void setSettleMentAccount(Integer sharedUserId, Integer type, BigDecimal toSettleMoney, String startTime, String endTime) throws Exception;
     public void settleApplyTrace(Integer sharedUserId, String startTime, String endTime, Integer type, BigDecimal toSettleMoney, String mobile);
     public Map<String, Object> getStatistics(Integer sharedUserId, int dayAgo);
     public List<DtsAccountTrace> queryAccountTraceList(Integer userId, Integer page, Integer size);
@@ -24,6 +24,6 @@ public interface DtsAccountService {
     public List<DtsAccountTrace> querySelectiveTrace(List<DtsUser> userList, List<Byte> status, Integer page,
                                                      Integer size, String sort, String order);
     public boolean approveAccountTrace(Integer traceId, Byte status, String traceMsg);
-    public boolean settlementPreviousAgency(Integer userId);
+    public boolean settlementPreviousAgency(Integer userId, BigDecimal settleMoney);
 
 }
