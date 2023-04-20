@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6101a212-168a-445f-96ec-70fdd432f1f0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java/com/haust/shop/order/consumer/OrderConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/order/SharedUserVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/config/RocketMqConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/job/SettlementJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/job/SettlementJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin/shop-admin-api/src/main/java/com/haust/shop/admin/web/AdminUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java/com/haust/shop/order/config/RocketMqConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java/com/haust/shop/order/service/Impl/SettlementOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-order/shop-order-rpc/src/main/java/com/haust/shop/order/service/Impl/SettlementOrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/order/SettlementOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/order/SettlementOrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/user/DtsAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/service/user/DtsAccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxBrokerageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-api/src/main/java/com/haust/shop/user/controller/WxBrokerageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/service/impl/DtsAccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-user/shop-user-rpc/src/main/java/com/haust/shop/user/service/impl/DtsAccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-ui/config/dev.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin-ui/config/dev.env.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,30 +56,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JavaProject/shop-gateway&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.27598897&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;7765d333a98d43413179f928dffdb542&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/JavaProject/mall4cloud",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.27598897",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "spring.configuration.checksum": "7765d333a98d43413179f928dffdb542",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -370,7 +361,9 @@
       <workItem from="1681556380535" duration="30885000" />
       <workItem from="1681629416326" duration="1360000" />
       <workItem from="1681632484390" duration="6606000" />
-      <workItem from="1681735953068" duration="4831000" />
+      <workItem from="1681735953068" duration="6125000" />
+      <workItem from="1681823205267" duration="2344000" />
+      <workItem from="1681993280605" duration="5089000" />
     </task>
     <servers />
   </component>
