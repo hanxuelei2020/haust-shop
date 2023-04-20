@@ -1,7 +1,5 @@
 package com.haust.common.service.impl;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.TypeReference;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTCreator;
 import com.auth0.jwt.algorithms.Algorithm;
@@ -9,10 +7,6 @@ import com.haust.common.config.RedisPrefix;
 import com.haust.common.model.UserToken;
 import com.haust.common.service.CacheService;
 import com.haust.common.service.UserTokenManager;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
-import reactor.core.publisher.Mono;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
