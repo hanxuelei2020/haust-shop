@@ -45,7 +45,7 @@
         where t.deleted = 0 and t.order_status in (401,402) and t.settlement_status = 0
           and t.confirm_time &gt;= STR_TO_DATE(#{startTime},'%Y-%m-%d %H:%i:%s')
           and t.confirm_time &lt;= STR_TO_DATE(#{endTime},'%Y-%m-%d %H:%i:%s')
-          and t.user_id in (#{sharedUserId,jdbcType=INTEGER}))
+          and t.user_id in (#{sharedUserId,jdbcType=INTEGER})
     </select>
 
     <select id="getLastMonthSettleMoney" resultType="java.math.BigDecimal" parameterType="map">
@@ -53,7 +53,7 @@
         where t.deleted = 0 and t.order_status in (401,402) and t.settlement_status = 0
           and t.confirm_time &gt;= STR_TO_DATE(#{startTime},'%Y-%m-%d %H:%i:%s')
           and t.confirm_time &lt;= STR_TO_DATE(#{endTime},'%Y-%m-%d %H:%i:%s')
-          and t.user_id in (#{sharedUserId,jdbcType=INTEGER}))
+          and t.user_id in (#{sharedUserId,jdbcType=INTEGER})
     </select>
 
     <update id="setLastMonthOrderSettleStaus"  parameterType="map">
@@ -61,7 +61,7 @@
         where deleted = 0 and order_status in (401,402)
           and confirm_time &gt;= STR_TO_DATE(#{startTime},'%Y-%m-%d %H:%i:%s')
           and confirm_time &lt;= STR_TO_DATE(#{endTime},'%Y-%m-%d %H:%i:%s')
-          and user_id in (#{sharedUserId,jdbcType=INTEGER}))
+          and user_id in (#{sharedUserId,jdbcType=INTEGER})
     </update>
 
     <select id="staticMonthSettleMoney" resultType="java.math.BigDecimal" parameterType="map">
@@ -69,21 +69,21 @@
         where t.deleted = 0 and t.order_status in (401,402)
           and t.confirm_time &gt;= STR_TO_DATE(#{startTime},'%Y-%m-%d %H:%i:%s')
           and t.confirm_time &lt;= STR_TO_DATE(#{endTime},'%Y-%m-%d %H:%i:%s')
-          and t.user_id in (#{sharedUserId,jdbcType=INTEGER}))
+          and t.user_id in (#{sharedUserId,jdbcType=INTEGER})
     </select>
 
     <select id="countOrderSharedUser" resultType="java.lang.Long" parameterType="map">
         select count(1) as cnt from dts_order t
         where t.deleted = 0
           and t.pay_time &gt;= #{startTime,jdbcType=TIMESTAMP}
-          and t.user_id in (#{sharedUserId,jdbcType=INTEGER}))
+          and t.user_id in (#{sharedUserId,jdbcType=INTEGER})
     </select>
 
     <select id="sumOrderSettleAmtSharedUser" resultType="java.math.BigDecimal" parameterType="map">
         select sum(t.settlement_money) as total_settlement_money from dts_order t
         where t.deleted = 0
           and t.pay_time &gt;= #{startTime,jdbcType=TIMESTAMP}
-          and t.user_id in (#{sharedUserId,jdbcType=INTEGER}))
+          and t.user_id in (#{sharedUserId,jdbcType=INTEGER})
     </select>
 
     <select id="querySettlementOrder" resultMap="BaseResultMap" parameterType="map">

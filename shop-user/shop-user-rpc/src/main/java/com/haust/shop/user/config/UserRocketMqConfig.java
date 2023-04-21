@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 
 @Configuration
-public class RocketMqConfig {
+public class UserRocketMqConfig {
     @Autowired
     private com.haust.common.config.RocketMqConfig config;
 
