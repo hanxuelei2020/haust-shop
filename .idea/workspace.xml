@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6101a212-168a-445f-96ec-70fdd432f1f0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-ui/config/dev.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin-ui/config/dev.env.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +64,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/JavaProject/mall4cloud",
+    "last_opened_file_path": "D:/JavaProject/Graduation Information/java/haust-shop2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -363,7 +361,8 @@
       <workItem from="1681632484390" duration="6606000" />
       <workItem from="1681735953068" duration="6125000" />
       <workItem from="1681823205267" duration="2344000" />
-      <workItem from="1681993280605" duration="5089000" />
+      <workItem from="1681993280605" duration="5739000" />
+      <workItem from="1682092336415" duration="68000" />
     </task>
     <servers />
   </component>

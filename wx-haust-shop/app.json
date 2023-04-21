@@ -57,6 +57,7 @@
   "backgroundColor": "#FFFFFF",
   "backgroundTextStyle": "dark"
 },
+"lazyCodeLoading": "requiredComponents",
   "tabBar": {
     "backgroundColor": "#fafafa",
     "borderStyle": "white",
