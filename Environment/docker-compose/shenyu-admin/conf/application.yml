@@ -57,7 +57,7 @@ shenyu:
     websocket:
       enabled: true
       messageMaxSize: 10240
-      allowOrigins: ws://192.168.88.128:9095;ws://192.168.88.128:9195;
+      allowOrigins: ws://192.168.88.128:9195;
 #    apollo:
 #      meta: http://192.168.88.128:8080
 #      appId: shenyu
@@ -136,4 +136,5 @@ shenyu:
     org.apache.ibatis: info
     org.apache.shenyu.bonuspoint: info
     org.apache.shenyu.lottery: info
-    org.apache.shenyu: info
+    org.apache.shenyu: debug
+    sql: debug

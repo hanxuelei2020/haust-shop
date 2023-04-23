@@ -1,0 +1,82 @@
+2023-04-17 20:40:02,781 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+
+2023-04-17 20:40:02,782 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+
+2023-04-17 20:40:02,782 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+
+2023-04-17 20:40:02,782 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+
+2023-04-17 20:40:05,120 INFO Load instance extension handler []
+
+2023-04-17 20:40:10,094 INFO Client connection 1681735209864_172.18.0.1_36642 connect
+
+2023-04-17 20:40:11,591 INFO Client connection 1681735211573_172.18.0.1_36650 connect
+
+2023-04-17 20:40:11,858 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='shenyu-bootstrap', ephemeral=true, revision=0}, 1681735211573_172.18.0.1_36650
+
+2023-04-17 20:40:11,873 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='shenyu-gateway', ephemeral=true, revision=0}, 1681735209864_172.18.0.1_36642
+
+2023-04-17 20:43:23,305 WARN [NamingServerHttpClientManager] Start destroying HTTP-Client
+
+2023-04-17 20:43:23,338 WARN [NamingServerHttpClientManager] Destruction of the end
+
+2023-04-17 20:43:23,339 INFO Client connection 1681735209864_172.18.0.1_36642 disconnect, remove instances and subscribers
+
+2023-04-17 20:43:23,344 INFO Client connection 1681735211573_172.18.0.1_36650 disconnect, remove instances and subscribers
+
+2023-04-17 20:44:35,913 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+
+2023-04-17 20:44:35,913 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+
+2023-04-17 20:44:35,914 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+
+2023-04-17 20:44:35,914 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+
+2023-04-17 20:44:37,736 INFO Load instance extension handler []
+
+2023-04-17 20:44:41,364 INFO Client connection 1681735481275_172.18.0.1_36838 connect
+
+2023-04-17 20:44:41,581 INFO Client connection 1681735481567_172.18.0.1_36842 connect
+
+2023-04-17 20:44:41,855 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='shenyu-bootstrap', ephemeral=true, revision=0}, 1681735481567_172.18.0.1_36842
+
+2023-04-17 20:44:41,873 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='shenyu-gateway', ephemeral=true, revision=0}, 1681735481275_172.18.0.1_36838
+
+2023-04-17 20:49:21,535 WARN [NamingServerHttpClientManager] Start destroying HTTP-Client
+
+2023-04-17 20:49:21,558 INFO Client connection 1681735481567_172.18.0.1_36842 disconnect, remove instances and subscribers
+
+2023-04-17 20:49:21,560 INFO Client connection 1681735481275_172.18.0.1_36838 disconnect, remove instances and subscribers
+
+2023-04-17 20:49:21,589 WARN [NamingServerHttpClientManager] Destruction of the end
+
+2023-04-17 20:51:46,027 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+
+2023-04-17 20:51:46,027 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+
+2023-04-17 20:51:46,028 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+
+2023-04-17 20:51:46,028 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+
+2023-04-17 20:51:47,934 INFO Load instance extension handler []
+
+2023-04-17 20:51:50,956 INFO Client connection 1681735910757_172.18.0.1_55816 connect
+
+2023-04-17 20:51:52,185 INFO Client connection 1681735912158_172.18.0.1_55820 connect
+
+2023-04-17 20:51:52,444 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='shenyu-bootstrap', ephemeral=true, revision=0}, 1681735912158_172.18.0.1_55820
+
+2023-04-17 20:51:52,472 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='shenyu-gateway', ephemeral=true, revision=0}, 1681735910757_172.18.0.1_55816
+
+2023-04-17 21:19:29,737 INFO Client connection 1681737569728_172.18.0.1_56266 connect
+
+2023-04-17 21:19:30,064 INFO Client connection 1681735912158_172.18.0.1_55820 disconnect, remove instances and subscribers
+
+2023-04-17 21:19:30,569 INFO Client connection 1681737570564_172.18.0.1_56270 connect
+
+2023-04-17 21:19:30,786 INFO Client connection 1681735910757_172.18.0.1_55816 disconnect, remove instances and subscribers
+
+2023-04-17 21:19:31,515 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='shenyu-bootstrap', ephemeral=true, revision=2}, 1681737569728_172.18.0.1_56266
+
+2023-04-17 21:19:33,501 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='shenyu-gateway', ephemeral=true, revision=2}, 1681737570564_172.18.0.1_56270
+

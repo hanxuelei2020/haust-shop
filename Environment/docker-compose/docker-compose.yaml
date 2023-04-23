@@ -94,6 +94,68 @@ services:
       timeout: 2s
       retries: 30
 
+  rocketmq-namesrv:
+    image: apache/rocketmq:4.9.4
+    container_name: rocketmq-namesrv
+    ports:
+      - 9876:9876
+    volumes:
+      - ./rocketmq/namesrv/logs:/home/rocketmq/logs
+      - ./rocketmq/namesrv/store:/home/rocketmq/store
+    environment:
+      JAVA_OPT_EXT: "-Duser.home=/home/rocketmq -Xms512M -Xmx512M -Xmn128M"
+    command: sh mqnamesrv
+    networks:
+      - rocketmq
+
+  rocketmq-broker-1:
+    image: apache/rocketmq:4.9.4
+    container_name: rocketmq-broker-1
+    ports:
+      - "10911:10911"
+    volumes:
+      - ./rocketmq/broker/logs:/home/rocketmq/rocketmq-4.9.4/logs
+      - ./rocketmq/broker/store:/home/rocketmq/rocketmq-4.9.4/store
+      - ./rocketmq/broker/conf/broker.conf:/home/rocketmq/rocketmq-4.9.4/broker.conf
+    environment:
+      TZ: Asia/Shanghai
+      JAVA_OPT_EXT: "-server -Xms512m -Xmx512m -Xmn512m"
+    command: sh mqbroker -c /home/rocketmq/rocketmq-4.9.4/broker.conf  -n rocketmq-namesrv:9876 autoCreateTopicEnable=true &
+    depends_on:
+      - rocketmq-namesrv
+    networks:
+      - rocketmq
+  rocketmq-broker-2:
+    image: apache/rocketmq:4.9.4
+    container_name: rocketmq-broker-2
+    ports:
+      - "20911:20911"
+    volumes:
+      - ./rocketmq/broker1/logs:/home/rocketmq/rocketmq-4.9.4/logs
+      - ./rocketmq/broker1/store:/home/rocketmq/rocketmq-4.9.4/store
+      - ./rocketmq/broker1/conf/broker.conf:/home/rocketmq/rocketmq-4.9.4/broker.conf
+    environment:
+      TZ: Asia/Shanghai
+      JAVA_OPT_EXT: "-server -Xms512m -Xmx512m -Xmn512m"
+    command: sh mqbroker -c /home/rocketmq/rocketmq-4.9.4/broker.conf -n rocketmq-namesrv:9876 autoCreateTopicEnable=true &
+    depends_on:
+      - rocketmq-namesrv
+    networks:
+      - rocketmq
+
+  rocketmq-dashboard:
+    image: apacherocketmq/rocketmq-dashboard:1.0.0
+    container_name: rocketmq-dashboard
+    ports:
+      - 8180:8080
+    environment:
+      - JAVA_OPTS=-Drocketmq.namesrv.addr=rocketmq-namesrv:9876 -Dcom.rocketmq.sendMessageWithVIPChannel=false
+    depends_on:
+      - rocketmq-namesrv
+    networks:
+      - rocketmq
+
+
 networks:
   rocketmq:
     name: rocketmq

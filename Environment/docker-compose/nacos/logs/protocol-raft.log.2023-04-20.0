@@ -1,0 +1,48 @@
+2023-04-20 21:39:48,439 INFO Initializes the Raft protocol, raft-config info : {}
+
+2023-04-20 21:39:48,940 INFO ========= The raft protocol is starting... =========
+
+2023-04-20 21:39:48,970 INFO ========= The raft protocol start finished... =========
+
+2023-04-20 21:39:48,986 INFO create raft group : naming_persistent_service_v2
+
+2023-04-20 21:39:49,592 INFO snapshot start to load from : /home/nacos/data/protocol/raft/naming_persistent_service_v2/snapshot/snapshot_1
+
+2023-04-20 21:39:49,605 INFO snapshot success to load from : /home/nacos/data/protocol/raft/naming_persistent_service_v2/snapshot/snapshot_1
+
+2023-04-20 21:39:49,607 INFO This Raft event changes : RaftEvent{groupId='naming_persistent_service_v2', leader='null', term=null, raftClusterInfo=[fc8c6def88bb:7848]}
+
+2023-04-20 21:39:49,723 INFO This Raft event changes : RaftEvent{groupId='naming_persistent_service_v2', leader='fc8c6def88bb:7848', term=2, raftClusterInfo=[fc8c6def88bb:7848]}
+
+2023-04-20 21:39:49,746 INFO create raft group : naming_instance_metadata
+
+2023-04-20 21:39:50,017 INFO This Raft event changes : RaftEvent{groupId='naming_instance_metadata', leader='null', term=null, raftClusterInfo=[fc8c6def88bb:7848]}
+
+2023-04-20 21:39:50,047 INFO This Raft event changes : RaftEvent{groupId='naming_instance_metadata', leader='fc8c6def88bb:7848', term=2, raftClusterInfo=[fc8c6def88bb:7848]}
+
+2023-04-20 21:39:50,054 INFO create raft group : naming_service_metadata
+
+2023-04-20 21:39:50,282 INFO This Raft event changes : RaftEvent{groupId='naming_service_metadata', leader='null', term=null, raftClusterInfo=[fc8c6def88bb:7848]}
+
+2023-04-20 21:39:50,611 INFO This Raft event changes : RaftEvent{groupId='naming_service_metadata', leader='fc8c6def88bb:7848', term=2, raftClusterInfo=[fc8c6def88bb:7848]}
+
+2023-04-20 21:39:50,963 ERROR Failed to join the cluster, retry...
+
+java.lang.IllegalStateException: Fail to get leader of group naming_persistent_service_v2
+	at com.alipay.sofa.jraft.core.CliServiceImpl.getPeers(CliServiceImpl.java:631)
+	at com.alipay.sofa.jraft.core.CliServiceImpl.getPeers(CliServiceImpl.java:524)
+	at com.alibaba.nacos.core.distributed.raft.JRaftServer.registerSelfToCluster(JRaftServer.java:353)
+	at com.alibaba.nacos.core.distributed.raft.JRaftServer.lambda$createMultiRaftGroup$0(JRaftServer.java:264)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-04-20 21:56:33,837 INFO shutdown jraft server
+
+2023-04-20 21:56:33,838 INFO ========= The raft protocol is starting to close =========
+
+2023-04-20 21:56:33,879 INFO ========= The raft protocol has been closed =========
+

@@ -1,0 +1,22 @@
+2023-04-20 21:39:44,263 INFO [ClientConnectionEventListenerRegistry] registry listener - ConnectionBasedClientManager
+
+2023-04-20 21:39:47,159 INFO [ClientConnectionEventListenerRegistry] registry listener - ConfigConnectionEventListener
+
+2023-04-20 21:39:47,326 INFO [ClientConnectionEventListenerRegistry] registry listener - RpcAckCallbackInitorOrCleaner
+
+2023-04-20 21:39:47,616 INFO Nacos GrpcSdkServer Rpc server starting at port 9848
+
+2023-04-20 21:39:48,346 INFO Nacos GrpcSdkServer Rpc server started at port 9848
+
+2023-04-20 21:39:48,348 INFO Nacos GrpcClusterServer Rpc server starting at port 9849
+
+2023-04-20 21:39:48,351 INFO Nacos GrpcClusterServer Rpc server started at port 9849
+
+2023-04-20 21:56:33,700 INFO Nacos GrpcClusterServer Rpc server stopping
+
+2023-04-20 21:56:33,706 INFO Nacos GrpcSdkServer Rpc server stopping
+
+2023-04-20 21:56:33,734 INFO Nacos GrpcClusterServer Rpc server stopped successfully...
+
+2023-04-20 21:56:33,739 INFO Nacos GrpcSdkServer Rpc server stopped successfully...
+
