@@ -1,9 +1,11 @@
 .idea/*
 .idea
-/**/.idea/**
+.idea/**
+**/.idea/**
 **/target/**
 *.class
 **/node_modules/**
 **/package-lock.json
 # prod 中包含着小程序密钥不上传
 **/application-prod.yml
+/.idea/
