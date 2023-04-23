@@ -1,0 +1,27 @@
+{
+    "name": "my-project-devcontainer",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",  // Any generic, debian-based image.
+    "features": {
+          "ghcr.io/devcontainers-contrib/features/springboot-sdkman:2": {
+            "version":"latest",
+              "jdkVersion": "8",
+                "jdkDistro": "open"
+          },
+              "ghcr.io/devcontainers/features/sshd:1": {
+        "version": "latest"
+    },
+//       java 
+      "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": 8,
+        "jdkDistro": "open",
+          "installMaven": true,
+            "mavenVersion": "3.8.6"
+    }
+},
+        "ghcr.io/devcontainers/features/docker-in-docker:1": {
+            "version": "latest",
+            "moby": true
+        }
+    }
+}
