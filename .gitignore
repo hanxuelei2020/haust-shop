@@ -1,7 +1,8 @@
+.idea/*
+.idea
 /**/.idea/**
 **/target/**
 *.class
-.idea/*
 **/node_modules/**
 **/package-lock.json
 # prod 中包含着小程序密钥不上传
