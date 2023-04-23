@@ -11,14 +11,12 @@
         "version": "latest"
     },
 //       java 
-      "features": {
-    "ghcr.io/devcontainers/features/java:1": {
+     "ghcr.io/devcontainers/features/java:1": {
       "version": 8,
         "jdkDistro": "open",
           "installMaven": true,
             "mavenVersion": "3.8.6"
-    }
-},
+    },
         "ghcr.io/devcontainers/features/docker-in-docker:1": {
             "version": "latest",
             "moby": true
