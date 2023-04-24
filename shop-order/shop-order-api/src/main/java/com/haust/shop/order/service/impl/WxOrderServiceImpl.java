@@ -13,9 +13,11 @@ import com.haust.common.config.SystemConfig;
 import com.haust.common.consts.CommConsts;
 import com.haust.common.consts.CouponUserConstant;
 import com.haust.common.consts.OrderHandleOption;
+import com.haust.common.consts.RocketMqConstant;
 import com.haust.common.type.NotifyType;
 import com.haust.common.type.WxResponseCode;
 import com.haust.common.util.*;
+import com.haust.common.util.UUID;
 import com.haust.service.domain.coupon.DtsCoupon;
 import com.haust.service.domain.coupon.DtsCouponUser;
 import com.haust.service.domain.order.*;
@@ -30,12 +32,16 @@ import com.haust.service.service.product.DtsGoodsProductService;
 import com.haust.service.service.product.DtsGrouponRulesService;
 import com.haust.service.service.third.*;
 import com.haust.service.service.user.*;
+import com.haust.shop.order.model.OrderPayInfo;
 import org.apache.commons.io.IOUtils;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.dubbo.config.annotation.DubboService;
+import org.apache.rocketmq.client.producer.SendStatus;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.support.GenericMessage;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
@@ -47,10 +53,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static com.haust.common.type.WxResponseCode.*;
 
@@ -80,9 +83,12 @@ public class WxOrderServiceImpl implements WxOrderService {
 
     @Autowired
     private SystemConfig systemConfig;
-    @DubboReference
+
+    @Autowired
+    private RocketMQTemplate orderPayTemplate;
+    @Autowired
     private DtsOrderService orderService;
-    @DubboReference
+    @Autowired
     private DtsOrderGoodsService orderGoodsService;
     @DubboReference
     private DtsAddressService addressService;
@@ -652,7 +658,27 @@ public class WxOrderServiceImpl implements WxOrderService {
             orderRequest.setTotalFee(fee);
             orderRequest.setSpbillCreateIp(IpUtil.getIpAddr(request));
 
-            result = wxPayService.createOrder(orderRequest);
+            // todo 因为没有 wx的商家号,这里只能进行数据模拟
+            // result = wxPayService.createOrder(orderRequest);
+            String timestamp = String.valueOf(System.currentTimeMillis() / 1000L);
+            String nonceStr = String.valueOf(System.currentTimeMillis());
+
+            String appId = "wx0bf46aec3bccaaac";
+            String payId = UUID.randomUUID().toString();
+            result = WxPayMpOrderResult.builder()
+                    .appId(appId)
+                    .timeStamp(timestamp)
+                    .nonceStr(nonceStr)
+                    .packageValue("prepay_id=" + payId)
+                    .signType(appId).build();
+            // 模拟发送了支付回调
+            SendStatus sendStatus = orderPayTemplate.syncSend(RocketMqConstant.ORDER_NOTIFY_TOPIC,
+                    new GenericMessage<OrderPayInfo>(new OrderPayInfo("orvOg5fPiHI68hPxL9L4sK_jIUKg", fee, order.getId(), payId))).getSendStatus();
+
+            if (!Objects.equals(sendStatus,SendStatus.SEND_OK)) {
+                // 消息发不出去就抛异常，发的出去无所谓
+                throw new RuntimeException("消息传递异常");
+            }
 
             // 缓存prepayID用于后续模版通知
             String prepayId = result.getPackageValue();
