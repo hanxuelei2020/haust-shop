@@ -281,14 +281,8 @@
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson-databind.version}</version>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/org.springframework.experimental/spring-native -->
-            <dependency>
-                <groupId>org.springframework.experimental</groupId>
-                <artifactId>spring-native</artifactId>
-                <version>${spring-native.version}</version>
-            </dependency>
 		</dependencies>
-    </dependencyManagement>
+	</dependencyManagement>
     <dependencies>
 <!--        &lt;!&ndash; 热部署模块 &ndash;&gt;-->
 <!--        <dependency>-->
@@ -322,32 +316,6 @@
                         <execution>
                             <goals>
                                 <goal>repackage</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <image>
-                            <env>
-                                <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
-                            </env>
-                        </image>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.springframework.experimental</groupId>
-                    <artifactId>spring-aot-maven-plugin</artifactId>
-                    <version>${spring-native.version}</version>
-                    <executions>
-                        <execution>
-                            <id>test-generate</id>
-                            <goals>
-                                <goal>test-generate</goal>
-                            </goals>
-                        </execution>
-                        <execution>
-                            <id>generate</id>
-                            <goals>
-                                <goal>generate</goal>
                             </goals>
                         </execution>
                     </executions>
