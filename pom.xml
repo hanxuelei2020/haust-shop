@@ -48,7 +48,7 @@
         <module>shop-product</module>
         <module>shop-search</module>
 <!--        暂时没有 payment 功能-->
-        <module>shop-payment</module>
+        <!-- <module>shop-payment</module> -->
         <module>shop-cart</module>
         <module>shop-groupon</module>
     </modules>
