@@ -28,11 +28,24 @@
         <spring-javaformat.version>0.0.22</spring-javaformat.version>
         <rocketmq-springboot.version>2.2.2</rocketmq-springboot.version>
         <shenyu.version>2.5.1</shenyu.version>
-        <spring-native.version>0.12.0</spring-native.version>
+        <spring-native.version>0.10.5</spring-native.version>
 <!--        jwt token-->
         <jwt.version>4.2.1</jwt.version>
 	</properties>
-    
+    <repositories>
+        <repository>
+            <id>spring-release</id>
+            <name>Spring release</name>
+            <url>https://repo.spring.io/release</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-release</id>
+            <name>Spring release</name>
+            <url>https://repo.spring.io/release</url>
+        </pluginRepository>
+    </pluginRepositories>
 	<modules>
 	    <module>admin-api</module>
 	    <module>core</module>
