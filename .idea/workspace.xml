@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b794182-bc8a-4170-a114-bd1fa1128a0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/java/com/haust/shop/order/config/OrderRocketMqConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/java/com/haust/shop/order/consumer/OrderPayConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/java/com/haust/shop/order/model/OrderPayInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/java/com/haust/shop/order/service/impl/WxOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-order/shop-order-api/src/main/java/com/haust/shop/order/service/impl/WxOrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/haust/shop/db/domain/DtsGoodsProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/haust/shop/db/domain/DtsGoodsProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/product/DtsGoodsProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/product/DtsGoodsProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/third/DtsRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/third/DtsRegion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/user/DtsAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/haust/service/domain/user/DtsAddress.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +25,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/dao/src/main/java/com/haust/shop/db/service/DtsAccountService.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -45,10 +48,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/JavaProject/mall4cloud",
+    "last_opened_file_path": "D:/JavaProject/Graduation Information/java/haust-shop2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -210,6 +217,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.AdminApiApplication" />
+      <item itemvalue="Spring Boot.GrouponRpcApplication" />
+      <item itemvalue="Spring Boot.AdminRpcApplication" />
+      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="Spring Boot.Application (1)" />
+      <item itemvalue="Spring Boot.CartApiApplication" />
+      <item itemvalue="Spring Boot.CartRpcApplication" />
+      <item itemvalue="Spring Boot.CouponApiApplication" />
+      <item itemvalue="Spring Boot.CouponRpcApplication" />
+      <item itemvalue="Spring Boot.GrouponApiApplication" />
+      <item itemvalue="Spring Boot.OrderApiApplication" />
+      <item itemvalue="Spring Boot.OrderRpcApplication" />
+      <item itemvalue="Spring Boot.ProductApiApplication" />
+      <item itemvalue="Spring Boot.ProductRpcApplication" />
+      <item itemvalue="Spring Boot.SearchApiApplication" />
+      <item itemvalue="Spring Boot.SearchRpcApplication" />
+      <item itemvalue="Spring Boot.SystemApplication" />
+      <item itemvalue="Spring Boot.ThirdPartyApplication" />
+      <item itemvalue="Spring Boot.UserApiApplication" />
+      <item itemvalue="Spring Boot.UserRpcApplication" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -225,7 +254,9 @@
       <workItem from="1682269667121" duration="62000" />
       <workItem from="1682269748646" duration="45000" />
       <workItem from="1682342634086" duration="29000" />
-      <workItem from="1682344173073" duration="3563000" />
+      <workItem from="1682344173073" duration="3650000" />
+      <workItem from="1682429360550" duration="297000" />
+      <workItem from="1682759822121" duration="7705000" />
     </task>
     <servers />
   </component>
