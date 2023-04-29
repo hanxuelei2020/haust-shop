@@ -28,6 +28,7 @@
         <spring-javaformat.version>0.0.22</spring-javaformat.version>
         <rocketmq-springboot.version>2.2.2</rocketmq-springboot.version>
         <shenyu.version>2.5.1</shenyu.version>
+        <spring-native.version>0.12.0</spring-native.version>
 <!--        jwt token-->
         <jwt.version>4.2.1</jwt.version>
 	</properties>
@@ -267,8 +268,14 @@
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson-databind.version}</version>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.experimental/spring-native -->
+            <dependency>
+                <groupId>org.springframework.experimental</groupId>
+                <artifactId>spring-native</artifactId>
+                <version>${spring-native.version}</version>
+            </dependency>
 		</dependencies>
-	</dependencyManagement>
+    </dependencyManagement>
     <dependencies>
         <!-- 热部署模块 -->
         <dependency>
@@ -302,6 +309,32 @@
                         <execution>
                             <goals>
                                 <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <image>
+                            <env>
+                                <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
+                            </env>
+                        </image>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.springframework.experimental</groupId>
+                    <artifactId>spring-aot-maven-plugin</artifactId>
+                    <version>${spring-native.version}</version>
+                    <executions>
+                        <execution>
+                            <id>test-generate</id>
+                            <goals>
+                                <goal>test-generate</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>generate</id>
+                            <goals>
+                                <goal>generate</goal>
                             </goals>
                         </execution>
                     </executions>

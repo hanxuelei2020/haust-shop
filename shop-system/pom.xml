@@ -74,6 +74,10 @@
             <artifactId>shop-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.experimental</groupId>
+            <artifactId>spring-native</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -84,6 +88,11 @@
                     <executable>true</executable>
                     <!--增加jvm参数-->
                     <jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
+                    <image>
+                        <env>
+                            <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
+                        </env>
+                    </image>
                 </configuration>
                 <executions>
                     <execution>
@@ -93,6 +102,24 @@
                         <configuration>
                             <classifier>exec</classifier>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.experimental</groupId>
+                <artifactId>spring-aot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>test-generate</id>
+                        <goals>
+                            <goal>test-generate</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>generate</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
