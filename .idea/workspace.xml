@@ -219,11 +219,11 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.AdminApiApplication" />
+      <item itemvalue="Spring Boot.CartApiApplication" />
       <item itemvalue="Spring Boot.GrouponRpcApplication" />
       <item itemvalue="Spring Boot.AdminRpcApplication" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.Application (1)" />
-      <item itemvalue="Spring Boot.CartApiApplication" />
       <item itemvalue="Spring Boot.CartRpcApplication" />
       <item itemvalue="Spring Boot.CouponApiApplication" />
       <item itemvalue="Spring Boot.CouponRpcApplication" />
@@ -256,7 +256,7 @@
       <workItem from="1682342634086" duration="29000" />
       <workItem from="1682344173073" duration="3650000" />
       <workItem from="1682429360550" duration="297000" />
-      <workItem from="1682759822121" duration="9489000" />
+      <workItem from="1682759822121" duration="12638000" />
     </task>
     <servers />
   </component>
