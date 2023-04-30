@@ -5,8 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b794182-bc8a-4170-a114-bd1fa1128a0a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Environment/docker-compose/mysql/initdb/haust_shop.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Environment/docker-compose/mysql/initdb/nacos.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Environment/docker-compose/mysql/initdb/shenyu.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Environment/docker-compose/mysql/initdb/shop_admin.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Environment/docker-compose/mysql/initdb/shop_cart.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Environment/docker-compose/mysql/initdb/shop_common.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Environment/docker-compose/mysql/initdb/shop_coupon.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Environment/docker-compose/mysql/initdb/shop_groupon.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Environment/docker-compose/mysql/initdb/shop_order.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Environment/docker-compose/mysql/initdb/shop_product.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Environment/docker-compose/mysql/initdb/shop_search.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Environment/docker-compose/mysql/initdb/shop_system.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Environment/docker-compose/mysql/initdb/shop_user.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Environment/docker-compose/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Environment/docker-compose/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Environment/docker-compose/mysql/initdb/mall4cloud_canal.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Environment/docker-compose/mysql/initdb/mall4cloud_nacos.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Environment/docker-compose/mysql/initdb/mall4cloud_seata.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +269,8 @@
       <workItem from="1682344173073" duration="3650000" />
       <workItem from="1682429360550" duration="297000" />
       <workItem from="1682759822121" duration="23099000" />
-      <workItem from="1682840132621" duration="96000" />
+      <workItem from="1682840132621" duration="227000" />
+      <workItem from="1682865190194" duration="5535000" />
     </task>
     <servers />
   </component>
