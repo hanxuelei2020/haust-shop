@@ -25,3 +25,12 @@ com.haust.service.service.third.DtsFormUserIdService+mapping|172.19.0.2|e10df693
 com.haust.service.service.third.SmsSender+mapping|172.19.0.2|e10df6931f00a830b531cc77b28095c9|2023-05-01 15:06:13
 com.haust.service.service.third.DtsRegionService+mapping|172.19.0.2|e10df6931f00a830b531cc77b28095c9|2023-05-01 15:06:13
 com.haust.service.service.third.NotifyService+mapping|172.19.0.2|e10df6931f00a830b531cc77b28095c9|2023-05-01 15:06:13
+com.haust.service.service.third.QCodeService+mapping|172.20.0.4|e10df6931f00a830b531cc77b28095c9|2023-05-01 15:36:18
+com.haust.service.service.third.StorageService+mapping|172.20.0.4|e10df6931f00a830b531cc77b28095c9|2023-05-01 15:36:19
+com.haust.service.service.third.Storage+mapping|172.20.0.4|e10df6931f00a830b531cc77b28095c9|2023-05-01 15:36:19
+com.haust.service.service.third.DtsStorageService+mapping|172.20.0.4|e10df6931f00a830b531cc77b28095c9|2023-05-01 15:36:19
+com.haust.service.service.third.ExpressService+mapping|172.20.0.4|e10df6931f00a830b531cc77b28095c9|2023-05-01 15:36:19
+com.haust.service.service.third.DtsFormUserIdService+mapping|172.20.0.4|e10df6931f00a830b531cc77b28095c9|2023-05-01 15:36:20
+com.haust.service.service.third.SmsSender+mapping|172.20.0.4|e10df6931f00a830b531cc77b28095c9|2023-05-01 15:36:20
+com.haust.service.service.third.DtsRegionService+mapping|172.20.0.4|e10df6931f00a830b531cc77b28095c9|2023-05-01 15:36:20
+com.haust.service.service.third.NotifyService+mapping|172.20.0.4|e10df6931f00a830b531cc77b28095c9|2023-05-01 15:36:21

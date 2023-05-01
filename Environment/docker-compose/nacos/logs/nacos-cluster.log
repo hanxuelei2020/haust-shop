@@ -28,3 +28,9 @@
 
 2023-05-01 14:26:28,306 INFO This node is ready to provide external services
 
+2023-05-01 15:35:17,970 INFO Current addressing mode selection : StandaloneMemberLookup
+
+2023-05-01 15:35:19,598 WARN [ClusterRpcClientProxy] success to refresh cluster rpc client on start up,members =[] 
+
+2023-05-01 15:35:26,607 INFO This node is ready to provide external services
+

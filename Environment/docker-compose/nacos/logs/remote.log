@@ -84,3 +84,17 @@
 
 2023-05-01 14:26:15,453 INFO Nacos GrpcClusterServer Rpc server started at port 9849
 
+2023-05-01 15:35:18,089 INFO [ClientConnectionEventListenerRegistry] registry listener - ConnectionBasedClientManager
+
+2023-05-01 15:35:19,740 INFO [ClientConnectionEventListenerRegistry] registry listener - ConfigConnectionEventListener
+
+2023-05-01 15:35:19,795 INFO [ClientConnectionEventListenerRegistry] registry listener - RpcAckCallbackInitorOrCleaner
+
+2023-05-01 15:35:20,058 INFO Nacos GrpcSdkServer Rpc server starting at port 9848
+
+2023-05-01 15:35:20,672 INFO Nacos GrpcSdkServer Rpc server started at port 9848
+
+2023-05-01 15:35:20,675 INFO Nacos GrpcClusterServer Rpc server starting at port 9849
+
+2023-05-01 15:35:20,680 INFO Nacos GrpcClusterServer Rpc server started at port 9849
+

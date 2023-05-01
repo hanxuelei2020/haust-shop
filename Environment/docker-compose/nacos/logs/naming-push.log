@@ -276,3 +276,63 @@
 
 2023-05-01 15:06:14,582 INFO [PUSH-SUCC] 2ms, all delay time 558ms for subscriber 172.19.0.2, Service{namespace='public', group='DEFAULT_GROUP', name='providers:org.apache.dubbo.metadata.MetadataService:1.0.0:shop-third', ephemeral=true, revision=0}, originalSize=0, DataSize=0
 
+2023-05-01 15:36:13,259 INFO [PUSH-SUCC] 122ms, all delay time 650ms for subscriber 172.21.0.2, Service{namespace='public', group='DEFAULT_GROUP', name='shenyu-bootstrap', ephemeral=true, revision=0}, originalSize=0, DataSize=0
+
+2023-05-01 15:36:13,845 INFO [PUSH-SUCC] 9ms, all delay time 586ms, SLA 586ms, Service{namespace='public', group='DEFAULT_GROUP', name='shenyu-bootstrap', ephemeral=true, revision=1}, originalSize=1, DataSize=1, target=172.21.0.2
+
+2023-05-01 15:36:18,727 INFO [PUSH] Task merge for Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.QCodeService::', ephemeral=true, revision=1}
+
+2023-05-01 15:36:19,059 INFO [PUSH] Task merge for Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.StorageService::', ephemeral=true, revision=1}
+
+2023-05-01 15:36:19,354 INFO [PUSH-SUCC] 73ms, all delay time 615ms for subscriber 172.20.0.4, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.QCodeService', ephemeral=true, revision=0}, originalSize=0, DataSize=0
+
+2023-05-01 15:36:19,356 INFO [PUSH] Task merge for Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.Storage::', ephemeral=true, revision=1}
+
+2023-05-01 15:36:19,358 INFO [PUSH-SUCC] 76ms, all delay time 641ms, SLA 641ms, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.QCodeService::', ephemeral=true, revision=1}, originalSize=1, DataSize=1, target=172.20.0.4
+
+2023-05-01 15:36:19,587 INFO [PUSH-SUCC] 5ms, all delay time 532ms, SLA 532ms, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.StorageService::', ephemeral=true, revision=1}, originalSize=1, DataSize=1, target=172.20.0.4
+
+2023-05-01 15:36:19,593 INFO [PUSH-SUCC] 10ms, all delay time 528ms for subscriber 172.20.0.4, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.StorageService', ephemeral=true, revision=0}, originalSize=0, DataSize=0
+
+2023-05-01 15:36:19,644 INFO [PUSH] Task merge for Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.DtsStorageService::', ephemeral=true, revision=1}
+
+2023-05-01 15:36:19,886 INFO [PUSH-SUCC] 4ms, all delay time 519ms for subscriber 172.20.0.4, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.Storage', ephemeral=true, revision=0}, originalSize=0, DataSize=0
+
+2023-05-01 15:36:19,889 INFO [PUSH-SUCC] 6ms, all delay time 546ms, SLA 546ms, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.Storage::', ephemeral=true, revision=1}, originalSize=1, DataSize=1, target=172.20.0.4
+
+2023-05-01 15:36:19,923 INFO [PUSH] Task merge for Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.ExpressService::', ephemeral=true, revision=1}
+
+2023-05-01 15:36:20,188 INFO [PUSH-SUCC] 5ms, all delay time 551ms, SLA 551ms, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.DtsStorageService::', ephemeral=true, revision=1}, originalSize=1, DataSize=1, target=172.20.0.4
+
+2023-05-01 15:36:20,190 INFO [PUSH-SUCC] 6ms, all delay time 537ms for subscriber 172.20.0.4, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.DtsStorageService', ephemeral=true, revision=0}, originalSize=0, DataSize=0
+
+2023-05-01 15:36:20,240 INFO [PUSH] Task merge for Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.DtsFormUserIdService::', ephemeral=true, revision=1}
+
+2023-05-01 15:36:20,489 INFO [PUSH-SUCC] 5ms, all delay time 572ms, SLA 572ms, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.ExpressService::', ephemeral=true, revision=1}, originalSize=1, DataSize=1, target=172.20.0.4
+
+2023-05-01 15:36:20,491 INFO [PUSH-SUCC] 6ms, all delay time 559ms for subscriber 172.20.0.4, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.ExpressService', ephemeral=true, revision=0}, originalSize=0, DataSize=0
+
+2023-05-01 15:36:20,504 INFO [PUSH] Task merge for Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.SmsSender::', ephemeral=true, revision=1}
+
+2023-05-01 15:36:20,747 INFO [PUSH] Task merge for Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.DtsRegionService::', ephemeral=true, revision=1}
+
+2023-05-01 15:36:20,791 INFO [PUSH-SUCC] 7ms, all delay time 555ms, SLA 555ms, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.DtsFormUserIdService::', ephemeral=true, revision=1}, originalSize=1, DataSize=1, target=172.20.0.4
+
+2023-05-01 15:36:20,799 INFO [PUSH-SUCC] 12ms, all delay time 553ms for subscriber 172.20.0.4, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.DtsFormUserIdService', ephemeral=true, revision=0}, originalSize=0, DataSize=0
+
+2023-05-01 15:36:21,010 INFO [PUSH] Task merge for Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.NotifyService::', ephemeral=true, revision=1}
+
+2023-05-01 15:36:21,093 INFO [PUSH-SUCC] 8ms, all delay time 592ms, SLA 592ms, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.SmsSender::', ephemeral=true, revision=1}, originalSize=1, DataSize=1, target=172.20.0.4
+
+2023-05-01 15:36:21,097 INFO [PUSH-SUCC] 12ms, all delay time 589ms for subscriber 172.20.0.4, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.SmsSender', ephemeral=true, revision=0}, originalSize=0, DataSize=0
+
+2023-05-01 15:36:21,291 INFO [PUSH-SUCC] 6ms, all delay time 539ms for subscriber 172.20.0.4, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.DtsRegionService', ephemeral=true, revision=0}, originalSize=0, DataSize=0
+
+2023-05-01 15:36:21,294 INFO [PUSH-SUCC] 8ms, all delay time 551ms, SLA 551ms, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.DtsRegionService::', ephemeral=true, revision=1}, originalSize=1, DataSize=1, target=172.20.0.4
+
+2023-05-01 15:36:21,590 INFO [PUSH-SUCC] 4ms, all delay time 571ms for subscriber 172.20.0.4, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.NotifyService', ephemeral=true, revision=0}, originalSize=0, DataSize=0
+
+2023-05-01 15:36:21,594 INFO [PUSH-SUCC] 8ms, all delay time 589ms, SLA 589ms, Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.NotifyService::', ephemeral=true, revision=1}, originalSize=1, DataSize=1, target=172.20.0.4
+
+2023-05-01 15:36:21,893 INFO [PUSH-SUCC] 7ms, all delay time 535ms for subscriber 172.20.0.4, Service{namespace='public', group='DEFAULT_GROUP', name='providers:org.apache.dubbo.metadata.MetadataService:1.0.0:shop-third', ephemeral=true, revision=0}, originalSize=0, DataSize=0
+

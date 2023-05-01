@@ -498,3 +498,45 @@ java.lang.InterruptedException: null
 
 2023-05-01 15:06:14,075 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='shop-third', ephemeral=true, revision=4}, 1682924771109_172.22.0.6_50170
 
+2023-05-01 15:35:20,699 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+
+2023-05-01 15:35:20,699 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+
+2023-05-01 15:35:20,700 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+
+2023-05-01 15:35:20,700 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+
+2023-05-01 15:35:22,861 INFO Load instance extension handler []
+
+2023-05-01 15:36:06,413 INFO Client connection 1682926565801_172.20.0.3_60008 connect
+
+2023-05-01 15:36:12,429 INFO Client connection 1682926572352_172.20.0.3_60022 connect
+
+2023-05-01 15:36:13,258 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='shenyu-bootstrap', ephemeral=true, revision=0}, 1682926572352_172.20.0.3_60022
+
+2023-05-01 15:36:13,287 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='shenyu-gateway', ephemeral=true, revision=0}, 1682926565801_172.20.0.3_60008
+
+2023-05-01 15:36:18,317 INFO Client connection 1682926578309_172.22.0.5_35454 connect
+
+2023-05-01 15:36:18,600 INFO Client connection 1682926578591_172.22.0.5_35468 connect
+
+2023-05-01 15:36:18,717 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.QCodeService::', ephemeral=true, revision=0}, 1682926578591_172.22.0.5_35468
+
+2023-05-01 15:36:19,055 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.StorageService::', ephemeral=true, revision=0}, 1682926578591_172.22.0.5_35468
+
+2023-05-01 15:36:19,342 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.Storage::', ephemeral=true, revision=0}, 1682926578591_172.22.0.5_35468
+
+2023-05-01 15:36:19,637 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.DtsStorageService::', ephemeral=true, revision=0}, 1682926578591_172.22.0.5_35468
+
+2023-05-01 15:36:19,916 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.ExpressService::', ephemeral=true, revision=0}, 1682926578591_172.22.0.5_35468
+
+2023-05-01 15:36:20,235 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.DtsFormUserIdService::', ephemeral=true, revision=0}, 1682926578591_172.22.0.5_35468
+
+2023-05-01 15:36:20,500 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.SmsSender::', ephemeral=true, revision=0}, 1682926578591_172.22.0.5_35468
+
+2023-05-01 15:36:20,743 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.DtsRegionService::', ephemeral=true, revision=0}, 1682926578591_172.22.0.5_35468
+
+2023-05-01 15:36:21,004 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='providers:com.haust.service.service.third.NotifyService::', ephemeral=true, revision=0}, 1682926578591_172.22.0.5_35468
+
+2023-05-01 15:36:21,404 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='shop-third', ephemeral=true, revision=0}, 1682926578309_172.22.0.5_35454
+

@@ -180,3 +180,35 @@
 
 2023-05-01 14:26:11,897 WARN clear all config-info-tag-tenant failed.
 
+2023-05-01 15:35:13,116 INFO notifyConnectTimeout:100
+
+2023-05-01 15:35:13,124 INFO notifySocketTimeout:200
+
+2023-05-01 15:35:13,124 INFO isHealthCheck:true
+
+2023-05-01 15:35:13,125 INFO maxHealthCheckFailCount:12
+
+2023-05-01 15:35:13,125 INFO maxContent:10485760
+
+2023-05-01 15:35:19,413 WARN DumpService start
+
+2023-05-01 15:35:19,415 INFO start clear all config-info.
+
+2023-05-01 15:35:19,427 INFO clear all config-info success.
+
+2023-05-01 15:35:19,434 INFO clear all config-info-tenant success.
+
+2023-05-01 15:35:19,541 INFO [all-dump] 4133 / 4133
+
+2023-05-01 15:35:19,541 INFO start clear all config-info-beta.
+
+2023-05-01 15:35:19,541 WARN clear all config-info-beta failed.
+
+2023-05-01 15:35:19,541 WARN clear all config-info-beta-tenant failed.
+
+2023-05-01 15:35:19,544 INFO start clear all config-info-tag.
+
+2023-05-01 15:35:19,544 WARN clear all config-info-tag failed.
+
+2023-05-01 15:35:19,544 WARN clear all config-info-tag-tenant failed.
+

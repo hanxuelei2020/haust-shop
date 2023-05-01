@@ -438,3 +438,7 @@ java.lang.IllegalStateException: No DataSource set
 
 2023-05-01 14:26:11,599 WARN isQuickStart:false
 
+2023-05-01 15:35:19,081 WARN [master-db] jdbc:mysql://haust-mysql:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useSSL=false
+
+2023-05-01 15:35:19,414 WARN isQuickStart:false
+

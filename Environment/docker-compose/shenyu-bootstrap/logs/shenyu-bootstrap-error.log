@@ -6354,4 +6354,40 @@ Caused by: java.net.UnknownHostException: nacos
 [0;39m[31m2023-05-01 07:16:41[0;39m [32m[parallel-1][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
 [0;39m[31m2023-05-01 07:17:11[0;39m [32m[parallel-2][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
 [0;39m[31m2023-05-01 07:17:42[0;39m [32m[parallel-3][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:18:12[0;39m [32m[parallel-4][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:18:42[0;39m [32m[parallel-1][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:19:12[0;39m [32m[parallel-2][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:19:42[0;39m [32m[parallel-3][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:20:12[0;39m [32m[parallel-4][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:20:42[0;39m [32m[parallel-1][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:21:12[0;39m [32m[parallel-2][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:35:58[0;39m [32m[WebSocketConnectReadThread-29][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.sync.data.websocket.client.ShenyuWebsocketClient[0;39m - [36mwebsocket server[ws://shenyu-admin:9095/websocket] is error.....
+[0;39mjava.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.java_websocket.client.WebSocketClient.run(WebSocketClient.java:461)
+	at java.lang.Thread.run(Thread.java:748)
+[31m2023-05-01 07:36:25[0;39m [32m[parallel-1][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:36:52[0;39m [32m[parallel-2][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:36:52[0;39m [32m[parallel-3][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:36:55[0;39m [32m[parallel-4][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:37:12[0;39m [32m[parallel-3][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:37:25[0;39m [32m[parallel-4][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:37:39[0;39m [32m[parallel-3][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:37:55[0;39m [32m[parallel-4][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:37:59[0;39m [32m[parallel-3][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:38:01[0;39m [32m[parallel-2][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:38:02[0;39m [32m[parallel-1][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:38:25[0;39m [32m[parallel-2][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:38:56[0;39m [32m[parallel-3][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:39:26[0;39m [32m[parallel-4][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:39:56[0;39m [32m[parallel-1][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:40:26[0;39m [32m[parallel-2][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:40:56[0;39m [32m[parallel-3][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:41:26[0;39m [32m[parallel-4][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:41:56[0;39m [32m[parallel-1][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
+[0;39m[31m2023-05-01 07:42:26[0;39m [32m[parallel-2][0;39m [1;31mERROR[0;39m [1;35morg.apache.shenyu.plugin.api.utils.WebFluxResultUtils[0;39m - [36mcan not match selector data: divide
 [0;39m
