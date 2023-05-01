@@ -9,8 +9,27 @@
 # prod 中包含着小程序密钥不上传
 **/application-prod.yml
 /.idea/
+
+**/Environment/docker-compose/minio/**
+**/Environment/docker-compose/mysql/**
+**/Environment/docker-compose/nacos/**
+**/Environment/docker-compose/shenyu-admin/**
+**/Environment/docker-compose/shenyu-bootstrap/**
+
 /Environment/docker-compose/minio/**
 /Environment/docker-compose/mysql/**
 /Environment/docker-compose/nacos/**
 /Environment/docker-compose/shenyu-admin/**
 /Environment/docker-compose/shenyu-bootstrap/**
+
+/workspaces/haust-shop/Environment/docker-compose/minio/**
+/workspaces/haust-shop/Environment/docker-compose/mysql/**
+/workspaces/haust-shop/Environment/docker-compose/nacos/**
+/workspaces/haust-shop/Environment/docker-compose/shenyu-admin/**
+/workspaces/haust-shop/Environment/docker-compose/shenyu-bootstrap/**
+
+Environment/docker-compose/minio/**
+Environment/docker-compose/mysql/**
+Environment/docker-compose/nacos/**
+Environment/docker-compose/shenyu-admin/**
+Environment/docker-compose/shenyu-bootstrap/**

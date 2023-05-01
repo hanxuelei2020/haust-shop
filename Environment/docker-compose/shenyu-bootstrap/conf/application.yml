@@ -29,7 +29,7 @@ spring:
       enabled: true
     nacos:
       discovery:
-        server-addr: 192.168.88.128:8848 # Spring Cloud Alibaba Dubbo use this.
+        server-addr: nacos:8848 # Spring Cloud Alibaba Dubbo use this.
         enabled: true
         namespace: public
 
@@ -42,7 +42,7 @@ eureka:
   client:
     enabled: false
     serviceUrl:
-      defaultZone: http://192.168.88.128:8761/eureka/
+      defaultZone: http://eureka:8761/eureka/
   instance:
     prefer-ip-address: true
 
@@ -119,7 +119,7 @@ shenyu:
   register:
     enabled: true
     registerType: nacos #etcd #consul
-    serverLists: 192.168.88.128:8848 #http://192.168.88.128:2379 #192.168.88.128:8848
+    serverLists: nacos:8848 #http://192.168.88.128:2379 #192.168.88.128:8848
     props:
   cross:
     enabled: true
@@ -151,8 +151,8 @@ shenyu:
     maxSize : 10
   sync:
     websocket:
-      urls: ws://192.168.88.128:9095/websocket
-      allowOrigin: ws://192.168.88.128:9195
+      urls: ws://shenyu-admin:9095/websocket
+      allowOrigin: ws://shenyu-bootstrap:9195
 #    apollo:
 #      appId: shenyu
 #      meta: http://192.168.88.128:8080
@@ -168,7 +168,7 @@ shenyu:
 #      username:
 #      password:
     nacos:
-      url: 192.168.88.128:8848
+      url: nacos:8848
       namespace: 
       username: nacos
       password: nacos

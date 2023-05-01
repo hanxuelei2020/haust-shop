@@ -21,6 +21,8 @@ public class RocketMqConfig {
         RocketMQTemplate mqTemplate = new RocketMQTemplate();
         DefaultMQProducer producer = new DefaultMQProducer(topic);
         producer.setNamesrvAddr(nameServer);
+        //关闭vip通道，阿里，腾讯上部署时建议关闭，不然可能发送失败
+        producer.setVipChannelEnabled(false);
         producer.setRetryTimesWhenSendFailed(2);
         producer.setSendMsgTimeout((int) RocketMqConstant.TIMEOUT);
         mqTemplate.setProducer(producer);
