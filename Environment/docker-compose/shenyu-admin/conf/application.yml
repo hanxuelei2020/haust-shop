@@ -57,7 +57,7 @@ shenyu:
     websocket:
       enabled: true
       messageMaxSize: 10240
-      allowOrigins: ws://192.168.88.128:9195;
+      allowOrigins: ws://shenyu-bootstrap:9195;
 #    apollo:
 #      meta: http://192.168.88.128:8080
 #      appId: shenyu
@@ -73,7 +73,7 @@ shenyu:
 #      http:
 #        enabled: true
       nacos:
-        url: 192.168.88.128:8848
+        url: nacos:8848
         namespace: 1c10d748-af86-43b9-8265-75f487d20c6c
         username: nacos
         password: nacos
