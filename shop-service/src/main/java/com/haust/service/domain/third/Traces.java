@@ -5,13 +5,15 @@ package com.haust.service.domain.third;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.io.Serializable;
+
 /**
  * Auto-generated: 2018-07-19 22:27:22
  *
  * @author bejson.com (i@bejson.com)
  * @website http://www.bejson.com/java2pojo/
  */
-public class Traces {
+public class Traces implements Serializable {
 
 	@JsonProperty("AcceptStation")
 	private String acceptStation;

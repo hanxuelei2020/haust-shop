@@ -5,9 +5,10 @@ package com.haust.service.domain.third;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class ExpressInfo {
+public class ExpressInfo implements Serializable {
 
 	@JsonProperty("LogisticCode")
 	private String LogisticCode;

@@ -9,6 +9,7 @@
 # prod 中包含着小程序密钥不上传
 **/application-prod.yml
 /.idea/
+.idea/workspace.xml
 
 **/Environment/docker-compose/minio/**
 **/Environment/docker-compose/mysql/**

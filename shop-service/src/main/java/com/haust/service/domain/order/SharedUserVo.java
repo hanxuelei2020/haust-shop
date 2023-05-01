@@ -1,6 +1,8 @@
 package com.haust.service.domain.order;
 
-public class SharedUserVo {
+import java.io.Serializable;
+
+public class SharedUserVo implements Serializable {
     private Integer shardUserId;
     private String startTime;
     private String endTime;

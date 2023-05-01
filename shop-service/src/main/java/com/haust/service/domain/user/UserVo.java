@@ -1,6 +1,8 @@
 package com.haust.service.domain.user;
 
-public class UserVo {
+import java.io.Serializable;
+
+public class UserVo implements Serializable {
 	private String nickname;
 	private String avatar;
 
