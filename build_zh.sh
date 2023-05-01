@@ -1,6 +1,14 @@
 #!/bin/bash
 # 获得所有 以 shop- 开头的目录
 dirs=($(find . -maxdepth 1 -type d -name 'shop-*' -printf '%f\n'))
+# 先处理特殊的两个
+for d in ./shop-system/ ./shop-third-party/; do
+    cd "$d"
+    echo "Building and pushing $(basename "$d")..."
+    mvn spring-boot:build-image -Dspring-boot.build-image.imageName=registry.cn-hangzhou.aliyuncs.com/hanxuelei/"$(basename "$d")":v1
+    docker push registry.cn-hangzhou.aliyuncs.com/hanxuelei/"$(basename "$d")":v1
+    cd ..
+done
 # 遍历上述目录
 for dir in "${dirs[@]}"; do
     # 如果目录不是 shop-third-party 和 shop-system
@@ -17,19 +25,13 @@ for dir in "${dirs[@]}"; do
                 echo "Building and pushing $project_name..."
                 mvn spring-boot:build-image -Dspring-boot.build-image.imageName=registry.cn-hangzhou.aliyuncs.com/hanxuelei/"${project_name}":v1
                 docker push registry.cn-hangzhou.aliyuncs.com/hanxuelei/"${project_name}":v1
+                # 推送完进行删除镜像
+                docker rmi registry.cn-hangzhou.aliyuncs.com/hanxuelei/"${project_name}":v1
             fi
             # 在这里添加您的代码，处理每个子目录
         done
         cd ..
     fi
-done
-# 处理特殊的两个
-for d in ./shop-system/ ./shop-third-party/; do
-    cd "$d"
-    echo "Building and pushing $(basename "$d")..."
-    mvn spring-boot:build-image -Dspring-boot.build-image.imageName=registry.cn-hangzhou.aliyuncs.com/hanxuelei/"$(basename "$d")":v1
-    docker push registry.cn-hangzhou.aliyuncs.com/hanxuelei/"$(basename "$d")":v1
-    cd ..
 done
 
 # #!/bin/bash
