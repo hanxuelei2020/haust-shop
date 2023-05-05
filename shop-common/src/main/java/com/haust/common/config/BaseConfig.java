@@ -29,7 +29,7 @@ public abstract class BaseConfig {
 	 * @param keyName
 	 * @return
 	 */
-	protected static String getConfig(String keyName) {
+	protected String getConfig(String keyName) {
 		return configs.get(keyName);
 	}
 
@@ -40,7 +40,7 @@ public abstract class BaseConfig {
 	 * @param keyName
 	 * @return
 	 */
-	protected static BigDecimal getConfigBigDec(String keyName) {
+	protected BigDecimal getConfigBigDec(String keyName) {
 		return new BigDecimal(configs.get(keyName));
 	}
 

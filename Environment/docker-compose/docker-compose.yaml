@@ -171,380 +171,380 @@ services:
     networks:
       - rocketmq
 
-  # 微服务都是需要mysql,需要和mysql在同一个network
-  shop-third-party:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-third-party:v1
-    container_name: shop-third-party
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql:3306/shop_common?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-  shop-groupon-rpc:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-groupon-rpc:v1
-    container_name: shop-groupon-rpc
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_groupon?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-  shop-user-rpc:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-user-rpc:v1
-    container_name: shop-user-rpc
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-  shop-cart-rpc:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-cart-rpc:v1
-    container_name: shop-cart-rpc
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_cart?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-  shop-order-rpc:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-order-rpc:v1
-    container_name: shop-order-rpc
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-  shop-admin-rpc:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-admin-rpc:v1
-    container_name: shop-admin-rpc
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_admin?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-  shop-coupon-rpc:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-coupon-rpc:v1
-    container_name: shop-coupon-rpc
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_coupon?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-  shop-search-rpc:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-search-rpc:v1
-    container_name: shop-search-rpc
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_search?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-  shop-product-rpc:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-product-rpc:v1
-    container_name: shop-product-rpc
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_product?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-
-  #        api 中的所有的服务都应该等rpc服务启动之后在进行启动
-  shop-groupon-api:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-groupon-api:v1
-    container_name: shop-groupon-api
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_groupon?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-      - shop-groupon-rpc
-      - shop-admin-rpc
-      - shop-cart-rpc
-      - shop-order-rpc
-      - shop-coupon-rpc
-      - shop-user-rpc
-      - shop-search-rpc
-      - shop-product-rpc
-      - shop-third-party
-      - shop-system
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-
-  shop-user-api:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-user-api:v1
-    container_name: shop-user-api
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-      - shop-groupon-rpc
-      - shop-admin-rpc
-      - shop-cart-rpc
-      - shop-order-rpc
-      - shop-coupon-rpc
-      - shop-user-rpc
-      - shop-search-rpc
-      - shop-product-rpc
-      - shop-third-party
-      - shop-system
-      - shop-order-api
-      - shop-product-api
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-  shop-cart-api:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-cart-api:v1
-    container_name: shop-cart-api
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_cart?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-      - shop-groupon-rpc
-      - shop-admin-rpc
-      - shop-cart-rpc
-      - shop-order-rpc
-      - shop-coupon-rpc
-      - shop-user-rpc
-      - shop-search-rpc
-      - shop-product-rpc
-      - shop-third-party
-      - shop-system
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-  shop-order-api:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-order-api:v1
-    container_name: shop-order-api
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-      - shop-groupon-rpc
-      - shop-admin-rpc
-      - shop-cart-rpc
-      - shop-order-rpc
-      - shop-coupon-rpc
-      - shop-user-rpc
-      - shop-search-rpc
-      - shop-product-rpc
-      - shop-third-party
-      - shop-system
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-  shop-admin-api:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-admin-api:v1
-    container_name: shop-admin-api
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_admin?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-      - shop-groupon-rpc
-      - shop-admin-rpc
-      - shop-cart-rpc
-      - shop-order-rpc
-      - shop-coupon-rpc
-      - shop-user-rpc
-      - shop-search-rpc
-      - shop-product-rpc
-      - shop-third-party
-      - shop-system
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-  shop-coupon-api:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-coupon-api:v1
-    container_name: shop-coupon-api
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_coupon?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-      - shop-groupon-rpc
-      - shop-admin-rpc
-      - shop-cart-rpc
-      - shop-order-rpc
-      - shop-coupon-rpc
-      - shop-user-rpc
-      - shop-search-rpc
-      - shop-product-rpc
-      - shop-third-party
-      - shop-system
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-  shop-search-api:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-search-api:v1
-    container_name: shop-search-api
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_search?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-      - shop-groupon-rpc
-      - shop-admin-rpc
-      - shop-cart-rpc
-      - shop-order-rpc
-      - shop-coupon-rpc
-      - shop-user-rpc
-      - shop-search-rpc
-      - shop-product-rpc
-      - shop-third-party
-      - shop-system
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-  shop-product-api:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-product-api:v1
-    container_name: shop-product-api
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_product?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-      - shop-groupon-rpc
-      - shop-admin-rpc
-      - shop-cart-rpc
-      - shop-order-rpc
-      - shop-coupon-rpc
-      - shop-user-rpc
-      - shop-search-rpc
-      - shop-product-rpc
-      - shop-third-party
-      - shop-system
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
-  shop-system:
-    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-system:v1
-    container_name: shop-system
-    environment:
-      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_system?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
-    depends_on:
-      - haust-mysql
-      - redis
-      - nacos
-      - shenyu-admin
-      - shenyu-bootstrap
-    networks:
-      - nacos
-      - rocketmq
-      - gateway
-      - mysql
+  # 微服务都是需要mysql,需要和mysql在同一个network, 内存不够的尽量不要同时开启这么多
+#  shop-third-party:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-third-party:v1
+#    container_name: shop-third-party
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql:3306/shop_common?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#  shop-groupon-rpc:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-groupon-rpc:v1
+#    container_name: shop-groupon-rpc
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_groupon?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#  shop-user-rpc:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-user-rpc:v1
+#    container_name: shop-user-rpc
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#  shop-cart-rpc:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-cart-rpc:v1
+#    container_name: shop-cart-rpc
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_cart?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#  shop-order-rpc:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-order-rpc:v1
+#    container_name: shop-order-rpc
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#  shop-admin-rpc:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-admin-rpc:v1
+#    container_name: shop-admin-rpc
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_admin?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#  shop-coupon-rpc:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-coupon-rpc:v1
+#    container_name: shop-coupon-rpc
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_coupon?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#  shop-search-rpc:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-search-rpc:v1
+#    container_name: shop-search-rpc
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_search?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#  shop-product-rpc:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-product-rpc:v1
+#    container_name: shop-product-rpc
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_product?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#
+#  #        api 中的所有的服务都应该等rpc服务启动之后在进行启动
+#  shop-groupon-api:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-groupon-api:v1
+#    container_name: shop-groupon-api
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_groupon?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#      - shop-groupon-rpc
+#      - shop-admin-rpc
+#      - shop-cart-rpc
+#      - shop-order-rpc
+#      - shop-coupon-rpc
+#      - shop-user-rpc
+#      - shop-search-rpc
+#      - shop-product-rpc
+#      - shop-third-party
+#      - shop-system
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#
+#  shop-user-api:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-user-api:v1
+#    container_name: shop-user-api
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#      - shop-groupon-rpc
+#      - shop-admin-rpc
+#      - shop-cart-rpc
+#      - shop-order-rpc
+#      - shop-coupon-rpc
+#      - shop-user-rpc
+#      - shop-search-rpc
+#      - shop-product-rpc
+#      - shop-third-party
+#      - shop-system
+#      - shop-order-api
+#      - shop-product-api
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#  shop-cart-api:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-cart-api:v1
+#    container_name: shop-cart-api
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_cart?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#      - shop-groupon-rpc
+#      - shop-admin-rpc
+#      - shop-cart-rpc
+#      - shop-order-rpc
+#      - shop-coupon-rpc
+#      - shop-user-rpc
+#      - shop-search-rpc
+#      - shop-product-rpc
+#      - shop-third-party
+#      - shop-system
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#  shop-order-api:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-order-api:v1
+#    container_name: shop-order-api
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#      - shop-groupon-rpc
+#      - shop-admin-rpc
+#      - shop-cart-rpc
+#      - shop-order-rpc
+#      - shop-coupon-rpc
+#      - shop-user-rpc
+#      - shop-search-rpc
+#      - shop-product-rpc
+#      - shop-third-party
+#      - shop-system
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#  shop-admin-api:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-admin-api:v1
+#    container_name: shop-admin-api
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_admin?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#      - shop-groupon-rpc
+#      - shop-admin-rpc
+#      - shop-cart-rpc
+#      - shop-order-rpc
+#      - shop-coupon-rpc
+#      - shop-user-rpc
+#      - shop-search-rpc
+#      - shop-product-rpc
+#      - shop-third-party
+#      - shop-system
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#  shop-coupon-api:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-coupon-api:v1
+#    container_name: shop-coupon-api
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_coupon?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#      - shop-groupon-rpc
+#      - shop-admin-rpc
+#      - shop-cart-rpc
+#      - shop-order-rpc
+#      - shop-coupon-rpc
+#      - shop-user-rpc
+#      - shop-search-rpc
+#      - shop-product-rpc
+#      - shop-third-party
+#      - shop-system
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#  shop-search-api:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-search-api:v1
+#    container_name: shop-search-api
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_search?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#      - shop-groupon-rpc
+#      - shop-admin-rpc
+#      - shop-cart-rpc
+#      - shop-order-rpc
+#      - shop-coupon-rpc
+#      - shop-user-rpc
+#      - shop-search-rpc
+#      - shop-product-rpc
+#      - shop-third-party
+#      - shop-system
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#  shop-product-api:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-product-api:v1
+#    container_name: shop-product-api
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_product?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#      - shop-groupon-rpc
+#      - shop-admin-rpc
+#      - shop-cart-rpc
+#      - shop-order-rpc
+#      - shop-coupon-rpc
+#      - shop-user-rpc
+#      - shop-search-rpc
+#      - shop-product-rpc
+#      - shop-third-party
+#      - shop-system
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
+#  shop-system:
+#    image: registry.cn-hangzhou.aliyuncs.com/hanxuelei/shop-system:v1
+#    container_name: shop-system
+#    environment:
+#      - JAVA_OPTS=-Dspring.datasource.druid.url=jdbc:mysql://haust-mysql/shop_system?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false&zeroDateTimeBehavior=convertToNull -Dspring.redis.host=redis -Ddubbo.registry.address=nacos://nacos:8848 -Dshenyu.register.serverLists=http://shenyu-admin:9095 -Xms500m -Xmx500m -Xmn500m
+#    depends_on:
+#      - haust-mysql
+#      - redis
+#      - nacos
+#      - shenyu-admin
+#      - shenyu-bootstrap
+#    networks:
+#      - nacos
+#      - rocketmq
+#      - gateway
+#      - mysql
 
 
 

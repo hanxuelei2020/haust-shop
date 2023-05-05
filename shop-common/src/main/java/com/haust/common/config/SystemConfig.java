@@ -104,6 +104,14 @@ public class SystemConfig extends BaseConfig {
 		return Integer.parseInt(Objects.requireNonNull(cacheService.hGet(RedisPrefix.SYSTEM_CONFIG, key).block()));
 	}
 
+	public BigDecimal getConfigBigDec(String key) {
+		return BigDecimal.valueOf(Long.parseLong(Objects.requireNonNull(cacheService.hGet(RedisPrefix.SYSTEM_CONFIG, key).block())));
+	}
+
+	public String getConfig(String key) {
+		return Objects.requireNonNull(cacheService.hGet(RedisPrefix.SYSTEM_CONFIG, key).block());
+	}
+
 	@Override
 	public String getPrefix() {
 		return PRE_FIX;
