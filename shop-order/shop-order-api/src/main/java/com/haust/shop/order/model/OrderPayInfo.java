@@ -3,13 +3,13 @@ package com.haust.shop.order.model;
 public class OrderPayInfo {
     private String openId;
     private Integer totalFee;
-    private Integer orderSn;
+    private String orderSn;
     private String payId;
 
     public OrderPayInfo() {
     }
 
-    public OrderPayInfo(String openId, Integer totalFee, Integer orderSn, String payId) {
+    public OrderPayInfo(String openId, Integer totalFee, String orderSn, String payId) {
         this.openId = openId;
         this.totalFee = totalFee;
         this.orderSn = orderSn;
@@ -32,11 +32,11 @@ public class OrderPayInfo {
         this.totalFee = totalFee;
     }
 
-    public Integer getOrderSn() {
+    public String getOrderSn() {
         return orderSn;
     }
 
-    public void setOrderSn(Integer orderSn) {
+    public void setOrderSn(String orderSn) {
         this.orderSn = orderSn;
     }
 

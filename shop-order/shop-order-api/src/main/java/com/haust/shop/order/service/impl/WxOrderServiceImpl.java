@@ -673,7 +673,7 @@ public class WxOrderServiceImpl implements WxOrderService {
                     .signType(appId).build();
             // 模拟发送了支付回调
             SendStatus sendStatus = orderPayTemplate.syncSend(RocketMqConstant.ORDER_NOTIFY_TOPIC,
-                    new GenericMessage<OrderPayInfo>(new OrderPayInfo("orvOg5fPiHI68hPxL9L4sK_jIUKg", fee, order.getId(), payId))).getSendStatus();
+                    new GenericMessage<OrderPayInfo>(new OrderPayInfo("orvOg5fPiHI68hPxL9L4sK_jIUKg", fee, order.getOrderSn(), payId))).getSendStatus();
 
             if (!Objects.equals(sendStatus,SendStatus.SEND_OK)) {
                 // 消息发不出去就抛异常，发的出去无所谓

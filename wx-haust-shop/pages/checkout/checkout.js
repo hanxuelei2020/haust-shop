@@ -177,6 +177,7 @@ Page({
           if (res.errno === 0) {
             const payParam = res.data;
             console.log("支付过程开始");
+            // 查询微信的接口
             wx.requestPayment({
               'timeStamp': payParam.timeStamp,
               'nonceStr': payParam.nonceStr,
