@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScans;
 @ComponentScans({@ComponentScan({"com.haust.common",
         "com.haust.shop.cart"})})
 @MapperScan({"com.haust.common",
-        "com.haust.shop.cart"})
+        "com.haust.shop.cart.mapper"})
 public class CartRpcApplication {
     public static void main(String[] args) {
         SpringApplication.run(CartRpcApplication.class, args);

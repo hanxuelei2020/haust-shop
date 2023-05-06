@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication(scanBasePackages = { "com.haust.common",
 		"com.haust.shop.admin" })
 @MapperScan({"com.haust.common",
-		"com.haust.shop.admin"})
+		"com.haust.shop.admin.mapper"})
 @EnableTransactionManagement
 @EnableScheduling
 @EnableDubbo

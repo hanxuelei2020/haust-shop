@@ -28,7 +28,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.*;
-
+import com.haust.common.util.Base64;
 @RestController
 @RequestMapping("/admin/auth")
 @ShenyuSpringMvcClient("/admin/auth/**")
@@ -173,7 +173,7 @@ public class AdminAuthController {
         try {
         	Map<String, Object> data = new HashMap<>();
             data.put("uuid", uuid);
-            data.put("img", Base64.getEncoder().encode(stream.toByteArray()));
+            data.put("img", Base64.encode(stream.toByteArray()));
             return ResponseUtil.ok(data);
         } catch (Exception e){
             e.printStackTrace();

@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScans;
 @ComponentScans({@ComponentScan({"com.haust.common",
         "com.haust.shop.search"})})
 @MapperScan({"com.haust.common",
-        "com.haust.shop.search"})
+        "com.haust.shop.search.mapper"})
 public class SearchApiApplication {
     public static void main(String[] args) {
         SpringApplication.run(SearchApiApplication.class, args);

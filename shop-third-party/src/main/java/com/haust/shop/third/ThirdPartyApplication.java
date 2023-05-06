@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScans;
 @ComponentScans({@ComponentScan({"com.haust.common",
         "com.haust.shop.third"})})
 @MapperScan({"com.haust.common",
-        "com.haust.shop.third"})
+        "com.haust.shop.third.mapper"})
 @EnableDubbo
 public class ThirdPartyApplication {
     public static void main(String[] args) {

@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScans;
 @ComponentScans({@ComponentScan({"com.haust.common",
         "com.haust.shop.groupon"})})
 @MapperScan({"com.haust.common",
-        "com.haust.shop.groupon"})
+        "com.haust.shop.groupon.mapper"})
 public class GrouponRpcApplication {
     public static void main(String[] args) {
         SpringApplication.run(GrouponRpcApplication.class, args);

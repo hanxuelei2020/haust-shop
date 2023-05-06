@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScans;
 @ComponentScans({@ComponentScan({"com.haust.common",
         "com.haust.shop.product"})})
 @MapperScan({"com.haust.common",
-        "com.haust.shop.product"})
+        "com.haust.shop.product.mapper"})
 @EnableDubbo
 public class ProductApiApplication {
     public static void main(String[] args) {
