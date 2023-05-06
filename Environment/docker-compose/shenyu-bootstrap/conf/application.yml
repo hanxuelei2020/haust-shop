@@ -123,7 +123,7 @@ shenyu:
     props:
   cross:
     enabled: true
-    allowedHeaders:
+    allowedHeaders: "*"
     allowedMethods: "*"
     allowedAnyOrigin: true # the same of Access-Control-Allow-Origin: "*"
 #    allowedOrigin:
