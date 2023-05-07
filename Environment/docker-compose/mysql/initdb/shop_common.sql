@@ -11,13 +11,66 @@
  Target Server Version : 80027
  File Encoding         : 65001
 
- Date: 01/05/2023 00:55:10
+ Date: 07/05/2023 22:44:40
 */
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`shop_common` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 
 USE `shop_common`;
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for dts_form_userId
+-- ----------------------------
+DROP TABLE IF EXISTS `dts_form_userId`;
+CREATE TABLE `dts_form_userId`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `formId` varchar(63) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '缓存的FormId',
+  `isprepay` tinyint(1) NOT NULL COMMENT '是FormId还是prepayId',
+  `useAmount` int NOT NULL COMMENT '可用次数，fromId为1，prepay为3，用1次减1',
+  `expire_time` datetime NOT NULL COMMENT '过期时间，腾讯规定为7天',
+  `openId` varchar(63) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '微信登录openid',
+  `add_time` datetime NULL DEFAULT NULL COMMENT '创建时间',
+  `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
+  `deleted` tinyint(1) NULL DEFAULT 0 COMMENT '逻辑删除',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 186 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = COMPACT;
+
+-- ----------------------------
+-- Records of dts_form_userId
+-- ----------------------------
+INSERT INTO `dts_form_userId` VALUES (155, '3c8f9a6d-3f4a-4ade-ae62-57ed5b785db4', 1, 3, '2023-05-13 00:14:30', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 00:14:30', '2023-05-06 00:14:30', 0);
+INSERT INTO `dts_form_userId` VALUES (156, '576a93e8-70ab-473d-ad2c-562d66371fb5', 1, 3, '2023-05-13 00:15:16', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 00:15:16', '2023-05-06 00:15:16', 0);
+INSERT INTO `dts_form_userId` VALUES (157, 'a256b0ae-578a-4095-bfb1-a1756d296dc5', 1, 3, '2023-05-13 00:15:53', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 00:15:53', '2023-05-06 00:15:53', 0);
+INSERT INTO `dts_form_userId` VALUES (158, '60cf9381-88a1-4d9f-85b8-1b41e0af600c', 1, 3, '2023-05-13 00:21:52', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 00:21:52', '2023-05-06 00:21:52', 0);
+INSERT INTO `dts_form_userId` VALUES (159, 'd630d342-6ec9-46e5-a2ed-981832077bd1', 1, 3, '2023-05-13 00:22:07', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 00:22:07', '2023-05-06 00:22:07', 0);
+INSERT INTO `dts_form_userId` VALUES (160, 'b6b78ed1-1366-48c1-82e9-ea81d8104af0', 1, 3, '2023-05-13 00:30:28', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 00:30:28', '2023-05-06 00:30:28', 0);
+INSERT INTO `dts_form_userId` VALUES (161, '5a2b3936-8dd9-4015-b89a-6bcedbc83e0b', 1, 3, '2023-05-13 00:31:07', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 00:31:07', '2023-05-06 00:31:07', 0);
+INSERT INTO `dts_form_userId` VALUES (162, '37f7ef8d-fb22-4040-8859-d0b87fffb238', 1, 3, '2023-05-13 00:31:38', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 00:31:38', '2023-05-06 00:31:38', 0);
+INSERT INTO `dts_form_userId` VALUES (163, 'b880336a-65d0-44ff-8fa7-c6afff0a0fe4', 1, 3, '2023-05-13 00:32:10', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 00:32:10', '2023-05-06 00:32:10', 0);
+INSERT INTO `dts_form_userId` VALUES (164, '5246dd7e-f4b8-4eed-a960-ae5edb911e08', 1, 3, '2023-05-13 00:32:35', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 00:32:35', '2023-05-06 00:32:35', 0);
+INSERT INTO `dts_form_userId` VALUES (165, '61121a0e-be0f-4550-9d4f-ef359d1af16e', 1, 3, '2023-05-13 00:32:57', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 00:32:57', '2023-05-06 00:32:57', 0);
+INSERT INTO `dts_form_userId` VALUES (166, 'fe0318d7-70e2-449f-a875-cecf0ac752c8', 1, 3, '2023-05-13 00:33:14', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 00:33:14', '2023-05-06 00:33:14', 0);
+INSERT INTO `dts_form_userId` VALUES (167, '2dceb6fc-8dbd-40ed-9448-2ebe0e291224', 1, 3, '2023-05-13 00:33:19', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 00:33:19', '2023-05-06 00:33:19', 0);
+INSERT INTO `dts_form_userId` VALUES (168, 'a108d82a-a304-4119-ba16-e615f7c98134', 1, 3, '2023-05-13 23:57:10', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 23:57:10', '2023-05-06 23:57:10', 0);
+INSERT INTO `dts_form_userId` VALUES (169, 'ce0b0a32-9f87-4769-b20a-cec93a23b31e', 1, 3, '2023-05-13 23:57:12', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 23:57:12', '2023-05-06 23:57:12', 0);
+INSERT INTO `dts_form_userId` VALUES (170, '3a66e0c4-4a01-444c-8d2d-bbdb96ef8b0f', 1, 3, '2023-05-13 23:57:56', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 23:57:56', '2023-05-06 23:57:56', 0);
+INSERT INTO `dts_form_userId` VALUES (171, '2b9152f3-0b22-4a50-8690-693f7bd1ccba', 1, 3, '2023-05-13 23:57:58', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 23:57:58', '2023-05-06 23:57:58', 0);
+INSERT INTO `dts_form_userId` VALUES (172, 'e4988b55-aafc-44ee-9dfb-bba3b13bd13f', 1, 3, '2023-05-13 23:58:49', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 23:58:49', '2023-05-06 23:58:49', 0);
+INSERT INTO `dts_form_userId` VALUES (173, '6cd70e42-d1ae-4403-a269-9be0a091ad57', 1, 3, '2023-05-13 23:59:00', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 23:59:00', '2023-05-06 23:59:00', 0);
+INSERT INTO `dts_form_userId` VALUES (174, '7566fa96-d514-49e5-b555-8d1a88ef516c', 1, 3, '2023-05-13 23:59:17', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-06 23:59:17', '2023-05-06 23:59:17', 0);
+INSERT INTO `dts_form_userId` VALUES (175, 'ddeb67f7-c399-47e1-acb4-fa42bcd58b43', 1, 3, '2023-05-14 00:00:54', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-07 00:00:54', '2023-05-07 00:00:54', 0);
+INSERT INTO `dts_form_userId` VALUES (176, 'eb21ec07-9981-48f4-b46d-07691646feda', 1, 3, '2023-05-14 00:04:50', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-07 00:04:50', '2023-05-07 00:04:50', 0);
+INSERT INTO `dts_form_userId` VALUES (177, '0f426497-cab5-48f6-be2d-c45889f429fe', 1, 3, '2023-05-14 00:05:41', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-07 00:05:41', '2023-05-07 00:05:41', 0);
+INSERT INTO `dts_form_userId` VALUES (178, 'f8cf8973-df86-4d54-9a4a-7f9b7e89c239', 1, 3, '2023-05-14 00:08:40', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-07 00:08:40', '2023-05-07 00:08:40', 0);
+INSERT INTO `dts_form_userId` VALUES (179, 'c3fcdbe3-7f37-4bc2-aba5-3abfa035dc3e', 1, 3, '2023-05-14 00:09:41', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-07 00:09:41', '2023-05-07 00:09:41', 0);
+INSERT INTO `dts_form_userId` VALUES (180, '4911fb71-a0b7-49fe-9a1d-f53a939221b2', 1, 3, '2023-05-14 00:09:59', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-07 00:09:59', '2023-05-07 00:09:59', 0);
+INSERT INTO `dts_form_userId` VALUES (181, 'd415b16f-bcc1-46be-ab4d-774d91b0fd58', 1, 3, '2023-05-14 00:10:19', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-07 00:10:19', '2023-05-07 00:10:19', 0);
+INSERT INTO `dts_form_userId` VALUES (182, '0c63b604-c721-4311-b19a-51654ae8a381', 1, 3, '2023-05-14 00:10:23', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-07 00:10:23', '2023-05-07 00:10:23', 0);
+INSERT INTO `dts_form_userId` VALUES (183, 'eacbbe3b-ca2d-4080-91c5-98320b9e4a65', 1, 3, '2023-05-14 00:11:55', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-07 00:11:55', '2023-05-07 00:11:55', 0);
+INSERT INTO `dts_form_userId` VALUES (184, '1847a7b0-b58d-46d6-b1a5-f342730aaa3a', 1, 3, '2023-05-14 00:13:12', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-07 00:13:12', '2023-05-07 00:13:12', 0);
+INSERT INTO `dts_form_userId` VALUES (185, 'd5653d8d-1016-42e2-867e-78c20fc9d740', 1, 3, '2023-05-14 00:14:07', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-07 00:14:07', '2023-05-07 00:14:07', 0);
+INSERT INTO `dts_form_userId` VALUES (186, '349d883b-880f-4cfe-aabe-d6813b9d9620', 1, 3, '2023-05-14 00:21:36', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', '2023-05-07 00:21:36', '2023-05-07 00:21:36', 0);
 
 -- ----------------------------
 -- Table structure for dts_region
@@ -33,7 +86,7 @@ CREATE TABLE `dts_region`  (
   INDEX `parent_id`(`pid`) USING BTREE,
   INDEX `region_type`(`type`) USING BTREE,
   INDEX `agency_id`(`code`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3232 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '行政区域表' ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 3231 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '行政区域表' ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of dts_region
@@ -3285,31 +3338,10 @@ CREATE TABLE `dts_storage`  (
   `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
   `deleted` tinyint(1) NULL DEFAULT 0 COMMENT '逻辑删除',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '文件存储表' ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '文件存储表' ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of dts_storage
--- ----------------------------
-
--- ----------------------------
--- Table structure for dts_user_formid
--- ----------------------------
-DROP TABLE IF EXISTS `dts_user_formid`;
-CREATE TABLE `dts_user_formid`  (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `formId` varchar(63) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '缓存的FormId',
-  `isprepay` tinyint(1) NOT NULL COMMENT '是FormId还是prepayId',
-  `useAmount` int NOT NULL COMMENT '可用次数，fromId为1，prepay为3，用1次减1',
-  `expire_time` datetime NOT NULL COMMENT '过期时间，腾讯规定为7天',
-  `openId` varchar(63) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '微信登录openid',
-  `add_time` datetime NULL DEFAULT NULL COMMENT '创建时间',
-  `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
-  `deleted` tinyint(1) NULL DEFAULT 0 COMMENT '逻辑删除',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 155 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = COMPACT;
-
--- ----------------------------
--- Records of dts_user_formid
 -- ----------------------------
 
 SET FOREIGN_KEY_CHECKS = 1;

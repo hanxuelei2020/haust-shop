@@ -37,7 +37,7 @@ CREATE TABLE `dts_account_trace`  (
   `trace_msg` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '消息内容',
   `update_time` datetime NULL DEFAULT NULL COMMENT '审批时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '账户流水表' ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '账户流水表' ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of dts_account_trace
@@ -91,6 +91,7 @@ INSERT INTO `dts_address` VALUES (45, '好**', 72, 1, 32, 378, '哦明敏xxxxxx 
 INSERT INTO `dts_address` VALUES (46, '廖**', 76, 23, 271, 2406, '洲际银海湾1xxxxxx xxx', '13438******', 1, '2019-11-03 20:11:32', '2019-11-03 20:11:32', 0);
 INSERT INTO `dts_address` VALUES (47, '廖**', 43, 18, 219, 2019, '湖南省隆回县xxxxxx xxx', '15973******', 0, '2019-11-07 10:49:51', '2019-11-07 10:49:51', 0);
 INSERT INTO `dts_address` VALUES (76, '韩雪磊', 200, 16, 199, 1873, '南海花园', '17634553249', 1, '2022-01-07 14:42:49', '2022-01-07 14:42:49', 0);
+INSERT INTO `dts_address` VALUES (77, '韩雪磊', 201, 16, 199, 1873, '南海花园', '17634553249', 1, '2023-05-05 23:51:37', '2023-05-05 23:51:37', 0);
 
 -- ----------------------------
 -- Table structure for dts_agency_share
@@ -105,7 +106,7 @@ CREATE TABLE `dts_agency_share`  (
   `add_time` datetime NULL DEFAULT NULL COMMENT '添加时间',
   `update_time` datetime NULL DEFAULT NULL COMMENT '最后更新时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of dts_agency_share
@@ -127,7 +128,7 @@ CREATE TABLE `dts_collect`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE,
   INDEX `goods_id`(`value_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 85 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '收藏表' ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 84 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '收藏表' ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of dts_collect
@@ -235,7 +236,7 @@ CREATE TABLE `dts_comment`  (
   `deleted` tinyint(1) NULL DEFAULT 0 COMMENT '逻辑删除',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `id_value`(`value_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1023 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '评论表' ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 1022 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '评论表' ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of dts_comment
@@ -1263,7 +1264,7 @@ CREATE TABLE `dts_footprint`  (
   `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
   `deleted` tinyint(1) NULL DEFAULT 0 COMMENT '逻辑删除',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5407 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '用户浏览足迹表' ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 5414 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '用户浏览足迹表' ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of dts_footprint
@@ -6674,6 +6675,14 @@ INSERT INTO `dts_footprint` VALUES (5403, 200, 23847, '2022-01-09 10:30:51', '20
 INSERT INTO `dts_footprint` VALUES (5404, 200, 19315, '2022-01-12 06:51:21', '2022-01-12 06:51:21', 0);
 INSERT INTO `dts_footprint` VALUES (5405, 200, 23851, '2022-01-12 07:04:01', '2022-01-12 07:04:01', 0);
 INSERT INTO `dts_footprint` VALUES (5406, 200, 23847, '2022-01-12 07:04:11', '2022-01-12 07:04:11', 0);
+INSERT INTO `dts_footprint` VALUES (5407, 201, 22900, '2023-05-05 23:50:55', '2023-05-05 23:50:55', 0);
+INSERT INTO `dts_footprint` VALUES (5408, 201, 22901, '2023-05-06 00:30:23', '2023-05-06 00:30:23', 0);
+INSERT INTO `dts_footprint` VALUES (5409, 201, 22937, '2023-05-06 00:31:33', '2023-05-06 00:31:33', 0);
+INSERT INTO `dts_footprint` VALUES (5410, 201, 19315, '2023-05-06 23:56:47', '2023-05-06 23:56:47', 0);
+INSERT INTO `dts_footprint` VALUES (5411, 201, 22870, '2023-05-07 00:00:37', '2023-05-07 00:00:37', 0);
+INSERT INTO `dts_footprint` VALUES (5412, 201, 22937, '2023-05-07 00:04:45', '2023-05-07 00:04:45', 0);
+INSERT INTO `dts_footprint` VALUES (5413, 201, 23849, '2023-05-07 00:11:50', '2023-05-07 00:11:50', 0);
+INSERT INTO `dts_footprint` VALUES (5414, 201, 23851, '2023-05-07 00:16:28', '2023-05-07 00:16:28', 0);
 
 -- ----------------------------
 -- Table structure for dts_user
@@ -6902,6 +6911,7 @@ INSERT INTO `dts_user` VALUES (197, 'oVpFH47Lq1为***', 'oVpFH47Lq1******', 2, N
 INSERT INTO `dts_user` VALUES (198, 'oVpFH4ziDJ牛***', 'oVpFH4ziDJ******', 1, NULL, '2019-12-20 23:24:09', '218.26.54.212', 0, '牛***', '******', 'https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eoYxUHaoiaHBKrA2Tc1BoZbicZVfcxXXSOe4ib8UCicOMvhDWKzYLMUNXUSibibAVbo1cPicFqibULsep9mTg/132', 'oVpFH4ziDJ******', 0, '2119-12-20 23:24:09', '2119-12-20 23:24:09', 0, 1);
 INSERT INTO `dts_user` VALUES (199, 'luotestl***', '$2a$10$IUK******', 0, NULL, '2019-12-21 01:18:04', '116.199.58.251', 0, 'l***', '13433******', 'https://avatar.csdnimg.cn/8/A/0/2_qiguliuxing.jpg', '$2a$10$IUK******', 0, '2119-12-21 01:18:04', '2119-12-21 01:18:04', 0, NULL);
 INSERT INTO `dts_user` VALUES (200, 'oFrUs4zJBYy1FF0dR9KqiLux_Xyc', 'oFrUs4zJBYy1FF0dR9KqiLux_Xyc', 0, NULL, '2022-01-12 07:15:06', '0:0:0:0:0:0:0:1', 2, '十年生死两茫茫', '', 'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJiarFwmvOKIgaaJK9KuWicKr4yo6tn4ClDKB1517eiceicZPXtpmyadABrSgKcJicHkjF0ib5buicLUYDQA/132', 'oFrUs4zJBYy1FF0dR9KqiLux_Xyc', 0, '2022-01-05 02:10:22', '2022-01-12 07:15:06', 0, 1);
+INSERT INTO `dts_user` VALUES (201, 'orvOg5fPiHI68hPxL9L4sK_jIUKg', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', 0, NULL, '2023-05-07 00:41:41', '192.168.88.128', 0, '萌妹代表', '', 'https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eoEDmku7bpgqrUsuyBPhWU9g0UhRBicKnvBfeQBZHawVPfficdkZ1zbiaZLFMbicY1kOwg6rCicgfDPoXw/132', 'orvOg5fPiHI68hPxL9L4sK_jIUKg', 0, '2023-05-05 23:50:46', '2023-05-07 00:41:41', 0, 201);
 
 -- ----------------------------
 -- Table structure for dts_user_account
@@ -6918,7 +6928,7 @@ CREATE TABLE `dts_user_account`  (
   `status` tinyint NULL DEFAULT NULL COMMENT '账户状态',
   `share_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '分享推广二维码URL',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 37 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '账户表' ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 36 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '账户表' ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of dts_user_account

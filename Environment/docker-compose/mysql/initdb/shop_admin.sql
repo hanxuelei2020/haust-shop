@@ -87,7 +87,7 @@ CREATE TABLE `dts_feedback`  (
   `deleted` tinyint(1) NULL DEFAULT 0 COMMENT '逻辑删除',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `id_value`(`status`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '意见反馈表' ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '意见反馈表' ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of dts_feedback
@@ -128,7 +128,7 @@ CREATE TABLE `dts_permission`  (
   `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
   `deleted` tinyint(1) NULL DEFAULT 0 COMMENT '逻辑删除',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 52 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '权限表' ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 51 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '权限表' ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of dts_permission
@@ -199,7 +199,7 @@ CREATE TABLE `dts_role`  (
   `deleted` tinyint(1) NULL DEFAULT 0 COMMENT '逻辑删除',
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `name_UNIQUE`(`name`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '角色表' ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '角色表' ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of dts_role
@@ -208,6 +208,41 @@ INSERT INTO `dts_role` VALUES (1, '超级管理员', '所有模块的权限', 1,
 INSERT INTO `dts_role` VALUES (2, '商场管理员', '只有商场模块的操作权限', 1, '2019-01-01 00:00:00', '2019-01-07 15:15:12', 0);
 INSERT INTO `dts_role` VALUES (3, '推广管理员', '只有推广模块的操作权限', 1, '2019-01-01 00:00:00', '2019-01-07 15:15:24', 0);
 INSERT INTO `dts_role` VALUES (4, '品牌制造商', '普通商户', 1, '2019-06-22 21:28:19', '2019-06-22 21:54:45', 0);
+
+-- ----------------------------
+-- Table structure for dts_system
+-- ----------------------------
+DROP TABLE IF EXISTS `dts_system`;
+CREATE TABLE `dts_system`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `key_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '系统配置名',
+  `key_value` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '系统配置值',
+  `add_time` datetime NULL DEFAULT NULL COMMENT '创建时间',
+  `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
+  `deleted` tinyint(1) NULL DEFAULT 0 COMMENT '逻辑删除',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '系统配置表' ROW_FORMAT = COMPACT;
+
+-- ----------------------------
+-- Records of dts_system
+-- ----------------------------
+INSERT INTO `dts_system` VALUES (1, 'dts.system.banner.new.title', '大家都在买的', '2018-02-01 00:00:00', '2018-02-01 00:00:00', 0);
+INSERT INTO `dts_system` VALUES (2, 'dts.system.banner.new.imageurl', 'http://yanxuan.nosdn.127.net/8976116db321744084774643a933c5ce.png', '2018-02-01 00:00:00', '2018-02-01 00:00:00', 0);
+INSERT INTO `dts_system` VALUES (3, 'dts.system.banner.hot.title', '大家都在买的', '2018-02-01 00:00:00', '2018-02-01 00:00:00', 0);
+INSERT INTO `dts_system` VALUES (4, 'dts.system.banner.hot.imageurl', 'http://yanxuan.nosdn.127.net/8976116db321744084774643a933c5ce.png', '2018-02-01 00:00:00', '2018-02-01 00:00:00', 0);
+INSERT INTO `dts_system` VALUES (5, 'dts.system.freight.value', '6', '2018-02-01 00:00:00', '2018-02-01 00:00:00', 0);
+INSERT INTO `dts_system` VALUES (6, 'dts.system.freight.limit', '40', '2018-02-01 00:00:00', '2018-02-01 00:00:00', 0);
+INSERT INTO `dts_system` VALUES (7, 'dts.system.indexlimit.new', '20', '2018-02-01 00:00:00', '2018-02-01 00:00:00', 0);
+INSERT INTO `dts_system` VALUES (8, 'dts.system.indexlimit.hot', '20', '2018-02-01 00:00:00', '2018-02-01 00:00:00', 0);
+INSERT INTO `dts_system` VALUES (9, 'dts.system.indexlimit.brand', '6', '2018-02-01 00:00:00', '2018-02-01 00:00:00', 0);
+INSERT INTO `dts_system` VALUES (10, 'dts.system.indexlimit.topic', '6', '2018-02-01 00:00:00', '2018-02-01 00:00:00', 0);
+INSERT INTO `dts_system` VALUES (11, 'dts.system.indexlimit.catloglist', '8', '2018-02-01 00:00:00', '2018-02-01 00:00:00', 0);
+INSERT INTO `dts_system` VALUES (12, 'dts.system.indexlimit.catloggood', '20', '2018-02-01 00:00:00', '2018-02-01 00:00:00', 0);
+INSERT INTO `dts_system` VALUES (13, 'dts.system.mallname', '科大商城', '2018-02-01 00:00:00', '2018-02-01 00:00:00', 0);
+INSERT INTO `dts_system` VALUES (14, 'dts.system.shareimage.autocreate', '1', '2018-02-01 00:00:00', '2018-02-01 00:00:00', 0);
+INSERT INTO `dts_system` VALUES (15, 'dts.system.multi.order.model', '1', '2019-08-07 18:11:02', '2019-08-07 18:11:07', 0);
+INSERT INTO `dts_system` VALUES (16, 'dts.system.notify.model', 'mail', '2020-02-27 20:53:48', '2020-02-27 20:53:52', 0);
+INSERT INTO `dts_system` VALUES (17, 'dts.system.agency.model', '0', '2020-03-14 20:53:48', '2020-03-14 20:53:52', 0);
 
 -- ----------------------------
 -- Table structure for dts_topic
