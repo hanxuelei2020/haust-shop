@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScans;
 @ComponentScans({@ComponentScan({"com.haust.common",
         "com.haust.shop.user"})})
 @MapperScan({"com.haust.common",
-        "com.haust.shop.user.mapper"})
+        "com.haust.shop.user.dao"})
 public class UserApiApplication {
     public static void main(String[] args) {
         SpringApplication.run(UserApiApplication.class, args);
