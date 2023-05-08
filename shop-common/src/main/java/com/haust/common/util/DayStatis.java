@@ -1,12 +1,13 @@
 package com.haust.common.util;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /** 
 * @Description: 获取时间的
 * @Author: 韩雪磊
 */ 
-public class DayStatis {
+public class DayStatis implements Serializable {
 	
 	private String dayStr;
 	

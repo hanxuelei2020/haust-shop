@@ -2,6 +2,7 @@ package com.haust.service.service.order;
 
 import com.haust.common.util.CategorySellAmts;
 import com.haust.common.util.DayStatis;
+import com.haust.service.domain.order.CloseOrder;
 import com.haust.service.domain.order.DtsOrder;
 
 import java.util.List;
@@ -38,7 +39,7 @@ public interface DtsOrderService {
     Map<Object, Object> orderInfo(Integer userId);
     public List<DtsOrder> queryComment();
     public List<DayStatis> recentCount(int statisDaysRang);
-    public List<CategorySellAmts> categorySell();
+    public List<CloseOrder> categorySell();
     public List<DtsOrder> queryBrandSelective(List<Integer> brandIds, Integer userId, String orderSn,
                                               List<Short> orderStatusArray, Integer page, Integer size, String sort, String order);
 

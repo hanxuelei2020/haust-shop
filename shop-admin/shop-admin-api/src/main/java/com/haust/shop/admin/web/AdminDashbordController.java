@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.haust.common.util.CategorySellAmts;
 import com.haust.common.util.DayStatis;
 import com.haust.common.util.ResponseUtil;
+import com.haust.service.domain.order.CloseOrder;
 import com.haust.service.service.order.DtsOrderService;
 import com.haust.service.service.product.DtsGoodsProductService;
 import com.haust.service.service.product.DtsGoodsService;
@@ -78,8 +79,9 @@ public class AdminDashbordController {
 		OrderAmtsVo orderAmts = fetchOrderAmtsVo(orderCnts);
 
 		// 大类销售统计情况
-		List<CategorySellAmts> categorySellStatis = orderService.categorySell();// 统计总量
-		CategorySellVo categorySell = fetchCategorySell(categorySellStatis);
+		List<CloseOrder> closeOrders = orderService.categorySell();// 统计总量
+		List<CategorySellAmts> categorySellData = productService.categorySell(closeOrders);
+		CategorySellVo categorySell = fetchCategorySell(categorySellData);
 
 		Map<String, Object> data = new HashMap<>();
 		data.put("userOrderCnt", userOrderCnt);

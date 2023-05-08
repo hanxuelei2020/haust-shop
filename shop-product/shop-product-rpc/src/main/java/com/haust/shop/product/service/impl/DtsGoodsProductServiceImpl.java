@@ -1,10 +1,13 @@
 package com.haust.shop.product.service.impl;
 
+import com.haust.common.util.CategorySellAmts;
+import com.haust.service.domain.order.CloseOrder;
 import com.haust.service.domain.product.DtsGoodsProduct;
 import com.haust.service.domain.product.DtsGoodsProductExample;
 import com.haust.service.service.product.DtsGoodsProductService;
 import com.haust.shop.product.mapper.DtsGoodsProductMapper;
 import com.haust.shop.product.mapper.GoodsProductMapper;
+import com.haust.shop.product.mapper.StatMapper;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +23,9 @@ public class DtsGoodsProductServiceImpl implements DtsGoodsProductService {
 	private DtsGoodsProductMapper dtsGoodsProductMapper;
 	@Autowired
 	private GoodsProductMapper goodsProductMapper;
+
+	@Autowired
+	private StatMapper statMapper;
 
 	public List<DtsGoodsProduct> queryByGid(Integer gid) {
 		DtsGoodsProductExample example = new DtsGoodsProductExample();
@@ -64,5 +70,10 @@ public class DtsGoodsProductServiceImpl implements DtsGoodsProductService {
 	public int reduceStock(Integer id, Integer goodsId, Short num) {
 		goodsProductMapper.addSales(goodsId, num);// 每次需将商品的销售量加下
 		return goodsProductMapper.reduceStock(id, num);
+	}
+
+	@Override
+	public List<CategorySellAmts> categorySell(List<CloseOrder> closeOrders) {
+		return statMapper.categorySellStatis(closeOrders);
 	}
 }

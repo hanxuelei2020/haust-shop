@@ -1,7 +1,6 @@
 package com.haust.shop.order.service.Impl;
 
 import com.github.pagehelper.PageHelper;
-import com.haust.common.util.CategorySellAmts;
 import com.haust.common.util.DayStatis;
 import com.haust.service.domain.order.DtsOrder;
 import com.haust.service.domain.order.DtsOrderExample;
@@ -10,6 +9,7 @@ import com.haust.service.service.order.DtsOrderService;
 import com.haust.shop.order.mapper.DtsOrderMapper;
 import com.haust.shop.order.mapper.OrderMapper;
 import com.haust.shop.order.mapper.StatMapper;
+import com.haust.service.domain.order.CloseOrder;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -191,8 +191,8 @@ public class DtsOrderServiceImpl implements DtsOrderService {
 		return statMapper.statisIncreaseOrderCnt(statisDaysRang);
 	}
 
-	public List<CategorySellAmts> categorySell() {
-		return statMapper.categorySellStatis();
+	public List<CloseOrder> categorySell() {
+		return statMapper.closeOrders();
 	}
 
 	/**

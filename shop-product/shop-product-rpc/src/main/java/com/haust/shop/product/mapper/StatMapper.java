@@ -1,4 +1,4 @@
-package com.haust.shop.order.mapper;
+package com.haust.shop.product.mapper;
 
 import com.haust.common.util.CategorySellAmts;
 import com.haust.common.util.DayStatis;
@@ -32,7 +32,7 @@ public interface StatMapper {
 	 * 类目销售额统计
 	 * @return
 	 */
-	List<CategorySellAmts> categorySellStatis();
+	List<CategorySellAmts> categorySellStatis(List<CloseOrder> closeOrders);
 
 
 	/**
