@@ -6,6 +6,7 @@ import com.haust.service.domain.user.DtsUserAccount;
 import com.haust.service.domain.user.UserVo;
 
 import java.util.List;
+import java.util.Map;
 
 public interface DtsUserService {
 
@@ -38,4 +39,6 @@ public interface DtsUserService {
     public DtsUserAccount detailApproveByUserId(Integer userId);
     public List<DtsUser> queryDtsUserListByNickname(String username,String mobile);
     public List<DayStatis> recentCount(int statisDaysRang);
+
+    public List<Map> statUser();
 }

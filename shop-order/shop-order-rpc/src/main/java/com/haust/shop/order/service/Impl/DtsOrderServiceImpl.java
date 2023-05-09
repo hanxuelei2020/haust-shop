@@ -237,4 +237,13 @@ public class DtsOrderServiceImpl implements DtsOrderService {
 		return orderMapper.selectBrandOrdersByExample(userId, orderSn,orderStatusSql,orderBySql,brandIdsSql);
 	}
 
+	@Override
+	public List<Map> statOrder() {
+		return statMapper.statOrder();
+	}
+
+	@Override
+	public List<Map> statGoods() {
+		return statMapper.statGoods();
+	}
 }

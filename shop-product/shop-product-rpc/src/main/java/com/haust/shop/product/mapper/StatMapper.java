@@ -3,6 +3,7 @@ package com.haust.shop.product.mapper;
 import com.haust.common.util.CategorySellAmts;
 import com.haust.common.util.DayStatis;
 import com.haust.service.domain.order.CloseOrder;
+import com.haust.service.domain.product.CategorySellGoodVo;
 import org.apache.ibatis.annotations.MapKey;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -32,7 +33,7 @@ public interface StatMapper {
 	 * 类目销售额统计
 	 * @return
 	 */
-	List<CategorySellAmts> categorySellStatis(List<CloseOrder> closeOrders);
+	List<CategorySellGoodVo> categorySellStatis(@Param("closeOrders") List<String> closeOrders);
 
 
 	/**

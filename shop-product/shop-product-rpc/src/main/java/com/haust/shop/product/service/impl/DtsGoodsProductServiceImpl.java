@@ -2,6 +2,7 @@ package com.haust.shop.product.service.impl;
 
 import com.haust.common.util.CategorySellAmts;
 import com.haust.service.domain.order.CloseOrder;
+import com.haust.service.domain.product.CategorySellGoodVo;
 import com.haust.service.domain.product.DtsGoodsProduct;
 import com.haust.service.domain.product.DtsGoodsProductExample;
 import com.haust.service.service.product.DtsGoodsProductService;
@@ -13,8 +14,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Service
 @DubboService
@@ -74,6 +79,30 @@ public class DtsGoodsProductServiceImpl implements DtsGoodsProductService {
 
 	@Override
 	public List<CategorySellAmts> categorySell(List<CloseOrder> closeOrders) {
-		return statMapper.categorySellStatis(closeOrders);
+		// 将 CloseOrder 转换为 Map<goodsId, price>
+		Map<String, BigDecimal> closeOrderMap = closeOrders.stream()
+				.collect(Collectors.toMap(
+						CloseOrder::getGoodsId,
+						CloseOrder::getPrice
+				));
+		List<String> goodIds = closeOrders.stream().map(CloseOrder::getGoodsId).distinct().collect(Collectors.toList());
+		List<CategorySellGoodVo> vos = statMapper.categorySellStatis(goodIds);
+		Map<String, BigDecimal> categorySellAmtsMap = vos.stream()
+				.collect(Collectors.groupingBy(
+						CategorySellGoodVo::getCategoryName, // 按照一级分类进行分组
+						Collectors.mapping(
+								g -> closeOrderMap.get(g.getId()), // 获取 price
+								Collectors.reducing(BigDecimal.ZERO, BigDecimal::add) // 对 price 求和
+						)
+				));
+		// 将map转化为结果
+		List<CategorySellAmts> res = new ArrayList<>();
+		categorySellAmtsMap.forEach((k, v) -> {
+			CategorySellAmts amts = new CategorySellAmts();
+			amts.setName(k);
+			amts.setValue(v);
+			res.add(amts);
+		});
+		return res;
 	}
 }

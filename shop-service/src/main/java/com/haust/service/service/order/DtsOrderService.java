@@ -43,4 +43,7 @@ public interface DtsOrderService {
     public List<DtsOrder> queryBrandSelective(List<Integer> brandIds, Integer userId, String orderSn,
                                               List<Short> orderStatusArray, Integer page, Integer size, String sort, String order);
 
+    public List<Map> statOrder();
+
+    public List<Map> statGoods();
 }

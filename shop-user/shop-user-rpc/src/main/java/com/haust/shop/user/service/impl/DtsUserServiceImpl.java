@@ -14,6 +14,7 @@ import org.springframework.util.StringUtils;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 
 @Service
 @DubboService
@@ -165,5 +166,10 @@ public class DtsUserServiceImpl implements DtsUserService {
 
 	public List<DayStatis> recentCount(int statisDaysRang) {
 		return statMapper.statisIncreaseUserCnt(statisDaysRang);
+	}
+
+	@Override
+	public List<Map> statUser() {
+		return statMapper.statUser();
 	}
 }

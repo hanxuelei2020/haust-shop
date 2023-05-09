@@ -18,6 +18,12 @@
         <result column="price" jdbcType="DECIMAL" property="price" />
     </resultMap>
 
+    <resultMap id="CategorySellGoodVo" type="com.haust.service.domain.product.CategorySellGoodVo" >
+        <result column="category_name" jdbcType="VARCHAR" property="categoryName" />
+        <result column="pid" jdbcType="VARCHAR" property="pid" />
+        <result column="id" jdbcType="VARCHAR" property="id" />
+    </resultMap>
+
     <select id="statisIncreaseUserCnt" resultMap="DayStatis" parameterType="map">
         select date_format(t.add_time,"%Y-%m-%d") as statis_day,count(1) as statis_cnts
         from dts_user t where t.add_time &gt; date_add(now(),interval -#{daysAgo} day)
@@ -32,7 +38,7 @@
         group by date_format(t.add_time,"%Y-%m-%d")
     </select>
 
-    <select id="categorySellStatis" resultMap="CategorySellAmts">
+    <select id="categorySellStatis" resultMap="CategorySellGoodVo" >
         SELECT
             pc.NAME AS category_name,
             c.pid,
@@ -40,7 +46,10 @@
             dts_goods g
                 JOIN dts_category c ON g.category_id = c.id
                 JOIN dts_category pc ON pc.id = c.pid
-        where g.id in ('23836')
+        where g.id in
+        <foreach item="goodId" collection="closeOrders" open="(" separator="," close=")">
+            #{goodId}
+        </foreach>
     </select>
 
     <select id="closeOrders" resultMap="CloseOrderMap">
