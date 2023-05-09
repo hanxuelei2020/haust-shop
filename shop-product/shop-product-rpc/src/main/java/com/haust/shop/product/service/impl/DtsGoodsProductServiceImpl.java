@@ -83,7 +83,8 @@ public class DtsGoodsProductServiceImpl implements DtsGoodsProductService {
 		Map<String, BigDecimal> closeOrderMap = closeOrders.stream()
 				.collect(Collectors.toMap(
 						CloseOrder::getGoodsId,
-						CloseOrder::getPrice
+						CloseOrder::getPrice,
+						BigDecimal::add // 将相同键的值相加
 				));
 		List<String> goodIds = closeOrders.stream().map(CloseOrder::getGoodsId).distinct().collect(Collectors.toList());
 		List<CategorySellGoodVo> vos = statMapper.categorySellStatis(goodIds);

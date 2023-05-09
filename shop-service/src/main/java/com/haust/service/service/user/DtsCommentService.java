@@ -14,7 +14,7 @@ public interface DtsCommentService {
     public void deleteById(Integer id);
     public String queryReply(Integer id);
     public DtsComment findById(Integer id);
-    public List<DtsComment> queryBrandCommentSelective(List<Integer> brandIds, String userId, String valueId,
+    public List<DtsComment> queryBrandCommentSelective(List<Integer> goodIds, String userId, String valueId,
                                                        Integer page, Integer size, String sort, String order);
 
 }

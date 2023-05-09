@@ -119,26 +119,26 @@ public class DtsCommentServiceImpl implements DtsCommentService {
 	 * @param order
 	 * @return
 	 */
-	public List<DtsComment> queryBrandCommentSelective(List<Integer> brandIds, String userId, String valueId,
+	public List<DtsComment> queryBrandCommentSelective(List<Integer> goodIds, String userId, String valueId,
 			Integer page, Integer size, String sort, String order) {
 		
 		String orderBySql = null;
 		if (!StringUtils.isEmpty(sort) && !StringUtils.isEmpty(order)) {
 			orderBySql = "o."+sort + " " + order;
 		}
-		
-		String brandIdsSql = null;
-		if (brandIds != null) {
-			brandIdsSql = "";
-			for (Integer brandId : brandIds) {
-				brandIdsSql += "," + brandId;
+
+		String goodIdsSql = null;
+		if (goodIds != null && !goodIds.isEmpty()) { // 检查列表是否为空
+			StringBuilder sb = new StringBuilder();
+			for (Integer goodId : goodIds) {
+				sb.append(",").append(goodId); // 先追加逗号
 			}
-			brandIdsSql = " and g.brand_id in (" + brandIdsSql.substring(1) + ") ";
+			goodIdsSql = " and r.goods_id in (" + sb.substring(1) + ") ";
 		}
 
 		PageHelper.startPage(page, size);
 		
 		Byte type = (byte) 0;//品牌入驻管理员限定只查商品评论
-		return commentMapperEx.queryBrandComment(type,userId,valueId,orderBySql,brandIdsSql);
+		return commentMapperEx.queryBrandComment(type,userId,valueId,orderBySql,goodIdsSql);
 	}
 }

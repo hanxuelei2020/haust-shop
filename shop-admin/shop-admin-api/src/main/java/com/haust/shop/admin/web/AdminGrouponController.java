@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/admin/groupon")
@@ -77,7 +78,10 @@ public class AdminGrouponController {
 			grouponList = grouponService.querySelective(rulesId, page, limit, sort, order);
 			total = PageInfo.of(grouponList).getTotal();
 		} else {
-			grouponList = grouponService.queryBrandGroupons(brandIds,rulesId, page, limit, sort, order);
+			// 按照品牌查询出来所有的 good
+			List<DtsGoods> dtsGoods = goodsService.queryByCategory(brandIds, 0, brandIds.size());
+			List<Integer> goodIds = dtsGoods.stream().map(DtsGoods::getId).distinct().collect(Collectors.toList());
+			grouponList = grouponService.queryBrandGroupons(goodIds,rulesId, page, limit, sort, order);
 			total = PageInfo.of(grouponList).getTotal();
 		}
 
@@ -139,7 +143,10 @@ public class AdminGrouponController {
 			rulesList = rulesService.querySelective(goodsId, page, limit, sort, order);
 			total = PageInfo.of(rulesList).getTotal();
 		} else {
-			rulesList = rulesService.queryBrandGrouponRules(brandIds,goodsId, page, limit, sort, order);
+			// 按照品牌查询出来所有的 good
+			List<DtsGoods> dtsGoods = goodsService.queryByCategory(brandIds, 0, brandIds.size());
+			List<Integer> goodIds = dtsGoods.stream().map(DtsGoods::getId).distinct().collect(Collectors.toList());
+			rulesList = rulesService.queryBrandGrouponRules(goodIds,goodsId, page, limit, sort, order);
 			total = PageInfo.of(rulesList).getTotal();
 		}
 		Map<String, Object> data = new HashMap<>();

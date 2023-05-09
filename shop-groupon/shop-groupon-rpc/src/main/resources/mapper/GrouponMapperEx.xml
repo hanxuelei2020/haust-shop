@@ -22,9 +22,8 @@
   <select id="queryBrandGrouponRules" resultMap="RuleResultMap" parameterType="map">
     select distinct 
     <include refid="Rule_Column_List" />
-    from dts_groupon_rules o 
-	join dts_goods g on o.goods_id=g.id 
-	and o.deleted = 0 
+    from dts_groupon_rules o
+	where o.deleted = 0
     <if test="goodsId != null and goodsId != ''">
         and o.goods_id = #{goodsId} 
     </if>
@@ -60,8 +59,7 @@
     <include refid="Groupons_Column_List" />
     from dts_groupon o 
     join dts_groupon_rules r on o.rules_id = r.id
-    join dts_goods g on r.goods_id=g.id 
-	and o.deleted = 0 
+	where o.deleted = 0
     <if test="rulesId != null and rulesId != ''">
         and o.rules_id = #{rulesId} 
     </if>

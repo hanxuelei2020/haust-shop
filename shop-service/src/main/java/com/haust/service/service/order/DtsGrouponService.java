@@ -14,7 +14,7 @@ public interface DtsGrouponService {
     public int updateById(DtsGroupon groupon);
     public int createGroupon(DtsGroupon groupon);
     public List<DtsGroupon> querySelective(String rulesId, Integer page, Integer size, String sort, String order);
-    public List<DtsGroupon> queryBrandGroupons(List<Integer> brandIds, String rulesId, Integer page, Integer size,
+    public List<DtsGroupon> queryBrandGroupons(List<Integer> goodIds, String rulesId, Integer page, Integer size,
                                                String sort, String order);
 
 

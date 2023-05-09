@@ -171,24 +171,24 @@ public class DtsGrouponRulesServiceImpl implements DtsGrouponRulesService {
 	 * @param order
 	 * @return
 	 */
-	public List<DtsGrouponRules> queryBrandGrouponRules(List<Integer> brandIds, String goodsId, Integer page,
+	public List<DtsGrouponRules> queryBrandGrouponRules(List<Integer> goodIds, String goodsId, Integer page,
 			Integer size, String sort, String order) {
 		String orderBySql = null;
 		if (!StringUtils.isEmpty(sort) && !StringUtils.isEmpty(order)) {
 			orderBySql = "o."+sort + " " + order;
 		}
-		
-		String brandIdsSql = null;
-		if (brandIds != null) {
-			brandIdsSql = "";
-			for (Integer brandId : brandIds) {
-				brandIdsSql += "," + brandId;
+
+		String goodIdsSql = null;
+		if (goodIds != null && !goodIds.isEmpty()) { // 检查列表是否为空
+			StringBuilder sb = new StringBuilder();
+			for (Integer goodId : goodIds) {
+				sb.append(",").append(goodId); // 先追加逗号
 			}
-			brandIdsSql = " and g.brand_id in (" + brandIdsSql.substring(1) + ") ";
+			goodIdsSql = " and r.goods_id in (" + sb.substring(1) + ") ";
 		}
 		
 		PageHelper.startPage(page, size);
 		
-		return grouponMapperEx.queryBrandGrouponRules(goodsId,orderBySql,brandIdsSql);
+		return grouponMapperEx.queryBrandGrouponRules(goodsId,orderBySql,goodIdsSql);
 	}
 }

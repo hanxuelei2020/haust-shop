@@ -84,7 +84,7 @@ dts:
     # 本地对象存储配置信息
     local:
       storagePath: dts/storage
-      # 这个地方应该是wx模块的WxStorageController的fetch方法对应的地址
+      # 这个地方应该是wx模块的 WxStorageController 的fetch方法对应的地址
       address: http://localhost:9999/demo/storage/
 
 

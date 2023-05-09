@@ -5,7 +5,9 @@ import com.github.pagehelper.PageInfo;
 import com.haust.common.util.ResponseUtil;
 import com.haust.common.validator.Order;
 import com.haust.common.validator.Sort;
+import com.haust.service.domain.product.DtsGoods;
 import com.haust.service.domain.user.DtsComment;
+import com.haust.service.service.product.DtsGoodsService;
 import com.haust.service.service.user.DtsCommentService;
 import com.haust.shop.admin.annotation.RequiresPermissionsDesc;
 import com.haust.shop.admin.service.AdminDataAuthService;
@@ -22,6 +24,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/admin/comment")
@@ -32,6 +35,9 @@ public class AdminCommentController {
 
 	@DubboReference
 	private DtsCommentService commentService;
+
+	@DubboReference
+	private DtsGoodsService dtsGoodsService;
 	
 	@Autowired
 	private AdminDataAuthService adminDataAuthService;
@@ -66,7 +72,10 @@ public class AdminCommentController {
 			commentList = commentService.querySelective(userId, valueId, page, limit, sort, order);
 			total = PageInfo.of(commentList).getTotal();
 		} else {
-			commentList = commentService.queryBrandCommentSelective(brandIds,userId, valueId, page, limit, sort, order);
+			// 按照品牌查询出来所有的 good
+			List<DtsGoods> dtsGoods = dtsGoodsService.queryByCategory(brandIds, 0, brandIds.size());
+			List<Integer> goodIds = dtsGoods.stream().map(DtsGoods::getId).distinct().collect(Collectors.toList());
+			commentList = commentService.queryBrandCommentSelective(goodIds,userId, valueId, page, limit, sort, order);
 			total = PageInfo.of(commentList).getTotal();
 		}
 		Map<String, Object> data = new HashMap<>();
