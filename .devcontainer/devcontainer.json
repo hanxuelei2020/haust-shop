@@ -1,6 +1,6 @@
 {
     "name": "my-project-devcontainer",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",  // Any generic, debian-based image.
+    "image": "mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04",  // Any generic, debian-based image.
     "features": {
           "ghcr.io/devcontainers-contrib/features/springboot-sdkman:2": {
             "version":"latest",
