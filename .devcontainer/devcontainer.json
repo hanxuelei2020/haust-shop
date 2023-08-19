@@ -1,6 +1,6 @@
 {
     "name": "my-project-devcontainer",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",  // Any generic, debian-based image.
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",  // Any generic, debian-based image.
     "features": {
           "ghcr.io/devcontainers-contrib/features/springboot-sdkman:2": {
             "version":"latest",
@@ -10,7 +10,6 @@
               "ghcr.io/devcontainers/features/sshd:1": {
         "version": "latest"
     },
-//       java 
      "ghcr.io/devcontainers/features/java:1": {
       "version": 8,
         "jdkDistro": "open",
