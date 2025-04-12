@@ -78,7 +78,7 @@ public class DtsCouponUserService {
 		if (couponUserList.size() == 0) {
 			return null;
 		}
-		return couponUserList.getFirst();
+		return couponUserList.get(0);
 	}
 
 	public DtsCouponUser findById(Integer id) {

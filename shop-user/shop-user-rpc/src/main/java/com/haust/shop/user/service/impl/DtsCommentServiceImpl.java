@@ -99,7 +99,7 @@ public class DtsCommentServiceImpl implements DtsCommentService {
 		List<DtsComment> commentReply = commentMapper.selectByExampleSelective(example, DtsComment.Column.content);
 		// 目前业务只支持回复一次
 		if (commentReply.size() == 1) {
-			return commentReply.getFirst().getContent();
+			return commentReply.get(0).getContent();
 		}
 		return null;
 	}

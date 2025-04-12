@@ -1,6 +1,5 @@
 package com.haust.shop.wx.dao;
 
-import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -11,8 +10,7 @@ import java.io.Serializable;
  */
 public class UserInfo implements Serializable {
 
-    @Serial
-    private static final long serialVersionUID = -5813029516433359765L;
+	private static final long serialVersionUID = -5813029516433359765L;
 
 	private Integer userId;
 	private String nickName;

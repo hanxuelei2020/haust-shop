@@ -1,15 +1,13 @@
 package com.haust.shop.admin.dao;
 
-import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
 import com.haust.shop.db.bean.CategorySellAmts;
 
 public class CategorySellVo implements Serializable{
-
-    @Serial
-    private static final long serialVersionUID = 96458407347975166L;
+	
+	private static final long serialVersionUID = 96458407347975166L;
 
     private String[] categoryNames;//一级大类目录名称
 	

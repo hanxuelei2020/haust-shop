@@ -1,13 +1,11 @@
 package com.haust.shop.admin.dao;
 
-import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
 public class AccountVo implements Serializable {
 
-    @Serial
-    private static final long serialVersionUID = 1567048369574496965L;
+	private static final long serialVersionUID = 1567048369574496965L;
 
 	private Integer userId;
 

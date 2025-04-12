@@ -47,7 +47,7 @@ public class RedisUserTokenManager implements UserTokenManager {
         List<String> userId = JWT.decode(token).getAudience();
         if (userId != null && !userId.isEmpty()) {
             if (userId.size() == 1) {
-                userToken = cacheService.getValue(RedisPrefix.USER_ID_TOKEN + userId.getFirst()).block();
+                userToken = cacheService.getValue(RedisPrefix.USER_ID_TOKEN + userId.get(0)).block();
             }
         }
 
@@ -56,7 +56,7 @@ public class RedisUserTokenManager implements UserTokenManager {
             return null;
         }
 
-        return Integer.parseInt(userId.getFirst());
+        return Integer.parseInt(userId.get(0));
     }
     @Override
     public UserToken generateToken(Integer id, String sessionKey) {

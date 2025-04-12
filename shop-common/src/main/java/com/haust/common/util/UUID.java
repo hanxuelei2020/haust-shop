@@ -3,7 +3,6 @@ package com.haust.common.util;
 
 import com.haust.common.exception.UtilException;
 
-import java.io.Serial;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
@@ -16,8 +15,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * @author 韩雪磊
  */
 public final class UUID implements java.io.Serializable, Comparable<UUID> {
-    @Serial
-    private static final long serialVersionUID = -1185015143654744140L;
+	private static final long serialVersionUID = -1185015143654744140L;
 
 	/**
 	 * SecureRandom 的单例

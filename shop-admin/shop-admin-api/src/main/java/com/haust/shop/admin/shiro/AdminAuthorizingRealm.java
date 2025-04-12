@@ -74,7 +74,7 @@ public class AdminAuthorizingRealm extends AuthorizingRealm {
 			logger.error("找不到用户（" + username + "）的帐号信息");
 			throw new UnknownAccountException("找不到用户（" + username + "）的帐号信息");
 		}
-		DtsAdmin admin = adminList.getFirst();
+		DtsAdmin admin = adminList.get(0);
 
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		if (!encoder.matches(password, admin.getPassword())) {

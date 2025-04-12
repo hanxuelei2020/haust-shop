@@ -1,6 +1,5 @@
 package com.haust.service.domain.order;
 
-import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
@@ -13,8 +12,7 @@ import java.util.List;
  */
 public class BrandOrderGoods implements Serializable {
 
-    @Serial
-    private static final long serialVersionUID = 4756437344642762485L;
+	private static final long serialVersionUID = 4756437344642762485L;
 
 	private Integer brandId;
 

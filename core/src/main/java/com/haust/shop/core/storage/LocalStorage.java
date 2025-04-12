@@ -8,6 +8,7 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.stream.Stream;
 
@@ -28,7 +29,7 @@ public class LocalStorage implements Storage {
 	public void setStoragePath(String storagePath) {
 		this.storagePath = storagePath;
 
-		this.rootLocation = Path.of(storagePath);
+		this.rootLocation = Paths.get(storagePath);
 		try {
 			Files.createDirectories(rootLocation);
 		} catch (IOException e) {

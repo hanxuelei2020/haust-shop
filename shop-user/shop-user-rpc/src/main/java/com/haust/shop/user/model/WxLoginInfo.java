@@ -1,12 +1,10 @@
 package com.haust.shop.user.model;
 
-import java.io.Serial;
 import java.io.Serializable;
 
 public class WxLoginInfo implements Serializable {
 
-    @Serial
-    private static final long serialVersionUID = -7722430332896313642L;
+	private static final long serialVersionUID = -7722430332896313642L;
 
 	private String code;
 	private UserInfo userInfo;

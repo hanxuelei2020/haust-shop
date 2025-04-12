@@ -1,6 +1,5 @@
 package com.haust.shop.wx.dao;
 
-import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
@@ -15,8 +14,7 @@ import com.haust.shop.db.domain.DtsOrderGoods;
  */
 public class BrandOrderGoods implements Serializable {
 
-    @Serial
-    private static final long serialVersionUID = 4756437344642762485L;
+	private static final long serialVersionUID = 4756437344642762485L;
 
 	private Integer brandId;
 

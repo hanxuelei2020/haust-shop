@@ -26,7 +26,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -158,10 +157,11 @@ public class OrderPayConsumer implements RocketMQListener<OrderPayInfo> {
                 BigDecimal calcOldOrderPrice = order.getGoodsPrice().add(order.getFreightPrice());
                 BigDecimal calcChildOrderPrice = childOrder.getGoodsPrice().add(childOrder.getFreightPrice());
 
-                BigDecimal rate = calcChildOrderPrice.divide(calcOldOrderPrice, 8, RoundingMode.UP);
-                BigDecimal couponPrice = order.getCouponPrice().multiply(rate).setScale(2, RoundingMode.UP);
-                BigDecimal integralPrice = order.getIntegralPrice().multiply(rate).setScale(2, RoundingMode.UP);
-                BigDecimal settlementMoney = order.getSettlementMoney().multiply(rate).setScale(2, RoundingMode.DOWN);
+                BigDecimal rate = calcChildOrderPrice.divide(calcOldOrderPrice, 8, BigDecimal.ROUND_UP);
+                BigDecimal couponPrice = order.getCouponPrice().multiply(rate).setScale(2, BigDecimal.ROUND_UP);
+                BigDecimal integralPrice = order.getIntegralPrice().multiply(rate).setScale(2, BigDecimal.ROUND_UP);
+                BigDecimal settlementMoney = order.getSettlementMoney().multiply(rate).setScale(2,
+                        BigDecimal.ROUND_DOWN);
 
                 BigDecimal orderPrice = bandGoodsTotalPrice.add(bandFreightPrice).subtract(couponPrice);
                 BigDecimal actualPrice = orderPrice.subtract(integralPrice);
@@ -199,7 +199,7 @@ public class OrderPayConsumer implements RocketMQListener<OrderPayInfo> {
             // 验证误差范围
             BigDecimal errorPrice = checkActualPrice.subtract(payTotalFee).abs();
             if (payTotalFee.compareTo(checkActualPrice) < 0 || errorPrice
-                    .divide(payTotalFee, 6, RoundingMode.HALF_UP).compareTo(new BigDecimal("0.005")) > 0) {
+                    .divide(payTotalFee, 6, BigDecimal.ROUND_HALF_UP).compareTo(new BigDecimal("0.005")) > 0) {
                 logger.warn("拆单过程存在误差已超出千分之五，请联系技术人员核查比对：订单编号：【" + orderSn + "】");
             }
 

@@ -54,7 +54,7 @@ public class SettlementOrderServiceImpl implements SettlementOrderService {
             conditionSql = "and o.order_status in (" + conditionSql.substring(1) + ") ";
         }
         if (settlementStatus != null && settlementStatus.size() == 1) {
-            conditionSql = conditionSql + " and o.settlement_status =" + settlementStatus.getFirst() + " ";
+            conditionSql = conditionSql + " and o.settlement_status =" + settlementStatus.get(0) + " ";
         }
 
         PageHelper.startPage(page, size);
