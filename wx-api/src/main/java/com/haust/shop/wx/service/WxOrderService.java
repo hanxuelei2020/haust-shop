@@ -14,6 +14,7 @@ import static com.haust.shop.wx.util.WxResponseCode.ORDER_UNKNOWN;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -485,7 +486,7 @@ public class WxOrderService {
 		}
 		BigDecimal rate = new BigDecimal(settlementRate * 0.01);
 		BigDecimal settlementMoney = (actualPrice.subtract(totalFreightPrice)).multiply(rate);
-		order.setSettlementMoney(settlementMoney.setScale(2, BigDecimal.ROUND_DOWN));
+		order.setSettlementMoney(settlementMoney.setScale(2, RoundingMode.DOWN));
 
 		// 添加订单表项
 		orderService.add(order);
@@ -846,11 +847,10 @@ public class WxOrderService {
 				BigDecimal calcOldOrderPrice = order.getGoodsPrice().add(order.getFreightPrice());
 				BigDecimal calcChildOrderPrice = childOrder.getGoodsPrice().add(childOrder.getFreightPrice());
 
-				BigDecimal rate = calcChildOrderPrice.divide(calcOldOrderPrice, 8, BigDecimal.ROUND_UP);
-				BigDecimal couponPrice = order.getCouponPrice().multiply(rate).setScale(2, BigDecimal.ROUND_UP);
-				BigDecimal integralPrice = order.getIntegralPrice().multiply(rate).setScale(2, BigDecimal.ROUND_UP);
-				BigDecimal settlementMoney = order.getSettlementMoney().multiply(rate).setScale(2,
-						BigDecimal.ROUND_DOWN);
+				BigDecimal rate = calcChildOrderPrice.divide(calcOldOrderPrice, 8, RoundingMode.UP);
+				BigDecimal couponPrice = order.getCouponPrice().multiply(rate).setScale(2, RoundingMode.UP);
+				BigDecimal integralPrice = order.getIntegralPrice().multiply(rate).setScale(2, RoundingMode.UP);
+				BigDecimal settlementMoney = order.getSettlementMoney().multiply(rate).setScale(2, RoundingMode.DOWN);
 
 				BigDecimal orderPrice = bandGoodsTotalPrice.add(bandFreightPrice).subtract(couponPrice);
 				BigDecimal actualPrice = orderPrice.subtract(integralPrice);
@@ -888,7 +888,7 @@ public class WxOrderService {
 			// 验证误差范围
 			BigDecimal errorPrice = checkActualPrice.subtract(payTotalFee).abs();
 			if (payTotalFee.compareTo(checkActualPrice) < 0 || errorPrice
-					.divide(payTotalFee, 6, BigDecimal.ROUND_HALF_UP).compareTo(new BigDecimal("0.005")) > 0) {
+					.divide(payTotalFee, 6, RoundingMode.HALF_UP).compareTo(new BigDecimal("0.005")) > 0) {
 				logger.warn("拆单过程存在误差已超出千分之五，请联系技术人员核查比对：订单编号：【" + orderSn + "】");
 			}
 
@@ -1168,7 +1168,7 @@ public class WxOrderService {
 			return ResponseUtil.badArgumentValue();
 		}
 
-		DtsOrderGoods orderGoods = orderGoodsList.get(0);
+		DtsOrderGoods orderGoods = orderGoodsList.getFirst();
 
 		logger.info("【请求结束】获取待评价订单商品订单成功！");
 		return ResponseUtil.ok(orderGoods);

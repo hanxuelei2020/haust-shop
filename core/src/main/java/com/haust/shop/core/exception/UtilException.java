@@ -1,10 +1,13 @@
 package com.haust.shop.core.exception;
 
+import java.io.Serial;
+
 /**
  * 工具类异常
  */
 public class UtilException extends RuntimeException {
-	private static final long serialVersionUID = 8247610319171014183L;
+    @Serial
+    private static final long serialVersionUID = 8247610319171014183L;
 
 	public UtilException(Throwable e) {
 		super(e.getMessage(), e);

@@ -106,7 +106,7 @@ public class WxAuthController {
 			logger.error("账户登录 用户尚未存在,用户名:{}", username);
 			return ResponseUtil.badArgumentValue();
 		} else {
-			user = userList.get(0);
+			user = userList.getFirst();
 		}
 
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -350,7 +350,7 @@ public class WxAuthController {
 			return ResponseUtil.serious();
 		}
 		if (userList.size() == 1) {
-			DtsUser checkUser = userList.get(0);
+			DtsUser checkUser = userList.getFirst();
 			String checkUsername = checkUser.getUsername();
 			String checkPassword = checkUser.getPassword();
 			if (!checkUsername.equals(openId) || !checkPassword.equals(openId)) {
@@ -448,7 +448,7 @@ public class WxAuthController {
 			logger.error("账号密码重置出错,账户不存在,查询手机号:{},{}", mobile, AUTH_MOBILE_UNREGISTERED.desc());
 			return WxResponseUtil.fail(AUTH_MOBILE_UNREGISTERED);
 		} else {
-			user = userList.get(0);
+			user = userList.getFirst();
 		}
 
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();

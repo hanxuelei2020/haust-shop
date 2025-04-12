@@ -1,5 +1,6 @@
 package com.haust.shop.wx.dao;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -16,7 +17,8 @@ import com.haust.shop.db.domain.DtsCart;
  */
 public class BrandCartGoods implements Serializable {
 
-	private static final long serialVersionUID = -7908381028314100456L;
+    @Serial
+    private static final long serialVersionUID = -7908381028314100456L;
 
 	private static final Integer DEFAULT_BRAND_ID = 1001000;
 

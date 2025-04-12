@@ -58,7 +58,7 @@ public class DtsAccountServiceImpl implements DtsAccountService {
 		List<DtsUserAccount> accounts = userAccountMapper.selectByExample(example);
 		// Assert.state(accounts.size() < 2, "同一个用户存在两个账户");
 		if (accounts.size() == 1) {
-			return accounts.get(0);
+			return accounts.getFirst();
 		} else {
 			logger.error("根据代理用户id：{},获取账号信息出错!!!",shareUserId);
 			return null;

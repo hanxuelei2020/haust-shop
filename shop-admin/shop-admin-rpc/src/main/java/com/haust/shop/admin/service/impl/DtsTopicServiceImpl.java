@@ -55,7 +55,7 @@ public class DtsTopicServiceImpl implements DtsTopicService {
 		if (topics.size() == 0) {
 			return queryList(offset, limit, "add_time", "desc");
 		}
-		DtsTopic topic = topics.get(0);
+		DtsTopic topic = topics.getFirst();
 
 		example = new DtsTopicExample();
 		example.or().andIdNotEqualTo(topic.getId()).andDeletedEqualTo(false);

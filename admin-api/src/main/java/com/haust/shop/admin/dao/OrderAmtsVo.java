@@ -1,11 +1,13 @@
 package com.haust.shop.admin.dao;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
 public class OrderAmtsVo implements Serializable {
 
-	private static final long serialVersionUID = 3840196229938738818L;
+    @Serial
+    private static final long serialVersionUID = 3840196229938738818L;
 
 	private String[] dayData;//日期数据
 	

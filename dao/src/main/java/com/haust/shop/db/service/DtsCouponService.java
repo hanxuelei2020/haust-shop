@@ -101,7 +101,7 @@ public class DtsCouponService {
 		} else if (couponList.size() == 0) {
 			return null;
 		} else {
-			return couponList.get(0);
+			return couponList.getFirst();
 		}
 	}
 

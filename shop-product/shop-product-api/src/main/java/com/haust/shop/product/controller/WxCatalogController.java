@@ -50,7 +50,7 @@ public class WxCatalogController {
 		if (id != null) {
 			currentCategory = categoryService.findById(id);
 		} else {
-			currentCategory = l1CatList.get(0);
+			currentCategory = l1CatList.getFirst();
 		}
 
 		// 当前一级分类目录对应的二级分类目录
@@ -93,7 +93,7 @@ public class WxCatalogController {
 		}
 
 		// 当前一级分类目录
-		DtsCategory currentCategory = l1CatList.get(0);
+		DtsCategory currentCategory = l1CatList.getFirst();
 
 		// 当前一级分类目录对应的二级分类目录
 		List<DtsCategory> currentSubCategory = null;

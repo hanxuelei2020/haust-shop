@@ -3,6 +3,7 @@ package com.haust.service.domain.order;
 
 import com.haust.service.domain.product.DtsBrand;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -16,7 +17,8 @@ import java.util.List;
  */
 public class BrandCartGoods implements Serializable {
 
-	private static final long serialVersionUID = -7908381028314100456L;
+    @Serial
+    private static final long serialVersionUID = -7908381028314100456L;
 
 	private static final Integer DEFAULT_BRAND_ID = 1001000;
 

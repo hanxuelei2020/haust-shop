@@ -71,8 +71,7 @@ public class GlobalExceptionHandler {
 	@ResponseBody
 	public Object badArgumentHandler(ValidationException e) {
 		e.printStackTrace();
-		if (e instanceof ConstraintViolationException) {
-			ConstraintViolationException exs = (ConstraintViolationException) e;
+		if (e instanceof ConstraintViolationException exs) {
 			Set<ConstraintViolation<?>> violations = exs.getConstraintViolations();
 			for (ConstraintViolation<?> item : violations) {
 				String message = ((PathImpl) item.getPropertyPath()).getLeafNode().getName() + item.getMessage();

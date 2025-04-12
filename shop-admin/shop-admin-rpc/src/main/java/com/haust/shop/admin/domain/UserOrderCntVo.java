@@ -1,10 +1,12 @@
 package com.haust.shop.admin.domain;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 public class UserOrderCntVo implements Serializable {
 
-	private static final long serialVersionUID = -5460904409450124808L;
+    @Serial
+    private static final long serialVersionUID = -5460904409450124808L;
 	
 	private String[] dayData;//日期数据
 	

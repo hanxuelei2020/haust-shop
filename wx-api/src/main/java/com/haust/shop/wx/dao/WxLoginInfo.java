@@ -1,10 +1,12 @@
 package com.haust.shop.wx.dao;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 public class WxLoginInfo implements Serializable {
 
-	private static final long serialVersionUID = -7722430332896313642L;
+    @Serial
+    private static final long serialVersionUID = -7722430332896313642L;
 
 	private String code;
 	private UserInfo userInfo;
